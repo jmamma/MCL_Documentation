@@ -1,0 +1,50 @@
+\chapter{Key Concepts}
+
+\begin{itemize}
+\item Page:
+\\
+The MCL firmware consists of pages accessible through the MC's function and encoder buttons. Each page contains unique behaviour and is described in this manual.
+\item Project:
+\\
+A project stored on the Micro SD-Card. Each project contains one Grid. 
+The maximum number of projects is only limited by the SD Card capacity.
+
+\item Grid:
+\\
+The MCL Firmware uses a Grid/Slot system to store Tracks. 
+The grid dimensions are 128 Rows x 20 Slots. 
+
+\item Row/Pattern:
+\\
+A row of the Grid. Each row consists of 20 slots and can store 16 MD tracks, a complete MD pattern + 4 external sequencer or A4 tracks.
+
+\item Slot:
+\\
+A position in the Grid where a Track can be stored. (Either occupied or unoccupied).
+
+\item Tracks
+\\
+A track copied from the Elektron MD or Analog4, or an external MIDI track.
+
+There are 3 types of tracks.
+\begin{itemize}
+
+\item MachineDrum Track (Slots 0-15):\\
+A track copied from the MD containing: Machine Settings, MD Sequencer Data, Local Sequencer Data, Master Effects Settings
+\\
+\item Analog4 Track (Slots 16-19):\\
+
+A track copied from the A4 containg Sound Settings, Local Sequencer Data (no A4 sequencer data is supported at this time)
+\\
+\item Ext Track (Slots 16-19):\\
+
+Local Sequencer Data
+\\
+\end{itemize}
+
+\item Internal Sequencer:\\
+MCL's 20 track internal sequencer.
+
+\end{itemize}
+
+

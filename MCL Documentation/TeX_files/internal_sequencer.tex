@@ -1,0 +1,39 @@
+\chapter{Internal Sequencer:}
+MCL features a powerful 20 track internal sequencer. There are 16 tracks dedicated to the MD and 4 tracks dedicated to the Analog 4 or an External Midi device.
+\paragraph{MD Sequencer Tracks:}
+\begin{itemize}
+\item 16 Track Sequencer with independent track lengths (64 max steps).
+\item Conditional Trigs and Micro Timing per step (10 degrees left or right of centre.)
+\item 4 lockable parameters per track with 64 locks per parameter. Lockable parameters are MIDI learnt and recordable from the MD.
+\item Trigless Locks.
+\item Real time record for both step and lock data.
+Chromatic Mode. (Machine pitch values are chromatically mapped to the MD. Melodies are recordable)
+\end{itemize}
+\paragraph{A4 or ExtMIDI Sequencer tracks:}
+\begin{itemize}
+\item 4 x 4-Note Polyphonic On-Off sequencer tracks. Each track can run in either high or low resolution modes. 
+\item Each track transmits on MIDI-OUT2, Midi channel = Track Numbers 1 to 6.
+\item Conditional Trigs and MicroTiming (6 degrees for high res, 10 degrees for low res)
+\item Low resolution mode up to 128 steps per track,
+\item High resolution mode up to 64 steps per track with the ability trigger successive 16th notes.
+\item Chromatics Mode with selectable scales.
+\item Legato record
+\end{itemize}
+The internal sequencer is synced to the MIDIClock source.
+\\
+\section{Internal Sequencer: Loading and Saving}
+Internal sequencer tracks are linked to the slot positions in the Grid.\\
+\\
+When storing a track within the Save menu, the internal sequencer data for that track is stored along with the track data in the specified slot.\\
+\\
+Internal Sequencer tracks are loaded when tracks are sent to the MD or A4 in the Write page.
+
+\section{Internal Sequencer Pages:}
+\textit{The primary Sequencer Pages are accessed using [\textbf{Encoder Buttons (1-4)].} Each sequencer page has access to secondary pages accessible by pressing \textbf{[Save]}}
+
+\begin{itemize}
+	\item Encoder 1: MD Step edit                          [ A4 Step edit ]
+	\item Encoder 2: MD Record Live                      [ MD Record Parameter Locks Live ]
+	\item Encoder 3: MD Parameter Lock Page A  [ MD Parameter Lock Page B ]
+	\item Encoder 4: MD/A4 Pitch Mode                [ MD/A4 Pitch Record Mode ]
+\end{itemize}

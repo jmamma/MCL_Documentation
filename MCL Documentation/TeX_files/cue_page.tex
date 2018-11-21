@@ -1,0 +1,34 @@
+ \chapter{Cue Page:}
+ \textit{Cue Page functionality when Chain Mode is enabled is currently experimental}\\
+ The Cue Page is used to send the audio of a specific track to the Audio Cue output. The audio cue output is Audio Output F on the MD.\\
+ \\
+ The CUE Page can be used in one of two ways. As an alternative to the MD Mute menu. Cued tracks are muted on the Master Output. Or as a way to preview tracks before they are played on the MD Master output, much like cueing a track on a traditional DJ mixer.\\
+\\Tracks with audio routed to the AudioCue output are denoted with an X as depicted below.\\
+
+\fbox{\includegraphics[scale=.40]{cue_page.png}}\\\\
+ \textit{The Cue Page is accessible from the PageSelect page.}
+  \subsection{Encoder Assignment:}
+ \begin{itemize}
+ 	\item \textbf{[ Encoder 1 ]: } --
+ 	\item \textbf{[ Encoder 2 ]: } --
+ 	\item \textbf{[ Encoder 3 ]: } Quantization
+ 	\item \textbf{[ Encoder 4 ]: } --
+ \end{itemize}
+ The Trigger Interface is used to interact with CUE Page. Pressing a MD trigger will toggle the CUE output of the corresponding track.
+ 
+ \subsection{Quantization Modes:}
+ Quantization modes are used to control the behaviour of the cue operations and allow for cue events to be musically timed.\\
+ \\
+ When a numerical quantization value is chosen the selected track’s cue will be toggled on the next specified multiple of the step-count.
+ \begin{itemize}
+\item --: Write tracks to current pattern as soon as possible, no muting.
+\item 02: Toggle cue on next possible 2nd step
+\item 04: Toggle cue on next possible 4th step
+\item 08: Toggle cue on next possible 8th step 
+\item 16: Toggle cue on next possible 16th step 
+\item 32: Toggle cue on next possible 32th step 
+\item 64: Toggle cue on next possible 64th step
+\item LV: Set volume of selected tracks to 0 and toggle cue.
+ \end{itemize}
+ 
+ 

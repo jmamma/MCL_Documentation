@@ -1,0 +1,73 @@
+\chapter{Write Page:}
+
+The Write Page is used to transfer tracks stored the Grid's current row, to the MD or A4.\\
+\\
+When tracks are written to either device, their corresponding External Sequencer track data will be loaded.
+\\\\
+\textit{The Write Page is assessable from the GridPage by pressing the  \textbf{[Write]} function button.}
+\\\\
+\fbox{\includegraphics[scale=.40]{write_init.png}}\\
+\subsection{Encoder Assignment:}
+\begin{itemize}
+	\item \textbf{[ Encoder 1 ]: }Destination Pattern
+	\item \textbf{[ Encoder 2 ]: }Destination Kit
+	\item \textbf{[ Encoder 3 ]: }Mute Quantization (Q)
+	\item \textbf{[ Encoder 4 ]: }--
+\end{itemize}
+\section{Writing Tracks}
+The Write Page uses the Trigger Interface to specify which slots are to be transferred to the MD.\\
+\\
+Pressing multiple triggers on the MD and then releasing them will cause the selected slots from the current row to be writen to the corresponding Tracks on the MD.
+\\
+\\The default behaviour is to write slots to tracks in a one-to-one mapping. That is to stay. Pressing triggers 1,2,3,4 will write MC slots 1,2,3,4 of the current row to MD tracks 1,2,3,4.\\
+\\
+Holding  \textbf{[Shift1]} will cause the mapping to be offset by the MD's current track number. For example: If the MD currently has track 5 selected and triggers 1,2,3,4 are chosen then tge MC Slots's 1,2,3,4 of the current row will be written to MD tracks 5,6,7,8
+\section{Write a pattern/row:}
+To write an entire pattern/row press \textbf{[Shift2]} from within the Write Page.
+All A4 sounds or external sequencer data will also be transferred/loaded.
+Master Effects settings of the first Track in the row will be written to the MD.
+
+\section{Pattern + Kit Selection:}
+Changing the Bank+Pattern encoders or the Kit encoders allow you to specify the transfer location for either the Pattern or Kit. The MD’s current pattern and kit are shown by default.
+\\
+\\If the bank encoder is rotated to the value “OG” the pattern a will sent to its original location. If the kit encoder is rotated to the value “OG” the kit will sent to its original location.\\
+
+\section{Step count:}
+The step count is synced to the MIDI Clock and will display the number of steps
+that have elapsed since the start of the pattern. The step count resets to 0 every 64 steps.
+
+\section{A4 Data Transfer:}
+When writing a track to the A4 only the sound data for the specific track is transferred. This is copied in to “workspace” memory of the Analog4 and will not overwrite any saved data.
+
+\section{Quantization Modes:}
+Quantization modes are used to control the behaviour of the write operations and allow for write events to be musically timed.\\
+\\
+When a numerical quantization value is chosen, the selected tracks will be muted before any data is transferred. After both the pattern and kit is received by the MD the selected tracks will be un-muted on the next specified multiple of the step-count.
+
+\subparagraph{Basic Mute Quantization:}
+\begin{itemize}
+\item{--: Write tracks to current pattern as soon as possible, no muting.}
+\item{02: Unmute new tracks on next possible 2nd step}
+\item{04: Unmute new tracks on next possible 4th step}
+\item{08: Unmute new tracks on next possible 8th step}
+\item{16: Unmute new tracks on next possible 16th step}
+\item{32: Unmute new tracks on next possible 32th step }
+\item{64: Unmute new tracks on next possible 64th step}
+\end{itemize}
+
+\subparagraph{Advanced Modes:}
+\begin{itemize}
+\item{P+:Transfer tracks to adjacent pattern and schedule pattern change.}
+\item{P-: Transfer tracks to previous pattern and schedule pattern change}
+
+\item{CU: Send new tracks to Audio Cue }
+\item{LV: Set volume of new tracks to 0}
+\end{itemize}
+
+
+\subparagraph{Toggle Mode:}
+When P+ mode is used, P- mode is automatically selected for the next write operation. When P- mode is used, P+ mode is automatically selected for the next write operation. With this functionality in mind you can alternate between two patterns. If the current kit is selected it will automatically be reloaded on the scheduled pattern change.
+
+\subparagraph{Audio Cue:}
+
+By sending new tracks to the Audio Cue, new tracks can be previewed with a pair of headphones before being played through the Master Output.

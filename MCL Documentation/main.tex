@@ -1,0 +1,85 @@
+
+\documentclass[openany,a4paper,12pt]{book}
+%openany causes margins to be different between odd and even pages
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+%\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\graphicspath{{images/}}
+\usepackage{hyperref}
+
+\usepackage{fontspec}
+%Set custom font, requires  XeLatex
+\setmainfont[Ligatures=TeX]{Arial}
+
+%Remove chapter numbering
+\usepackage[pagestyles]{titlesec}
+\titlespacing*{\chapter}{0pt}{*0}{12pt}
+\titlespacing*{\section}{0pt}{*2}{12pt}
+\titlespacing*{\subsection}{0pt}{*-1}{6pt}
+\titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
+\titleformat{\subsection}[display]{\normalfont\bfseries}{}{0pt}{\normalsize}
+\newpagestyle{mystyle}
+{\sethead[\thepage][][\chaptertitle]{}{}{\thepage}}
+\pagestyle{mystyle}
+
+\begin{document}
+
+\author{Justin Mammarella}
+\title{MegaCommand Live}
+\date{November 2018}
+
+\frontmatter
+\begin{titlepage}
+
+	\begin{center}
+	%\vspace*{\fill}
+	\vspace*{5.75cm}
+	\includegraphics{mcl_logo_black_short.png}
+    \vspace*{1.00cm}
+	\LARGE
+	\vspace*{0.65cm}
+	\\MegaCommand Live
+    \large
+	\\Firmware Version 2.20
+    \vspace*{2cm}
+    \\Justin Mammarella
+\end{center}
+\end{titlepage}
+
+%\maketitle
+
+\tableofcontents
+
+\mainmatter
+\include{./TeX_files/chapter01}
+\include{./TeX_files/chapter02}
+\include{./TeX_files/chapter03}
+\include{./TeX_files/GUI}
+\include{./TeX_files/chapter05}
+\include{./TeX_files/chapter06}
+\include{./TeX_files/SlotMenu}
+\include{./TeX_files/chapter07}
+\include{./TeX_files/modes_of_operation}
+\include{./TeX_files/chapter08} 
+\include{./TeX_files/chain_mode}
+\include{./TeX_files/chain_page}
+\include{./TeX_files/internal_sequencer}
+\include{./TeX_files/md_step_edit}
+\include{./TeX_files/poly_step_edit}
+\include{./TeX_files/seq_rtrk_page}
+\include{./TeX_files/parameter_locks}
+\include{./TeX_files/seq_rlck_page}
+\include{./TeX_files/seq_param_page}
+\include{./TeX_files/chromatic_page}
+\include{./TeX_files/polyphonic}
+\include{./TeX_files/mixer_page}
+\include{./TeX_files/mute_page}
+\include{./TeX_files/cue_page}
+\include{./TeX_files/wav_designer}
+\include{./TeX_files/global_settings}
+\backmatter
+
+% bibliography, glossary and index would go here.
+
+\end{document}
