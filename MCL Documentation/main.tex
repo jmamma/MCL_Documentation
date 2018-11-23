@@ -15,10 +15,11 @@
 %Remove chapter numbering
 \usepackage[pagestyles]{titlesec}
 \titlespacing*{\chapter}{0pt}{*0}{12pt}
-\titlespacing*{\section}{0pt}{*2}{12pt}
+\titlespacing*{\section}{0pt}{*-1}{12pt}
 \titlespacing*{\subsection}{0pt}{*-1}{6pt}
 \titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
-\titleformat{\subsection}[display]{\normalfont\bfseries}{}{0pt}{\normalsize}
+\titleformat{\section}[display]{\normalfont\bfseries}{}{0pt}{\LARGE}
+\titleformat{\subsection}[display]{\normalfont\bfseries}{}{0pt}{\large}
 \newpagestyle{mystyle}
 {\sethead[\thepage][][\chaptertitle]{}{}{\thepage}}
 \pagestyle{mystyle}
