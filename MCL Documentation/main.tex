@@ -16,10 +16,10 @@
 \usepackage[pagestyles]{titlesec}
 \titlespacing*{\chapter}{0pt}{*0}{12pt}
 \titlespacing*{\section}{0pt}{*-1}{12pt}
-\titlespacing*{\subsection}{0pt}{*-1}{6pt}
+\titlespacing*{\subsection}{0pt}{*-1}{12pt}
 \titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
-\titleformat{\section}[display]{\normalfont\bfseries}{}{0pt}{\LARGE}
-\titleformat{\subsection}[display]{\normalfont\bfseries}{}{0pt}{\large}
+\titleformat{\section}[display]{\normalfont\bfseries}{}{0pt}{\Large}
+\titleformat{\subsection}[display]{\normalfont}{}{0pt}{\normalsize}
 \newpagestyle{mystyle}
 {\sethead[\thepage][][\chaptertitle]{}{}{\thepage}}
 \pagestyle{mystyle}
@@ -53,16 +53,17 @@
 \tableofcontents
 
 \mainmatter
-\include{./TeX_files/chapter01}
-\include{./TeX_files/chapter02}
-\include{./TeX_files/chapter03}
+\include{./TeX_files/introduction}
+\include{./TeX_files/key_concepts}
+\include{./TeX_files/midi_setup}
 \include{./TeX_files/GUI}
-\include{./TeX_files/chapter05}
-\include{./TeX_files/chapter06}
+\include{./TeX_files/grid_slot_system}
+\include{./TeX_files/grid_page}
 \include{./TeX_files/SlotMenu}
-\include{./TeX_files/chapter07}
+\include{./TeX_files/global_settings}
+\include{./TeX_files/save_page}
 \include{./TeX_files/modes_of_operation}
-\include{./TeX_files/chapter08} 
+\include{./TeX_files/write_page} 
 \include{./TeX_files/chain_mode}
 \include{./TeX_files/chain_page}
 \include{./TeX_files/internal_sequencer}
@@ -78,7 +79,6 @@
 \include{./TeX_files/mute_page}
 \include{./TeX_files/cue_page}
 \include{./TeX_files/wav_designer}
-\include{./TeX_files/global_settings}
 \backmatter
 
 % bibliography, glossary and index would go here.

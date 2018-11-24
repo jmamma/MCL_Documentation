@@ -13,19 +13,19 @@ To ensure that the MD plays back the resulting waveform optimally, WAV Designer 
 \item \textbf{Encoder[4]}: is the Mixer Page.
 \end{itemize}
 
-\subsection{Oscillator Pages:}
-\subsubsection{Encoder Assignment:}
+\section{Oscillator Pages:}
+\subsection{Encoder Assignment:}
 \begin{itemize}
 	\item \textbf{[ Encoder 1 ]: } Pitch, note increments.
 	\item \textbf{[ Encoder 2 ]: } Fine Tune, +/- 100 cents
 	\item \textbf{[ Encoder 3 ]: } Pulse Width
 	\item \textbf{[ Encoder 4 ]: } Modify
 \end{itemize}
-\subsection{Pitch}
+\subsection{Pitch:}
 Each oscillator can run at a unique frequency.\\
 \\The pitch is adjusted in note increments by rotating \textbf{[ Encoder 1 ]}. Rotating \textbf{[ Encoder 2 ]} will adjust the frequency in cents +/-100. Holding down \textbf{[ Shift 2 ]} will display the corresponding frequency.\\
 \\The fundamental frequency of the rendered waveform is automatically selected from the oscillator that has the lowest frequency.
-\subsection{Waveforms}
+\subsection{Waveforms:}
 Each oscillator can be set to a unique waveform by pressing the \textbf{[Save]} button from it's respective page.\\
 \\
 The available waveforms are described below:
@@ -47,10 +47,12 @@ Sample values are modified by using the MD TI and rotating \textbf{[Encoder 4]}.
 \end{itemize}
 \subsection{Pulse Width:}
 TRI, PULSE and SAW waveform's pulse width adjusted by rotating \textbf{[Encoder 3]}.\\
-\fbox{\includegraphics[scale=.40]{wav_designer_pulse_width.png}}\\\\
-\subsection{Mixer Page:}
-\fbox{\includegraphics[scale=.40]{wav_designer_mixer.png}}\\
-The WAV Designer mixer page has volume levels for each of the oscillators which can be adjusted by rotating encoders 1 to 3. The fourth encoder is used to set the sample slot position. On the MD the sample slots are offset by 1 (00 = 01).\\
+\fbox{\includegraphics[scale=.40]{wav_designer_pulse_width.png}}\\
+\section{Mixer Page:}
+\fbox{\includegraphics[scale=.40]{wav_designer_mixer.png}}\\\\
+The WAV Designer mixer page has volume levels for each of the oscillators which can be adjusted by rotating encoders 1 to 3. \textit{Absolute volume levels are not important here as the resulting waveform will be automatically normalized.}
+
+\\The fourth encoder is used to set the sample slot position. On the MD the sample slots are offset by 1 (00 = 01).\\
 \\
 To render a sample and then transfer it to the MD's selected sample slot, press \textbf{[Write]}.\\
 \\
@@ -62,5 +64,4 @@ For convience, pressing the \textbf{[Save]} button will open the SampleManager w
 	\item \textbf{[ Encoder 3 ]: } Osc3 Level
 	\item \textbf{[ Encoder 4 ]: } Sample Slot
 \end{itemize}
-\\
 \textbf{Important}: The MD firmware features a nasty bug that causes the user interface to stop responding if a sample dump is received at any point after specific SYSEX messages are requested. As MCL uses SYSEX for all communication with the MD, the MD's GUI will lock up after a sample is received from WavDesigner. The only known work around at this time is to reset the MD.
