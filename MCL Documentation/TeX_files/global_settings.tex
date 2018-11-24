@@ -3,46 +3,44 @@ The Global Settings Menu is used for project management and to change a variety 
 \fbox{\includegraphics[scale=.40]{global_menu_1.png}}\\\\
 %\fbox{\includegraphics[scale=.40]{global_menu_2.png}}\\
 \textit{To enter the Global Settings menu press \textbf[ Save ] + \textbf[ Write ] from the GridPage.\\
-To enter submenus press one of the Encoder Buttons. Use the function buttons to go back.}
+To enter sub-menus press one of the Encoder Buttons. Use the function buttons to go back one level or exit the menu.}
 \section{Load Project:}
-The Load Project submenu will display a list of MCL Projects that are stored on the root folder of the Micro SD card. \\
-The loaded project is always selected first and is indicated by an '>' character next to its name.\\\\
+The Load Project sub-menu will display a list of MCL Projects that are stored on the root folder of the Micro SD card.\\\\
+The current project is always selected first and is indicated by an '>' character next to its name.\\\\
 \fbox{\includegraphics[scale=.40]{project_menu.png}}\\
 \section{New Project:}
-The New Project options loads the New Project Page. This page allows you to specify a name for a project which will then be created.\\\\
+The New Project options loads the New Project Page. This page allows you to specify a name for a project which will then be created.\\
 \fbox{\includegraphics[scale=.40]{new_project.png}}\\
 \section{MIDI Settings:}
-The MIDI menu allows you to configure the behaviour of MIDI ports one and two.\\
+The MIDI menu allows you to configure MIDI ports one and two.\\
 \fbox{\includegraphics[scale=.40]{midi_menu.png}}
-
 \subsection{Turbo MIDI:}
-The TURBO MIDI speed can be set for each port (8x turbo is recommmened for best performance.) To disabled turbo MIDI set the speed to 1x
+The TURBO MIDI speed can be set for each port (8x turbo is recommended for best performance.) To disabled turbo MIDI set the speed to 1x.
 \subsection{MIDI Clock:}
 MCL does not generate its own MIDI Clock, instead it relies on a clock signal from either port 1 or port 2.\\\\
 The CLK REC parameter can be used to set the receive port for the MIDI clock.\\
-The CLK SEND parameter can be used to forward the MIDI Clock from port 1 to port 2.\\
+The CLK SEND parameter can be used to forward the MIDI Clock from port 1 to port 2.\\\\
 \textit{Note: The MD's clock settings are controlled by MCL and will be automatically configured based on the options selected above.}
 
 \subsection{MIDI Forward:}
-The MIDI FWD option allows you to forward MIDI meessages received on port 1 to the MIDI out of port 2 or vice versa.
+The MIDI FWD option allows you to forward MIDI messages received on port 1 to the MIDI out of port 2 or vice versa.
 
 \section{Machinedrum Settings:}
-The Machinedrum settings are used to control how the MCL firmware interracts with the MD
+The Machinedrum settings are used to control how the MCL firmware interacts with the MD.
 \fbox{\includegraphics[scale=.40]{machinedrum_menu.png}}\\
 \subsection{Auto Save:}
-MCL will periodically request the current Kit from the MD. In order to get the most up-to-date copy of the kit, it must first ask the MD to save the kit
+MCL will periodically request the current Kit from the MD. In order to get the most up-to-date copy of the kit, it must first instruct the MD to save the kit
 \\
-You can choose to disable this behaviour by turning AUTO SAVE to off.
+You can choose to disable this behaviour by turning AUTO SAVE to off. If AUTO-SAVE is disabled master effects settings and track types may be inconsistent between the MD and the MC.
+
 \subsection{Sequencer Merge:}
-Chain Mode will ignore MD sequencer data and only load data for the internal sequencer.\\
-\\
-When Saving a slot from the SavePage, you can choose to have the MD Sequencer data automatically merged in to the internal sequencer data for that slot by setting AUTO SAVE to ON.
+When Saving a slot from the SavePage, you can choose to have the MD Sequencer data automatically merged in to the internal sequencer data for that slot by setting SEQ MERGE to AUTO.
+\textit{This option is useful because Chain Mode will ignore MD sequencer data and only load data for the internal sequencer.}
 \subsection{CTRL CHAN:}
-The CTRL CHAN setting is used to specify which note data the MD responds to when in Chromatic modes. \\\\The default value is INT (internal) and states that the MD will be controlled by the Trigger Interface (TI) in chromatic mode. 
-\\If set to a channel number, the MD will be controlled by the specified MIDI channel on port 2. 
-\\If set to OMNI the MD will be controlled by any channel on port 2.
+The CTRL CHAN setting is used to specify which note data the MD responds to when in Chromatic modes. \\\\The default value is INT (internal) and states that the MD will be controlled by the Trigger Interface (TI) in chromatic mode. \\
+\\If set to a channel number, the MD will be controlled by the specified MIDI channel on port 2. If set to OMNI the MD will be controlled by any channel on port 2.
 \subsection{Poly Config}
-The POLY CONFIG option opens the Voice Select page, and allows 2 or more voices of the MD to act as voices of a polyphonic synthesizer.
+The POLY CONFIG option opens the Voice Select page and allows 2 or more voices of the MD to act as voices of a polyphonic synthesizer.
 \section{Chain Mode Settings:}
 The CHAIN setting enables or disables Chain Mode.\\
 \fbox{\includegraphics[scale=.40]{chain_menu.png}}\\
@@ -51,12 +49,12 @@ The CHAIN setting enables or disables Chain Mode.\\
 \begin{itemize}
 	\item Automatic: If the number of loops is greater than 0, slots will automatically jump to the specified Row after N loops.
 	\item Manual: Automatic slot jumping is disabled, but tracks can be chained using the quantization rules in the Chain Page.
-	\item Random: Slots will jump after a random number of iterations to a random row position bounded by the min and max settings specified in GlobalSetting
+	\item Random: Slots will jump after a random number of iterations to a random row position bounded by the min and max settings specified in Global Settings.
 \end{itemize}
 \subsection{Rand Min/Max:}
 The random min + max values are used to specify the minimum + maximum range of rows that will be loaded when random mode is enabled.
 \section{System Settings:}
 \subsection{Display:}
-Display is used to enable the OLED display mirror. Using the provided python script and a USB connection between the MC and your comptuer, it is possible to mirror the OLED display over the serial port to your computer screen.
+The display setting is used to enable the OLED display mirror. Using the provided python script and a USB connection between the MC and your computer, it is possible to mirror the OLED display over the serial port to your computer screen.
 \subsection{Screensaver:}
-To preserve the OLED display a 5 minute scrensaver is disabled by default. After 5 minutes of inactivity the display will turn black to prevent any burn in.
+To preserve the OLED display a 5 minute screen-saver is enabled by default. After 5 minutes of inactivity the display will turn black to prevent any burn in.
