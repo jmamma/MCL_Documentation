@@ -1,11 +1,9 @@
 \chapter{Chain Page}
-When chain mode is enabled the Write Page is replaced with the Chain Page.\\
+The chain page is used to load slots from the Grid. When a slot is loaded, Machine/Sound data is sent to the attached device and the internal sequencer data for that track is loaded.\\
 \\
-The chain page allows you to manually load slots at a specific transition interval defined by the Quantization rules.\\
+If the sequencer is stopped the selected slots will be loaded immediately. If the sequencer is running the slots will be placed in the transition queue, to be loaded at the next interval defined by the selected quantization rule.\\
 \\
-The minimum Quantization value is 4 steps. Quantization values can be changed by adjusting the "Q:" parameter.
-\\\\
-\textit{When Chain Mode is enabled, the Chain Page is assessable from the GridPage by pressing the  \textbf{[Write | Chain]} function button.}
+\textit{The Chain Page is accessible from the GridPage by pressing the  \textbf{[Write | Chain]} function button.}
 \\\\
 \fbox{\includegraphics[scale=.40]{chain_page.png}}
 \section{Encoder Assignment:}
@@ -16,3 +14,13 @@ The minimum Quantization value is 4 steps. Quantization values can be changed by
 	\item \textbf{[ Encoder 3 ]: } Quantization (Q)
 	\item \textbf{[ Encoder 4 ]: }--
 \end{itemize}
+\section{Quantization Rules}
+The quantization rules specify the transition interval for the selected slots.\\
+\\
+The minimum Quantization value is 4 steps. Quantization values can be changed by adjusting the "Q:" parameter and increase in powers of 2. ie 4,8,16,32,64
+\section{Chain invidiual tracks:}
+Tracks can be placed in the transition queue, to be loaded at the next specified Quantization interval. To do so, simply press and release the corresponding trigger buttons in the Chain Page.
+\section{Chain a pattern/row:}
+From within the Chain Page, pressing shift2 will chain an entire row/pattern consisting of all 16 MD tracks + 4 A4/Ext tracks.\\
+\\
+\textit{Note: If sequencer playback is stopped, tracks will be loaded immediately. When chaining an entire row, the current Kit will be replaced and master FX settings loaded.}
