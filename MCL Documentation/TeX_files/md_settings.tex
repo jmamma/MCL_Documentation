@@ -1,12 +1,21 @@
 \chapter{Machinedrum Settings:}
 The Machinedrum settings are used to control how the MCL firmware interacts with the MD.
 \fbox{\includegraphics[scale=.40]{machinedrum_menu.png}}\\
-\subsection{Auto Save:}
-MCL will periodically request the current Kit from the MD. In order to get the most up-to-date copy of the kit, it must first instruct the MD to save the kit. You can choose to disable this behaviour by turning AUTO SAVE to off. \textit{If AUTO-SAVE is disabled master effects settings and track types may be inconsistent between the MD and the MC (some pages may not work correctly as a result).}
+\section{Kit Save:}
+MCL will periodically request the current Kit from the MD. In order to get the most up-to-date copy of the kit, it must first instruct the MD to save the kit. You can choose to disable this behaviour by turning AUTO SAVE to off. \textit{Some pages may not work correctly if Kit Save is disabled, as they require an up-to-date cache of the current kit).}
+\section{Normalize:}
+Auto Normalize: When activated,  all saved tracks have their LEV boosted to
+127, and parameters controlling VOL (including parameter locks) are lowered
+to compensate. VOL parameter locks and LFOs with destination VOL are 
+adjusted too.
 
-\subsection{CTRL CHAN:}
+The resulting track loudness remains the same, but the Track LEV parameter
+is no longer set arbitrarily. LEV == 127 will always be the loudest volume
+for a track.
+
+This is extremely useful when using the Mixer.
+\section{CTRL CHAN:}
 The CTRL CHAN setting is used to specify which note data the MD responds to when in Chromatic modes. \\\\The default value is INT (internal) and states that the MD will be controlled by the Trigger Interface (TI) in chromatic mode. \\
 \\If set to a channel number, the MD will be controlled by the specified MIDI channel on port 2. If set to OMNI the MD will be controlled by any channel on port 2.
-\subsection{Poly Config}
+\section{Poly Config}
 The POLY CONFIG option opens the Voice Select page and allows 2 or more voices of the MD to act as voices of a polyphonic synthesizer.
-\pagebreak
