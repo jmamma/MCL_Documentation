@@ -1,22 +1,23 @@
 \chapter{Loudness Page}
-Gain staging and loudness levels between patterns on the MD can be a complicated issue.\\
+Gain staging and matching loudness levels between patterns on the MD can be a complicated issue.\\
 \\
-As a general rule of thumb, the track LEV parmater should control the absolute volume of a track where as the VOL parameter should be used to control relative level to other tracks. This means that you can confidently set a sounds level to it's maximum by turning the LEV paramater to 127, and not unexpectedly exceed it.\\
+As a general rule of thumb, the track LEV parameter should control the absolute volume of a track; the VOL parameter should be used to control relative level to other tracks. This allows setting a sound level to its maximum by turning the LEV paramater to 127, and not unexpectedly exceed it.\\
 \\
-When working on different kits you can end up with completely different loudness levels, depending on your style of programming and the configuration of master effects.\\
+When working on different kits you can end up with completely different loudness levels, depending on your style of programming and the configuration of master effects.\\\\
+\fbox{\includegraphics[scale=.40]{loudness_page.png}}
+\\\\\textit{The Loudness Page is accessible from the PageSelect page.}
+\section{Encoder Assignment:}
+\begin{itemize}
+	\item \textbf{[ Encoder 1 ]: } Gain adjustment
+	\item \textbf{[ Encoder 2 ]: } -
+    \item \textbf{[ Encoder 3 ]: } -
+	\item \textbf{[ Encoder 4 ]: } -
+\end{itemize}
 
-The Loudness page features 3 key functions that attempts to address this.
-
-\section{Functions:}
-
-**Track Level Normalise:** When activated,  all track levels have their LEV boosted to 127, and parameters controlling VOL (including parameter locks) are lowered to compensate. 
-
-The resulting track loudness remains the same, but the Track LEV parameter is no longer set arbitrarily. LEV == 127 will always be the loudest volume for a track.
-
-Gain Boost:
-
+\section{Gain Boost:}
 The ability to boost / reduce the VOL of all tracks in the current kit by a percentage amount.
+\\Pressing any of the encoder buttons will apply the boost/reduction.
 
-Peak Analyser.
-
+\section{Peak Analyser.}
+\textbf{[Save]}\\\\
 The MD is instructed to record 1 Bar of the current pattern. The recording is transferred to the MegaCommand and the WAV file is decoded and analysed. The peak value in the recording is found and this is used to determine an appropriate gain boost to increase pattern/kit loudness using the Boost function above.
