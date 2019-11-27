@@ -1,18 +1,20 @@
  \chapter{Route Page:}
  The Route Page is used to direct the audio of a specific MD track to a selected output. \\
- \\\textbf{[ Encoder 1]} can be used to select the audio output destination. The destination can be one of MD's external outputs C, D, E, F.\\
+ 
+\screenshot{route.png}
+\textit{The Route Page is accessible from the PageSelect page.}
 
-\fbox{\includegraphics[scale=.40]{route_page.png}}\\\\
- \textit{The Route Page is accessible from the PageSelect page.}
-  \section{Encoder Assignment:}
- \begin{itemize}
- 	\item \textbf{[ Encoder 1 ]: } Output Selection
- 	\item \textbf{[ Encoder 2 ]: } --
- 	\item \textbf{[ Encoder 3 ]: } Quantization
- 	\item \textbf{[ Encoder 4 ]: } --
- \end{itemize}
-  The trigger interface is used to toggle the output of selected tracks, between Main Outputs and the chosen external output.
- \section{Quantization Modes:}
+%\fbox{\includegraphics[scale=.40]{route_page.png}}
+
+\encoders{Output Selection}{--}{Quantization}{--}
+
+\textbf{[ Encoder 1]} can be used to select the audio output destination. The destination can be one of MD's external outputs C, D, E, F.
+
+The trigger interface is used to toggle the output of selected tracks, between Main Outputs and the chosen external output.
+
+\screenshot{route_action.png}
+
+\section{Quantization Modes:}
  Quantization modes are used to control the timing of the routing changes so that they are in sync with the sequencer.
  \\
  When a numerical quantization value is chosen the selected track’s cue will be toggled on the next specified multiple of the step-count.

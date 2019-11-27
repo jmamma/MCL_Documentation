@@ -1,12 +1,18 @@
 \chapter{Parameter Locks:}
-The internal sequencer implements parameter locks for the 16 MD tracks. Each of these track has access to 4 Parameter Locks, with 64 steps per lock. Trigless locks are supported, meaning parameter values can change without retriggering the sound. \\\\Unique characters are used to represent the types of locks and are discussed below.
-\section{Lockless Trigs:}
-\fbox{\includegraphics[scale=.40]{lockless_trigs.png}}\\
-\textit{Triggers on steps 1, 5, 9 ,13. No locks.\\
-Trigs can only be added or removed from the} StepEdit page.\\
-\section{Locked Trigs:}
-\fbox{\includegraphics[scale=.40]{locked_trigs.png}}\\
-\textit{Triggers and locks on steps 1, 5, 9, 13.\\}
-\section{Trigless Locks:}
-\fbox{\includegraphics[scale=.40]{trigless_locks.png}}\\
-\textit{Locks on steps 1,5,9,13 . No triggers}
+The internal sequencer implements parameter locks for the 16 MD tracks. Each of these track has access to 4 Parameter Locks, with 64 steps per lock. 
+
+\screenshot{plock.png}
+
+Trigless locks are supported, meaning parameter values can change without retriggering the sound.
+The trigs and the locks are shown independently on the display, where the upper rectangle denotes the lock, and the lower square the trig.
+A solid box indicates active trig/lock, and during playback, the current playing trig square will be inverted.
+
+\screenshot{plock_action.png}
+
+\textit{Note: Trigs can only be added or removed from the \textbf{StepEdit} page.}
+
+\section{Lock Targets}
+
+Each track can host up to four parameter lock targets. The display shows two of them at a time. Use \textbf{[Save]} to toggle between the two groups, and the group is indicated by \textbf{PARAM-A} or \textbf{PARAM-B} in the left information panel.
+
+\textit{Note: If using chromatic step editing in the \textbf{StepEdit} page, one lock target will be occupied for controlling the pitch.}

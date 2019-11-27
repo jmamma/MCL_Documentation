@@ -1,23 +1,26 @@
 \chapter{Mixer Page:}
-The mixer page graphically illustrates the audio  levels of the sixteen MD tracks of the current Kit.\\
-\\
-The trigger interface is used in conjunction with \textbf{[ Encoder 1]} to raise or lower the volume of multiple tracks simultaneously. The remaining encoders can be used to adjust the filter parameters of the selected tracks. \\
-\\
-\fbox{\includegraphics[scale=.40]{mixer_page_init.png}}\\\\
-\textit{The Mixer Page is accessible from the PageSelect page.}
-\section{Encoder Assignment:}
-\begin{itemize}
-	\item \textbf{[ Encoder 1 ]: } Level
-	\item \textbf{[ Encoder 2 ]: } FLTF (Filter Frequency)
-    \item \textbf{[ Encoder 3 ]: } FLTW (Filter width)
-	\item \textbf{[ Encoder 4 ]: } FLTQ (Filter resonance)
-\end{itemize}
+The mixer page displays the audio levels, or parameter values of the sixteen MD tracks of the current Kit.
 
+The trigger interface is used in conjunction with \textbf{[ Encoder 1]} to raise or lower the volume of multiple tracks simultaneously. The remaining encoders can be used to adjust the filter parameters of the selected tracks. 
+
+%\fbox{\includegraphics[scale=.40]{mixer_page_init.png}}\\\\
+\screenshot{mixer_page_init.png}
+
+\textit{The Mixer Page is accessible from the PageSelect page.}
+
+\encoders{Level}{FLTF (Filter Frequency)}{FLTW (Filter width)}{FLTQ (Filter resonance)}
+
+\vspace{-0.4cm}
 
 \section{Audio Mutes}
+\vspace{-0.2cm}
+
 The top row of mixer page shows the Audio Mute state of each Track. The audio mute state changes the audio routing of muted tracks. When a track is muted from the Mixer Page, audio is routed to the Audio Output specified on the Route Page.\\
 \\
-\textit{Audio mutes are independent from the MD's sequencer mute page} \\
+\textit{Audio mutes are independent from the MD's sequencer mute page.}
 \subsection{Mute Tracks}Holding down \textbf{[ Chain ]} and pressing a trigger buttons on the MD allows you to quickly toggle the mute state of a track.
 \subsection{Solo Tracks}
 Holding down \textbf{[ Save ]} and pressing the trigger buttons on the MD allows you to quickly solo selected tracks.
+\subsection{Recall Tracks}
+When entering the Mixer page, a snapshot will be taken for Level, FLTF, FLTW and FLTQ.
+Holding down \textbf{[Shift2]} and pressing the trigger buttons on the MD recalls these parameter settings.

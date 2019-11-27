@@ -1,16 +1,22 @@
 \chapter{Machinedrum Settings:}
 The Machinedrum settings are used to control how the MCL firmware interacts with the MD.
-\fbox{\includegraphics[scale=.40]{machinedrum_menu.png}}\\
+\screenshot{machinedrum_menu.png}
+
 \section{Kit Save:}
 Before entering a Page, MCL will attempt to download the MD's current kit. In order to get an up to date version of the kit, it must first instruct the MD to save the current kit. You can choose to disable this behaviour by turning AUTO SAVE to off. By disabling this, some pages may not work correctly.
 \section{Normalize:}
 When activated, all saved tracks have their LEV boosted to 127, and parameters controlling VOL (including parameter locks) are lowered
 to compensate. LFOs with destination VOL are 
-adjusted too.\\
-\\
+adjusted too.
+
 The resulting track loudness remains the same, but the Track LEV parameter is no longer set arbitrarily. LEV == 127 will always be the loudest volume for each track.
 \section{CTRL CHAN:}
-The CTRL CHAN setting is used to specify which note data the MD responds to when in Chromatic modes. \\\\The default value is INT (internal) and states that the MD will be controlled by the Trigger Interface (TI) in chromatic mode. \\
-\\If set to a channel number, the MD will be controlled by the specified MIDI channel on port 2. If set to OMNI the MD will be controlled by any channel on port 2.
+The CTRL CHAN setting is used to specify which note data the MD responds to when in Chromatic modes.
+
+The default value is INT (internal) and states that the MD will be controlled by the Trigger Interface (TI) in chromatic mode.
+
+If set to a channel number, the MD will be controlled by the specified MIDI channel on port 2. If set to OMNI the MD will be controlled by any channel on port 2.
 \section{Poly Config}
 The POLY CONFIG option opens the Voice Select page and allows 2 or more voices of the MD to act as voices of a polyphonic synthesizer.
+\section{SD Drive}
+The SD Drive option opens the file browser to load/save snapshots of MD's internal memory, including global settings, kits and patterns.

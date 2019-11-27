@@ -7,6 +7,7 @@
 
 \graphicspath{{images/}}
 \usepackage{hyperref}
+\usepackage[table,xcdraw]{xcolor}
 
 \usepackage{fontspec}
 %Set custom font, requires  XeLatex
@@ -15,18 +16,50 @@
 %Remove chapter numbering
 \usepackage[pagestyles]{titlesec}
 \titlespacing*{\chapter}{0pt}{*0}{12pt}
-\titlespacing*{\section}{0pt}{*-1}{12pt}
-\titlespacing*{\subsection}{0pt}{*-1}{12pt}
+\titlespacing*{\section}{0pt}{*-2}{10pt}
+\titlespacing*{\subsection}{0pt}{*-2}{10pt}
 \titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
 \titleformat{\section}[display]{\normalfont\bfseries}{}{0pt}{\Large}
 \titleformat{\subsection}[display]{\normalfont\bfseries}{}{0pt}{\normalsize}
 \newpagestyle{mystyle}
 {\sethead[\thepage][][\chaptertitle]{}{}{\thepage}}
 \pagestyle{mystyle}
+\setlength\parindent{0pt}
+\setlength{\parskip}{0.2em}
+
+\newcommand{\screenshot}[1]{\begin{figure}[h]
+    %\centering
+    \fbox{\includegraphics[scale=.40]{#1}}
+\end{figure}}
+
+\newcommand{\encoders}[4]{
+\begin{figure}[h]
+    %\centering
+    \begin{tabular}{|
+    >{\columncolor[HTML]{C0C0C0}}l |l|}
+    \hline
+    \multicolumn{2}{|l|}{\cellcolor[HTML]{C0C0C0}\textbf{Encoder Assignment \hspace{8.4cm} }}  \\[3pt] \hline
+    Encoder 1                          & #1                         \\[3pt]  \hline
+    Encoder 2                          & #2                         \\[3pt]  \hline
+    Encoder 3                          & #3                         \\[3pt]  \hline
+    Encoder 4                          & #4                         \\[3pt]  \hline
+    \end{tabular}
+\end{figure}
+%\begin{itemize}
+%	\item \textbf{[ Encoder 1 ]: } #1
+%	\item \textbf{[ Encoder 2 ]: } #2
+%	\item \textbf{[ Encoder 3 ]: } #3
+%	\item \textbf{[ Encoder 4 ]: } #4
+%\end{itemize}
+}
 
 \begin{document}
 
-\author{Justin Mammarella}
+\author{
+    Justin Mammarella
+    \and
+    Yatao Li
+}
 \title{MegaCommand Live}
 \date{November 2019}
 
@@ -43,9 +76,10 @@
 	\\MegaCommand Live
     \large
 	\\Firmware Version 2.50
-	\footnote{Manual Revision: 01/12/2019}
+	\footnote{Manual Revision: 11/27/2019}
     \vspace*{2cm}
     \\Justin Mammarella
+    \\Yatao Li
 \end{center}
 \end{titlepage}
 
@@ -82,10 +116,13 @@
 \include{./TeX_files/polyphonic}
 \include{./TeX_files/mixer_page}
 \include{./TeX_files/route_page}
-\include{./TeX_files/ram_page}
+\include{./TeX_files/lfo_page}
 \include{./TeX_files/sound_page}
 \include{./TeX_files/loudness_page}
 \include{./TeX_files/wav_designer}
+\include{./TeX_files/fx_delay_page}
+\include{./TeX_files/fx_reverb_page}
+\include{./TeX_files/ram_page}
 \backmatter
 
 % bibliography, glossary and index would go here.
