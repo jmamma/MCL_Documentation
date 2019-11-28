@@ -32,25 +32,49 @@
     \fbox{\includegraphics[scale=.40]{#1}}
 \end{figure}}
 
-\newcommand{\encoders}[4]{
-\begin{figure}[h]
-    %\centering
-    \begin{tabular}{|
-    >{\columncolor[HTML]{C0C0C0}}l |l|}
-    \hline
-    \multicolumn{2}{|l|}{\cellcolor[HTML]{C0C0C0}\textbf{Encoder Assignment \hspace{8.4cm} }}  \\[3pt] \hline
+\newcommand{\encodersimpl}[4]{
+    \multicolumn{2}{|l|}{\cellcolor[HTML]{C0C0C0}\textbf{Encoder Assignment \hspace{8.3cm} }}  \\[3pt] \hline
     Encoder 1                          & #1                         \\[3pt]  \hline
     Encoder 2                          & #2                         \\[3pt]  \hline
     Encoder 3                          & #3                         \\[3pt]  \hline
     Encoder 4                          & #4                         \\[3pt]  \hline
-    \end{tabular}
-\end{figure}
 %\begin{itemize}
 %	\item \textbf{[ Encoder 1 ]: } #1
 %	\item \textbf{[ Encoder 2 ]: } #2
 %	\item \textbf{[ Encoder 3 ]: } #3
 %	\item \textbf{[ Encoder 4 ]: } #4
 %\end{itemize}
+}
+
+\newcommand{\buttonsimpl}[4]{
+    \multicolumn{2}{|l|}{\cellcolor[HTML]{C0C0C0}\textbf{Function Button Assignment}}  \\[3pt] \hline
+    Save                               & #1                         \\[3pt]  \hline
+    Shift1                             & #2                         \\[3pt]  \hline
+    Write                              & #3                         \\[3pt]  \hline
+    Shift2                             & #4                         \\[3pt]  \hline
+}
+
+\newcommand{\encoders}[4]{
+\begin{figure}[h]
+    %\centering
+    \begin{tabular}{|
+    >{\columncolor[HTML]{C0C0C0}}l |l|}
+    \hline
+    \encodersimpl{#1}{#2}{#3}{#4}
+    \end{tabular}
+\end{figure}
+}
+
+\newcommand{\encodersbuttons}[8]{
+\begin{figure}[h]
+    %\centering
+    \begin{tabular}{|
+    >{\columncolor[HTML]{C0C0C0}}l |l|}
+    \hline
+    \encodersimpl{#1}{#2}{#3}{#4}
+    \buttonsimpl{#5}{#6}{#7}{#8}
+    \end{tabular}
+\end{figure}
 }
 
 \begin{document}

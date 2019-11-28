@@ -6,16 +6,11 @@ Each oscillator can be set to a unique waveform and pitch. The 3 oscillators are
 \\
 To ensure that the MD plays back the resulting waveform optimally, WAV Designer performs all the heavy lifting for you. This involves calculating sample length and rate based on the fundamental frequency, auto detecting loop points and normalizing the waveform.
 \section{WAV Designer Pages}
-\textit{WAV Designer is accessible from the \textbf{PageSelect} page and consists of 4 sub-pages. Once you have entered the WAV Designer you can access the sub-pages using the four Encoder buttons.}
-
-\begin{itemize}
-\item \textbf{Encoders[1-3]}: select Oscillator Pages 1-3 respectively.
-\item \textbf{Encoder[4]}: is the Mixer Page.
-\end{itemize}
+\textit{WAV Designer is accessible from the \textbf{PageSelect} page and consists of 4 sub-pages. Once you have entered the WAV Designer you can access the sub-pages using the \textbf{[Save]} button.}
 
 \section{Oscillator Pages:}
 
-\encoders{Pitch, note increments.}{Fine Tune, +/- 100 cents}{Pulse Width}{Modify}
+\encodersbuttons{Pitch, note increments.}{Fine Tune, +/- 100 cents}{Pulse Width}{Modify}{SubPage Select}{Page Select}{--}{Waveform Select}
 
 \subsection{Pitch:}
 Each oscillator can be tuned to a unique frequency.\\
@@ -53,11 +48,7 @@ The Oscillator Mixer Page has volume levels for each of the oscillators which ca
 To render a sample and then transfer it to the MD's selected sample slot, press \textbf{[Write]}.\\
 \\
 For convience, pressing the \textbf{[Save]} button will open the SampleManager window on the MD. You can also choose the destination slot from here.
-\subsubsection{Encoder Assignment:}
-\begin{itemize}
-	\item \textbf{[ Encoder 1 ]: } Osc1 Level
-	\item \textbf{[ Encoder 2 ]: } Osc2 Level
-	\item \textbf{[ Encoder 3 ]: } Osc3 Level
-	\item \textbf{[ Encoder 4 ]: } Sample Slot
-\end{itemize}
+
+\encodersbuttons{Osc1 Level}{Osc2 Level}{Osc3 Level}{Sample Slot}{SubPage Select}{Page Select}{Render+Transfer}{--}
+
 \textbf{Important}: The MD firmware features a nasty bug that causes the user interface to stop responding if a sample dump is received at any point after specific SYSEX messages are requested. As MCL uses SYSEX for all communication with the MD, the MD's GUI will lock up after a sample is received from WavDesigner. The only known work around at this time is to reset the MD.
