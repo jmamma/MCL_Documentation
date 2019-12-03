@@ -1,0 +1,9 @@
+\chapter{ Workflow: }
+
+The Grid is similar to the banks of the MD, but different. An active pattern is first chain-written from the Grid into the Internal Sequencer and then ready for playback. 
+
+Different tracks from different rows in the Grid can be mix-and-matched into the Internal Sequencer too.
+
+Patterns created in the Sequencer Pages are kept in the Internal Sequencer, and thus not immediately saved to the Grid, until the MCL firmware is told so in the Save Page. 
+
+A common gotcha is to create a pattern in the Sequencer Pages, use the Chain Write page to load data from the Grid, only to find the just-created pattern gone. To avoid this, make sure to \textbf{save modified internal sequence before chain write}.
