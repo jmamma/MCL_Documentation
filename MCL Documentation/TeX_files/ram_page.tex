@@ -1,0 +1,40 @@
+\chapter{RAM Page:}
+The MCL firmware is equipped with two RAM Pages. A RAM page is used to automate the recording and playblack of RAM-R1 and RAM-P1 machines.
+The RAM pages can be used to sample the MD main outputs or the External Inputs in either Mono or Stereo. The recorded loop can then be played backed.
+Slicing and modulating allows for interesting musical effects.
+
+\screenshot{ram1.png}
+\screenshot{ram1_action.png}
+\textit{To enter the LFO Page: press and hold \textbf{[Shift1|PageSelect]}, then press \textbf{[Trigger 4]}.}
+
+By default the LFO engine is deactivated. To toggle it ON, press \textbf{[Save]}.
+
+\buttons{Toggle LFO ON/OFF}{PageSelect}{Toggle MOD/DST}{LFO Mode}
+
+\section{Modulation Source}
+
+The modulation source shape, speed and depth can be controlled. The subpage index will show as ``LFO>MOD'' on the left information panel.
+
+\screenshot{lfo_action.png}
+
+\newpage
+
+\encoders{Waveform}{LFO Speed}{Target 1 Depth}{Target 2 Depth}
+
+\section{Modulation Target}
+To switch to the Modulation Target subpage, press \textbf{[Shift2]}. The subpage index will show as ``LFO>DST'' on the left information panel.
+
+\screenshot{lfo_action_trig3.png}
+
+Only valid parameter types for the current target track will be shown for Encoder2/Encoder4. Master FX machines are regarded as individual tracks, each with its own modulation target parameter types. This extends the mastering capabilities of MD, for that one can use the LFOs to create sidechain-like effects etc.
+
+\encoders{Target Machine 1}{Param Type 1}{Target Machine 2}{Param Type 2}
+
+\section{LFO Operation Modes}
+
+The LFO engine operates in different modes, namely \textbf{FREE}, \textbf{TRIG}, \textbf{ONESHOT}. Use \textbf{[Write]} to switch between them.
+\begin{itemize}
+    \item FREE: Free-running LFO.
+    \item TRIG: The LFO is reset on each trig.
+    \item ONESHOT: The LFO is reset each trig but only plays through one cycle
+\end{itemize}

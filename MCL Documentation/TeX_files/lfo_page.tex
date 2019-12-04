@@ -23,7 +23,7 @@ To switch to the Modulation Target subpage, press \textbf{[Shift2]}. The subpage
 
 \screenshot{lfo_action_trig3.png}
 
-Only valid parameter types for the current target track will be shwon for Encoder2/Encoder4. Master FX machines are regarded as individual tracks, each with its own modulation target parameter types. This extends the mastering capabilities of MD, for that one can use the LFOs to create sidechain-like effects etc.
+Only valid parameter types for the current target track will be shown for Encoder2/Encoder4. Master FX machines are regarded as individual tracks, each with its own modulation target parameter types. This extends the mastering capabilities of MD, for that one can use the LFOs to create sidechain-like effects etc.
 
 \encoders{Target Machine 1}{Param Type 1}{Target Machine 2}{Param Type 2}
 
@@ -32,6 +32,6 @@ Only valid parameter types for the current target track will be shwon for Encode
 The LFO engine operates in different modes, namely \textbf{FREE}, \textbf{TRIG}, \textbf{ONESHOT}. Use \textbf{[Write]} to switch between them.
 \begin{itemize}
     \item FREE: Free-running LFO.
-    \item TRIG: Use TI to specify LFO trigs.
-    \item ONESHOT: Activates on the first trig, and then runs free.
+    \item TRIG: The LFO is reset on each trig.
+    \item ONESHOT: The LFO is reset each trig but only plays through one cycle
 \end{itemize}
