@@ -1,14 +1,18 @@
 \chapter{Save Page}
 
-The Save Page is used to save track data from the Machinedrum or AnalogFour to a specific slots in the current row of the Grid.
+The Save Page is used to save track data from the Internal Sequencer, Machinedrum or AnalogFour to  specific slots in the current row of the Grid.\\
+\\
+There are three different save modes available:
+\begin{itemize}
+    \item SEQ: Save internal sequencer data and MD sound data.
+    \item MD: Copy MD Sequencer data. Save MD sequencer data and MD sound data.
+    \item MERGE: Merge MD Sequencer data with internal sequencer. Save sequencer data and MD sound data.
+\end{itemize}
+MD's Master Effects settings are also saved with each MD Track.
+\textit{For technical reasons, MD and MERGE modes are only available when the sequencer playback is stopped.}
+\\
+\\The Save page is also used to save A4 tracks. When an A4 track is saved, the Sound Settings for the chosen track together with the internal sequencer data are stored together. Save mode has no effect here.
 
-When a MD's track is saved to a slot, the track's Machine settings and the MC's internal sequencer data for the chosen track are stored together.
-
-Similarly, when an A4 track is saved, the Sound Settings for the chosen track together with the internal sequencer data are stored together.
-
-\textbf{To retain the MD's pattern data for the selected track(s), you must use the sequencer Merge functionality described below.}
-
-Master Effects settings are also saved with each MD Track.
 %\fbox{\includegraphics[scale=.40]{save_page.png}}\\
 
 \screenshot{save_to_grid.png}
@@ -16,18 +20,6 @@ Master Effects settings are also saved with each MD Track.
 \textit{The Save Page is accessible from the GridPage by pressing the  \textbf{[Save]} function button.}
 
 \encodersbuttons{Mode}{--}{--}{--}{cancels the save.}{--}{--}{save all tracks.}
-
-\vspace{-0.5cm}
-
-\section{Mode:}
-
-\vspace{-0.5cm}
-
-\screenshot{save_to_grid_merge.png}
-
-The Mode option specifies which data source to save to the grid. It can be either the MD sequencer, the internal sequencer, or both, where the MD's pattern data is merged into the internal sequencer. When a save mode is chosen, the data flow will be updated on the display.
-
-\textit{Note: The Merge/MD options are only available when the sequencer playback is stopped.}
 
 \section{Saving Individual Tracks}
 The Save Page uses the Trigger Interface to specify which tracks are to be saved. Pressing multiple trigger buttons on the MD and then releasing them will cause the selected tracks to be stored in the corresponding slots of the current row.

@@ -3,7 +3,7 @@
 \begin{itemize}
 \item Page:
 \\
-The MCL firmware consists of pages accessible through the MC's function and encoder buttons. Each page contains unique behaviour and is described in this manual.
+The MCL firmware consists of pages accessible through the MC's GUI. Each page contains unique behaviour and is described in this manual.
 \item Project:
 \\
 A project stored on the Micro SD-Card. Each project contains one Grid. 
@@ -16,7 +16,7 @@ The grid dimensions are 128 Rows x 20 Slots.
 
 \item Row/Pattern:
 \\
-A row of the Grid. Each row consists of 20 slots and can store 16 MD tracks, a complete MD pattern + 4 external sequencer or A4 tracks.
+A row of the Grid. Each row consists of 20 slots and can store 16 Machinedrum tracks and 4 external sequencer or A4 tracks. 
 
 \item Slot:
 \\
@@ -31,17 +31,18 @@ There are 3 types of tracks.
 
 \item MachineDrum Track (Slots 0-15):
 
-A track merged from the MD containing: Machine Settings, Internal Sequencer Data, Master Effects Settings.
+A sequencer track for the Elektron MD. Each MD Track contains the Machine's Sound Settings, Master Effects Settings and Internal Sequencer Data.
+
 \item AnalogFour Track (Slots 16-19):
 
-A track merged from the A4 containing: Sound Settings, Internal Sequencer Data
+A sequencer track for the Elektron A4. Each A4 Track contains the  Sound Settinggs and Internal Sequencer Data.
 \item Ext Track (Slots 16-19):
 
 A General MIDI device track only containing Local Sequencer Data.
 \end{itemize}
 
 \item Internal Sequencer:\\
-MCL's 20 track internal sequencer.
+MCL's built in 20 track internal sequencer used to sequence external MIDI devices such as the Elektron MD and A4.
 
 \end{itemize}
 

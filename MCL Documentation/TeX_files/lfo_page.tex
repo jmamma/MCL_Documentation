@@ -35,3 +35,5 @@ The LFO engine operates in different modes, namely \textbf{FREE}, \textbf{TRIG},
     \item TRIG: The LFO is reset on each trig.
     \item ONESHOT: The LFO is reset each trig but only plays through one cycle
 \end{itemize}
+\section{Parameter Offset}
+The LFO modulation is relative to the destination parameter's original value (the lfo offset). The lfo offset will automatically be updated by adjusting the corresponding parameter on the MD's parameter page. For FX parameters it is best to adjust the offset from the FX Pages as changes in the MD FX page will not be immediately received by the MC.
