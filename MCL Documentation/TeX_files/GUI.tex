@@ -31,13 +31,6 @@ The Trigger Interface (TI) has different uses depending on the current page.\\
 \\For example, the TI can be used to enter sequencer data in to the internal sequencer;
 to select multiple tracks on the Mixer page and attenuate their volume simultaneously; to save or load Grid Slots from the Save or Chain pages and much more.
 
-\subsection{MD Trigger Interface Limitations}
-The MD TI is not natively supported by the MD and is instead achieved using a Global Slot/MIDI Channel exploit. The exploit is used to allow the user to press trigger buttons without triggering internal sounds. It also differentiate between notes triggered by the sequencer and notes triggered by a user key-press.\\
-\\
-The TI will cease working whenever the MD display is updated unexpectedly, for example, when a machine parameter's value is changed; or when a sub-menu on the MD is opened.\\
-\\
-As a precaution, whenever entering a Page on the MC that uses the TI, the MD's current track will automatically change to a track without Parameter locks. This avoids unexpected display updates that may be caused by transmitted Parameter Changes. If all tracks have parameter locks, then Track 16 will be chosen.\\
-\\
-\textit{Recovery: If the Trigger Interface stops working, exit and then re-enter the current page.}
-
+\subsection{Machinedrum OS Version}
+As of MCL version 2.60, your machinedrum must be upgraded to OS version 1.70 or greater.
 
