@@ -1,15 +1,25 @@
 \chapter{Polyphonic Mode}
-The MD can be configured to perform as a 16 voice polyphonic synthesizer.\\
-\\
-Two or more MD tracks need to be assigned as polyphonic voices. Once this has occurred, parameter changes are distributed accross the selected voices. Tracks will be allocated rotationally, with repeated notes using the same voice. 
-
-\section{Voice control}
-The polyphonic tracks can be played using the MD TI from the PTC page.\\
-\\An external MIDI keyboard connected to PORT2 can be used to play the MD.
-To achieve this set the MD control channel in \textbf{Global Settings-->MD-->CTRL CHAN} to the output channel of your controller.
 
 \section{Voice Select Page}
 The voice select page is used to assign MD tracks as polyphonic voices.\\\\
-The TI is used to assign tracks as polyphonic voices.\\\\
+The TI is used to select voices\\\\
 \fbox{\includegraphics[scale=.40]{voice_select_page.png}}\\\\
-\textit{To open the voice select page. Enter \textbf{GlobalSettings-->MD-->POLY CONFIG}}
+\textit{To open the voice select page:\\\\
+Enter \textbf{GlobalSettings-->MD-->POLY CONFIG}. Or press \textbf{[Save]} + \textbf{[Write]} from  Chromatic Page}
+
+\section{Voice modes}
+
+The Machinedrum's current active track will be used as a monophonic voice from the PTC page.\\
+\\
+If the current active track is part of the Polyphonic track selection \textbf{POLY} mode will be activated; the MD will be played polyphonically using voices selected from the \textbf{POLY Page.}\\
+\\
+When POLY mode is active, tracks become 'linked'. Track length and parameter changes will be synchronised across the voices. In addition pressing \textbf{Write} from the PTC Page will clear all recorded sequencer data from the poly tracks.
+
+\section{External MIDI Control}
+The MD can be played chromatically using an attached MIDI keyboard/sequencer connected to MIDI input port 2.
+To enable/disable control from an external device you must change the Megacommand's \textbf{Global Settings->Machinedrum->CTRL CHAN} setting from INT (internal) to a desired MIDI channel or OMNI (all channels).\\
+\\
+When external control mode is enabled, the trigger interface will be disabled.\\
+\\
+You can control the voice parameters using MIDI CC messages. CC 16 to 39 control MD parameters 1 to 24 on the active track, or across all polyphonic tracks.
+
