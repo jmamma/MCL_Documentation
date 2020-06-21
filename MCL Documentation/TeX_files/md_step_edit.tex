@@ -23,6 +23,7 @@ The Step Edit page is used to program MCL's internal sequencer for a selected tr
 \item L1,L2,L3,L4,L5,L6,L7,L8 (For Ln, step is only triggered after every n iterations of track)
 \item P10, P25, P50, P75, P90 (For Pxx, step has a xx percent chance of being triggered)
 \item 1S. (One Shot trig, step is only triggered once)
+\item Each trig condition above has a twin denoted by the \^{} character e.g L1\^{}, L2\^{}, P1\^{}. When these condition modes are selected, parameter locks and slides must also obey the trig condition.
 \end{itemize}
 \section{Micro Timing:}
 \screenshot{utiming1.png}
@@ -30,7 +31,7 @@ The Step Edit page is used to program MCL's internal sequencer for a selected tr
 \vspace{-0.3cm}
 
 \section{Track Speed:}
-All sequencer tracks can be played at various speeds. 1x, 2x, 3/2x, 4/3x, 1/2x, 1/4x, 1/8x. Triplets can be achieved using either 3/2x, 4/3x. 
+All sequencer tracks can be played at various speeds. 1x, 2x, 3/2x, 3/4x, 1/2x, 1/4x, 1/8x. Triplets can be achieved using either 3/2x, 3/4x. 
 Track speed can be adjusted from the Track Menu as explained in the previous chapter.
 
 \section{Program a sequence:}
@@ -40,7 +41,7 @@ Track speed can be adjusted from the Track Menu as explained in the previous cha
 \end{itemize}
 
 \section{Change Edit Mode:}
-By default, the Step Edit page opens in Trig Edit mode. It is possible to change this edit mode to program the track's sequencer data for either Locks, Slides or Mutes.
+By default, the Step Edit page opens in Trig Edit mode. It is possible to change this edit mode to program the track's sequencer data for either Trigs, Locks, Slides or Mutes.
 \begin{itemize}
 \item To change the Edit mode, press and hold the\textbf{ [ Shift2 ]} to open the track menu, rotate \textbf{[Encoder2]} to the entry \textbf{Edit:}, then rotate \textbf{[Encoder1]} to select either \textbf{Trig, Lock, Slide or Mute}.
 \end{itemize}
@@ -78,8 +79,14 @@ The Step Edit allows you to adjust a step's pitch by setting a note value.
 \screenshot{step_keyboard.png}
 
 \section{Parameter Locks:}
-The Step Edit page now allows you to enter parameter locks directly. Simply select a trigger button and rotate the corresponding parameter on the MD.
-Up to four parameter types can be locked on any given track. See the Sequencer Parameter Locks pages more details.
+The Step Edit page now allows you to enter parameter locks directly from the MD. Simply select a trigger button and rotate the corresponding parameter on the MD. Up to four parameter types can be locked on any given track. See the Sequencer Parameter Locks pages more details.
+
+\section{Slides:}
+Each parameter lock can be made to slide up or down to the nearest step containing a parameter lock of the same type.
+\newline
+To add slides to your sequence change the Edit Mode to slides (see above).
+
+As of version 2.70 only the first 32 steps in the slide pattern will be retained when saving.
 
 \newpage
 \section{Step Menu:}
