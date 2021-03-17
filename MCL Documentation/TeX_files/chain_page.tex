@@ -1,14 +1,27 @@
-\chapter{Chain Page}
-The chain page is used to load slots from the Grid. When a slot is loaded, Machine/Sound data is sent to the attached device and the internal sequencer data for that track is loaded.
-
-If the sequencer is stopped the selected slots will be loaded immediately. If the sequencer is running the slots will be placed in the transition queue, to be loaded at the next interval defined by the selected quantization rule.
-
-\textit{The Chain Page is accessible from the GridPage by pressing the  \textbf{[Write | Chain]} function button.}
+\chapter{Load Page}
+The Load page is used to load slots from the Grid. When a slot is loaded, Machine/Sound data is sent to the attached device and the sequencer data is loaded in to the internal sequencer.\\
+\\
+The Load Page behaviour depends on whether the sequencer is actively running.
+If the sequencer is in a stopped state, the selected slots will be loaded immediately.\\\\
+If the sequencer is in a running state, the slots will be placed in the transition queue, to be loaded at the next interval defined by the selected quantization rule.
 
 %\fbox{\includegraphics[scale=.40]{chain_page.png}}
 \screenshot{chain_from_grid.png}
-
+\textit{The Load Page is accessible from the GridPage by pressing the  \textbf{[Load} function button.}
 \encodersbuttons{--}{--}{Quantization (Q)}{--}{Cancel Chain Write.}{--}{--}{Chain Write all tracks.}
+
+\section{Loading Individual Tracks}
+The Load Page uses the Trigger Interface to specify which tracks are to be saved. Pressing multiple trigger buttons on the MD and then releasing them will cause the selected tracks to be stored in the corresponding slots of the current row.
+\section{Grid Toggle}
+The \textbf{[ Shift 1 ]} button can be used to toggle between Grid A or Grid B.\\\\
+It is possible to simultaneously save a collection of tracks from both Grids A and B. 
+\begin{itemize}
+\item First select the tracks from one grid by pressing and holding the corresponding triggers.
+\item Tap \textbf{[ Shift 1 ]} to switch grids
+\item Release the trig selection
+\item Select tracks from alternate grid by pressing and holding the corresponding triggers. 
+\item Finally release the second grid selection to confirm the action. 
+\end{itemize}
 
 \section{Chain invidiual tracks:}
 Tracks can be placed in the transition queue, to be loaded at the next specified Quantization interval. To do so, simply press and release the corresponding trigger buttons in the Chain Page.
@@ -28,3 +41,4 @@ The minimum Quantization value is 4 steps. Quantization values can be changed by
 \item 32: Toggle cue on next possible 32th step 
 \item 64: Toggle cue on next possible 64th step
 \end{itemize}
+

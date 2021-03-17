@@ -1,49 +1,45 @@
 \chapter{Key Concepts}
 
 \begin{itemize}
-\item Page:
+\item \textbf{Page:}
 \\
-The MCL firmware consists of pages accessible through the MC's GUI. Each page contains unique behaviour and is described in this manual.
-\item Project:
+The MCL firmware consists of pages accessible through the MC's GUI. Each page contains distinct functionality and is described in this manual.
+\item \textbf{Project:}
 \\
-A project stored on the Micro SD-Card. Each project contains one Grid. 
+A project stored on the Micro SD-Card.
 The maximum number of projects is only limited by the SD Card capacity.
 
-\item Grid:
+\item \textbf{Grid:}
 \\
-The MCL Firmware uses a Grid/Slot system to store Tracks. 
-The grid dimensions are 128 Rows x 20 Slots. 
-
-\item Row/Pattern:
+The MCL Firmware uses a Grid/Slot system to store Tracks.\\
+Each project contains two grids, A and B. Grid dimensions are 16 Slots x 128 Rows.\\
 \\
-A row of the Grid. Each row consists of 20 slots and can store 16 Machinedrum tracks and 4 external sequencer or A4 tracks. 
+Grid A is used to store 16 MD tracks.\\Grid B is used to store 6 External MIDI tracks + 4 AUX tracks.
 
-\item Slot:
+\item \textbf{Row/Pattern:}
+\\
+A row of the Grid.
+
+\item \textbf{Slot:}
 \\
 A position in the Grid where a Track can be stored. (Either occupied or unoccupied).
 
-\item Tracks
+\item \textbf{Track:}
 \\
-A track retrieved from the Elektron MD or AnalogFour, or an external MIDI track.
+An internal sequencer track that may contain both sound and MIDI sequencer data.
 
 There are 3 types of tracks.
 \begin{itemize}
 
-\item MachineDrum Track (Slots 0-15):
+\item \textbf{MachineDrum Track} (Grid A: Slots 0-15):
+A sequencer track for the Elektron MD. Each MD Track contains the Machine's Sound Settings and Sequencer Data.
 
-A sequencer track for the Elektron MD. Each MD Track contains the Machine's Sound Settings, Master Effects Settings and Internal Sequencer Data.
+\item \textbf{External MIDI Track} (Grid B: Slots 0-5):
+A polyphonic sequencer track used to control a sound module connected via MIDI. Each External MIDI track contains Sequencer Data, and for supported Elektron devices sound data is retained. 
 
-\item AnalogFour Track (Slots 16-19):
-
-A sequencer track for the Elektron A4. Each A4 Track contains the  Sound Settings and Internal Sequencer Data.
-\item Ext Track (Slots 16-19):
-
-A General MIDI device track only containing Local Sequencer Data.
+\item \textbf{AUX Track} (Grid B: Slots: 11-15)\\
+An auxiliary track. Used to store/recall the Machinedrum's master FX settings, LFO settings, audio Routing and Tempo settings.
 \end{itemize}
 
-\item Internal Sequencer:\\
-MCL's built in 20 track internal sequencer used to sequence external MIDI devices such as the Elektron MD and A4.
-
 \end{itemize}
-
 

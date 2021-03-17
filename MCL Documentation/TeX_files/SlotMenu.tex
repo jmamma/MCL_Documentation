@@ -8,7 +8,7 @@ The Slot Menu is an important sub-menu of the Grid Page and is used to manipulat
 When \textbf{[Shift2]} is released, any changes to the menu will be applied to the selected slots. }
 \\
 \section{Multiple Slot Selection:}
-A rectangular selection consisting of multiple slots can be made by rotating \textbf{[Encoder 3]} and \textbf{[Encoder 4]}.
+A rectangular selection consisting of multiple slots can be made by entering the slot menu and rotating \textbf{[Encoder 3]} and \textbf{[Encoder 4]}.
 
 \screenshot{range_copy.png}
 
@@ -18,7 +18,8 @@ Slot Menu has the following options and selectable values:
 \begin{tabular}{|l|l|}
 \hline
 \rowcolor[HTML]{C0C0C0} 
-Entry                                  & Function                                                                                                                                                                                      \\ \hline
+Entry                                  & Function                                                                       \\ \hline
+Grid: {[} A, B {]}                     & switch between Grid A or B.                                                      \\ \hline
 Chain: {[} –, auto, manual, random {]} & \begin{tabular}[c]{@{}l@{}}auto: enables chain auto mode global setting.\\ manual: enables chain manual mode global setting.\\ random: enables chain random mode global setting.\end{tabular} \\ \hline
 Loops: (0, 64)                         & specify how many times to loop track/slot.                                                                                                                                                    \\ \hline
 Row: (0,127)                           & \begin{tabular}[c]{@{}l@{}}specify which row, the current slot is to\\ load/jump to after n loops.\end{tabular}                                                                               \\ \hline
@@ -28,10 +29,3 @@ Copy: {[} –, YES {]}                   & copy the selected slot(s).           
 Paste: {[} –, YES {]}                  & paste the selected slot(s).                                                                                                                                                                   \\ \hline
 Rename                                 & rename the current row.                                                                                                                                                                       \\ \hline
 \end{tabular}
-
-\section{HD44780 LCD users:}
-\textit{Note: For users running MCL on a \textbf{HD44780 LCD}, the SlorMenu  is accessible from the GridPage by holding down the  \textbf{[Shift2]} function button and pressing a corresponding encoder button.\\
-\\For example if slots 5 to 8 are displayed on screen, holding  \textbf{[Shift2]} and then pressing \textbf{[Encoder3]} will open the slot menu for slot 7.}\\
-\\
-Rectangular selection is not available for the HD44780. Instead, an additional "APPLY" parameter is provided. If the APPLY value is greater than 1, changes will be applied sequentially; starting from the current slot and up to the number of slots specified by the APPLY value on the same row.
-
