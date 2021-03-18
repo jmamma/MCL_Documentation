@@ -1,5 +1,5 @@
-\chapter{Internal Sequencer:}
-MCL features a powerful internal sequencer. There are 16 step sequencer tracks dedicated to the MD and 6 polyphonic tracks dedicated to External Midi devices, each has independent track length and speed.
+\chapter{MCL Sequencer:}
+MCL features a powerful internal sequencer. There are 16 step sequencer tracks dedicated to the MD and 6 polyphonic tracks dedicated to External Midi devices, each has track independent length and playback speed.
 \section{MD Sequencer Tracks:}
 \begin{itemize}
 \item 16 Track Sequencer with 64 max steps per track.
@@ -29,30 +29,52 @@ Chromatic Mode. (Machine pitch values are chromatically mapped to the MD. Melodi
 \end{itemize}
 
 \section{Auxiliary tracks:}
- AUX Tracks are positioned on Grid B and occupy slots 12 to 15.
-  AUX Tracks can be saved/loaded/chained like regular tracks, so that you can automate loading of LFOs, TrackRouting, Machinedrum Master FX and tempo.
+There are four auxiliary track types
  \begin{itemize}
- \item \textbf{MDFXTrack (FX):} Store and recall MDFX (MachinDrum MasterFX: Delay, Reverb, EQ, Dynamics)
- \item \textbf{LFOTrack (LF):} Store and recall LFO page data.
+ \item \textbf{MDFXTrack (FX):} Store and recall MachinDrum MasterFX settings: Delay, Reverb, EQ, Dynamics.
+ \item \textbf{LFOTrack (LF):} Store and recall LFO page settings.
  \item \textbf{RouteTrack (RT):} Store and recall MD Track Routing and Chromatic Mode's Poly settings.
  \item \textbf{TempoTrack (TP):} Store and recall Tempo.
 
  
     \end{itemize}
 \end{itemize}
-The internal sequencer is synced to the MIDIClock source.
+\chapter{Sequencer: Saving and Loading}
+
+Depending upon the track type, sequencer tracks are saved to or loaded from specific slots on either Grid A or Grid B. 
+
+\begin{itemize}
+    \item 16 x MD Sequencer tracks are stored/loaded from slots 0 to 15 in Grid A, they correspond to MD tracks 1-16.
+    \item 6 x External MIDI Sequencer tracks are stored/loaded from slots 0 to 5 in Grid B. If the Analog4 was attached these would correspond to A4 tracks 1- 4, with 2 spare tracks for general MIDI.
+    \item 4 x Auxiliary tracks are stored/loaded from slots 12 to 15 in Grid B. 
+\end{itemize}
+
+\textit{Saving/Loading slots is accomplished through the use of the Save and Load pages and is described in the next chapter(s).}\\
+
+Loaded tracks can be edited via their respective editor. The Step Edit page is used to edit MD sequencer tracks, whilst the PianoRoll Editor is used to edit External MIDI Sequencer tracks.\\
+
+When loading tracks, the internal sequencer data will be loaded from the slot and placed in the corresponding sequencer track. The slot's sound data is then transmitted to the corresponding track on the attached MIDI device. If the sequencer is stopped this occurs immediately, if the sequencer is running, then loading occurs according to behaviour described in the chapter "Chain Mode".\\
+
+When saving to a slot, the corresponding internal sequencer track's data is stored, if the slot is mapped to a MIDI device such as the MD, the sound data of the corresponding track is retrieved from the device and also saved.\\
 \\
-\chapter{Loading and Saving}
-Internal sequencer tracks are automatically mapped to specific slot positions in Grid A or Grid B.\\Slot positions are automatically mapped to specific tracks of the attached MIDI device. \\\\For example:
-\begin{enumerate}
-    \item The 16 x MD Sequencer tracks are stored/loaded from slots 0 to 15 in Grid A, they correspond to MD tracks 1-16. The MD sequencer tracks can be edited via the StepEdit page.
-    \item The 6 x External MIDI Sequencer tracks are stored/loaded from slots 0 to 5 in Grid B. If the Analog4 was attached these would correspond to A4 tracks 1-4. Once loaded, the Ext MIDI tracks can be edited via the Piano Roll editor.
-\end{enumerate}
-\\
-When storing a slot from the Save page, the corresponding internal sequencer track's data is stored, if the slot is mapped to a device such as the MD, the sound data of the corresponding track is retrieved from the device and also saved.\\
-\\
-Pattern/step sequencer data from an Elektron device is not retained. However, for the Machinedrum, the Save page offers the possibility of copying the corresponding MD track's pattern data to the slot's internal sequencer data via the option MD, or to Merge the MD track's pattern data with the slot's sequencer data. (see next chapter, Save Page)
+\textit{Pattern/step sequencer data from an Elektron device is not retained. However, for the Machinedrum, the Save page offers the possibility of copying the corresponding MD track's pattern data to the slot's internal sequencer data via the options "MD", or "MERGE" (see next chapter, Save Page)}
 \\\\
-When loading slots using the Load page, the internal sequencer data will be loaded from the slot in to the corresponding sequencer track, the slot's sound data transmitted to the corresponding track on the attached device. If the sequencer is stopped this occurs immediately, If the sequencer is running, then loading occurs according to the chosen quantization option. If the loaded slot contains chain ROW/LOOP chain settings, and Global Chain mode setting is set to AUTO, the next slot transition will occur automatically according to the slot's specified chain settings. (see chapter Chain Mode)
 
-
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{save_or_load_grid_a.png}
+    \caption{Save Page / Load Page - Grid A - MD }
+    \label{fig:my_label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{save_or_load_grid_b.png}
+    \caption{Save Page / Load Page - Grid B - External MIDI}
+    \label{fig:my_label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{save_or_load_grid_b_md.png}
+    \caption{Save Page / Load Page - Grid B - Auxiliary}
+    \label{fig:my_label}
+\end{figure}

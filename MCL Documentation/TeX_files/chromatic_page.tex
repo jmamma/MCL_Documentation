@@ -1,59 +1,63 @@
 \chapter{Chromatic Page:}
-The PTC page, also known as the Chromatic Page, is used to play MD tracks chromatically using the Machinedrum's trigger buttons or an attached MIDI Keyboard. Each MD track can be used as a voice of a monophonic/polyphonic synthesizer.
-
-\screenshot{chroma.png}
-
-For supported track types, the Track’s Pitch is mapped to Notes of a selected scale across the MD Trigger interface.
-\\\\
-Melodies can be recorded in real-time.
-\\\\
-\textit{The PTC page can be accessed from the Page Select: \textbf{[Shift1|PageSelect]} and \textbf{[Trigger 8] }.}
-
+The Chromatic Page, enables the user to play tracks of the Machinedrum or an Ext MIDI device chromatically. Each MD track can be used as a voice of a monophonic/polyphonic synthesizer. Melodies can be recorded in real-time.
+\screenshot{chroma.png}\\
+\textit{The Chromatic page can be accessed by pressing \textbf{[ PageSelect ]} and \textbf{[ Trigger 8 ]}.}
+\\
+\section{Using the Chromatic Page:}
 \screenshot{chromat_action.png}
-
-\textit{A keyboard will be displayed showing the current active notes.}
-\\
-
 \encodersbuttons{Octave (OC)}{Fine Tune (F)}{Track Length}{Scale Type (S)}{Record}{PageSelect}{Clear Track}{Track/Trig Menu}
+The top left of the screen shows the active device tab and indicates whether the Chromatic Page is targeting the MD or an Ext MIDI device.
+The Octave (OCT) parameter allows for adjusting the relative octave of the track's tuning. The Detune (DET) parameter can be used for offsetting the absolute pitch by small increments (MD only). Length (LEN) controls the length of the associated sequencer track. Scale (SCA) maps MIDI notes to a musical scale type.
+A keyboard at the bottom of the screen is displayed showing notes as they are played.
+\section{Tuning}
+For MD tracks hosting a supported machine, the machines’s pitch is tuned to notes of a selected scale. The track can then be played using the MD Trigger interface or an attached MIDI keyboard.\\\\
+The Machinedrum X.04 OS allows for more precise tuning of machines. If the machine's tuning setting is TONAL then the new quarter tone, equal temperament tuning table will be used. If the machine's tuning setting is DEFAULT the legacy microtonal tuning table is used.
 
-
-\section{A4 + ExtMIDI:}
-The PTC Page is also used to record/play the Analog4 or ExtMIDI tracks. Scale modes are also supported for these track types.\\
-\\
+\section{Chromatic Page Menu}
+\screenshot{chromatic_menu.png}
+Holding \textbf{[ Shift 2 ]} opens the Chromatic Page menu.
+\begin{figure}[hb]
+    \begin{tabular}{|l|l|}
+    \hline
+    \rowcolor[HTML]{C0C0C0} 
+    Entry            & Function \\ \hline
+    Arpeggiator      & Opens the Arpeggiator Page \\ \hline
+    Transpose        & Transpose scale by semi-tone\\ \hline
+    Polyphony        & Opens the PolyPage, for voice selection\\ \hline
+    \end{tabular}
+\end{figure}
+\section{Ext MIDI Tracks:}
+The Chromatic Page is also used to record/play the External MIDI tracks.
+Octave and Scale settings from the Chromatic Page are also applied to incoming note data when using the PianoRoll editor.
 \section{Recording a sequence:}
 \textit{Press the \textbf{[ Save ] }button to enable record mode, RPTC.\\}
 
 Play notes on either the MD or A4/ExtMidi to record a melody.
 
-\vspace{-0.3cm}
-
 \section{Clearing recorded sequence:}
 \begin{itemize}
-\item To clear the current track, press and hold the\textbf{ [ Shift2 ]} to open the track menu, rotate \textbf{[Encoder2]} to the entry \textbf{CLEAR}, then rotate \textbf{[Encoder1]} to select \textbf{TRK}.
+\item To clear the current track, press and hold the\textbf{ [ Shift2 ]} to open the track menu, rotate \textbf{[ Encoder2 ]} to the entry \textbf{CLEAR}, then rotate \textbf{[ Encoder1 ]} to select \textbf{TRK}.
 \item To clear all tracks of the current track type, select \textbf{ALL}.
-\item The current track can also be quickly cleared by pressing \textbf{[Write]}.
+\item The current track can also be quickly cleared by pressing \textbf{[ Load ]}.
 \end{itemize}
-
-
-\vspace{-0.3cm}
 
 \section{Changing track length:}
 \begin{itemize}
 \item Track length is controlled by rotating \textbf{[ Encoder 3 ]}.
-\item To change the lengths of all tracks of the current track type, simultaneously hold down \textbf{[Write]} whilst rotating \textbf{[ Encoder 3 ]}.
-\item Track length can also be set by holding \textbf{[Write]} and then selecting the corresponding step from the MD trigger interface. The track length is offset by the current track-page.
+\item To change the lengths of all tracks of the current track type, simultaneously hold down \textbf{[ Load ]} whilst rotating \textbf{[ Encoder 3 ]}.
+\item Track length can also be set by holding \textbf{[ Load ]} and then selecting the corresponding step from the MD trigger interface. The track length is offset by the current track-page.
 \end{itemize}
 
 
-\section{A4 or ExtMidi}
-Melodies and chords can be played and recorded from the Analog4 or ExtMIDI device in the PTC and RPTC pages.
+\section{ExtMidi}
+Melodies and chords can be played and recorded from an ExtMIDI device on port 2.
 \\
 
-If using the Analog 4, select the desired track using the A4’s track select buttons. The first note played on the mini keyboard will cause the PolyStep edit page to switch to  the corresponding external sequencer track.
+When MIDI note data is received, MCL will switch to the first ExtMIDI track that has the same MIDI channel.
 \\
 
 \textit{The active device tab will switch over from MD to A4/MI, in the left information panel, when such midi notes are received.}
 \\
 
 Switching Between Low and High Resolution Modes on Poly Sequencer Tracks.
-Press \textbf{[Shift2]} then rotate \textbf{[Encoder2]} to select the \textbf{TRACK RES.} entry.
+Press \textbf{[ Shift2 ]} then rotate \textbf{[ Encoder2 ]} to select the \textbf{TRACK RES.} entry.

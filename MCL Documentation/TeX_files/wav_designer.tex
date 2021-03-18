@@ -5,19 +5,30 @@ It features a 3 oscillator additive synthesis engine with a level mixer.\\
 Each oscillator can be set to a unique waveform and pitch. The 3 oscillators are then mixed together and rendered in to a WAV file which can be transferred to the MD using the MIDI Sample Dump Specification (SDS).\\
 \\
 To ensure that the MD plays back the resulting waveform optimally, WAV Designer performs all the heavy lifting for you. This involves calculating sample length and rate based on the fundamental frequency, auto detecting loop points and normalizing the waveform.
-\section{WAV Designer Pages}
-\textit{WAV Designer is accessible from the \textbf{PageSelect} page and consists of 4 sub-pages. Once you have entered the WAV Designer you can access the sub-pages using the \textbf{[Save]} button.}
+\section{Oscillators Pages:}
+The WAV designer features 3 oscillator pages, each oscillator page can be accessed via the Oscillator menu's "EDIT" parameter.
 
-\section{Oscillator Pages:}
-
-\encodersbuttons{Pitch, note increments.}{Fine Tune, +/- 100 cents}{Pulse Width}{Modify}{SubPage Select}{Page Select}{--}{Waveform Select}
-
-\subsection{Pitch:}
 Each oscillator can be tuned to a unique frequency.\\
-\\The pitch is adjusted in note increments by rotating \textbf{[ Encoder 1 ]}. Rotating \textbf{[ Encoder 2 ]} will adjust the frequency in cents +/-100. Holding down \textbf{[ Shift 2 ]} will display the corresponding frequency.\\
-\\The fundamental frequency of the rendered waveform is automatically selected from the oscillator that has the lowest frequency.
-\subsection{Waveforms:}
-Each oscillator can be set to a unique waveform by pressing the \textbf{[Save]} button from it's respective page.\\
+\\The pitch is adjusted in note increments by rotating \textbf{[ Encoder 1 ]}. Rotating \textbf{[ Encoder 2 ]} will adjust the frequency in cents +/-100. Holding down \textbf{[ Save ]} will display the corresponding frequency.\\
+\\The fundamental frequency of the rendered waveform is automatically selected from the oscillator that has the lowest frequency.\\
+
+\section{Oscillator Page Menu:}
+\screenshot{osc_menu.png}
+Holding \textbf{[ Shift 2 ]} opens the Oscillator Page menu.
+\begin{figure}[hb]
+    \begin{tabular}{|l|l|}
+    \hline
+    \rowcolor[HTML]{C0C0C0}
+    Entry     & Function \\ \hline
+    EDIT      & Oscillator or Oscillator Mixer Page selection \\ \hline
+    WAV       & Oscillator wave shape\\ \hline
+    \end{tabular}
+\end{figure}
+\newpage
+\encodersbuttons{Pitch, note increments.}{Fine Tune, +/- 100 cents}{Pulse Width}{Modify}{Frequency}{Page Select}{--}{Oscillator Menu}
+
+\section{Waveforms:}
+Each oscillator can be set to a unique waveform from the Oscillator Menu.
 \\
 The available waveforms are described below:
 
@@ -25,7 +36,7 @@ The available waveforms are described below:
 \item{\textbf{SIN:}}Sine waveform with adjustable overtones (each overtone is one more octave above the fundamental frequency)\\
 \fbox{\includegraphics[scale=.40]{wav_designer_sine_init.png}}\\\\
 \fbox{\includegraphics[scale=.40]{wav_designer_sin.png}}\\\\
-\\Overtones are added by using the MD TI and rotating \textbf{[Encoder 4]}.
+\\Overtones are added by using the MD TI and rotating \textbf{[ Encoder 4 ]}.
 \item{\textbf{TRI:}} Triangle waveform with adjustable width.\\
 \fbox{\includegraphics[scale=.40]{wav_designer_tri.png}}\\\\
 \item{\textbf{PUL:}} Pulse/Square waveform with adjustable width.\\
@@ -34,10 +45,10 @@ The available waveforms are described below:
 \fbox{\includegraphics[scale=.40]{wav_designer_saw.png}}\\\\
 \item{\textbf{USR:}}User defined waveform, 16 points with linear interpolation.\\
 \fbox{\includegraphics[scale=.40]{wav_designer_user.png}}\\\\
-Sample values are modified by using the MD TI and rotating \textbf{[Encoder 4]}.
+Sample values are modified by using the MD TI and rotating \textbf{[ Encoder 4 ]}.
 \end{itemize}
 \subsection{Pulse Width:}
-TRI, PULSE and SAW waveform's pulse width can be adjusted by rotating \textbf{[Encoder 3]}.\\
+TRI, PULSE and SAW waveform's pulse width can be adjusted by rotating \textbf{[ Encoder 3] }.\\
 \fbox{\includegraphics[scale=.40]{wav_designer_pulse_width.png}}\\
 \newpage
 \section{OSC Mixer Page:}
@@ -45,8 +56,8 @@ TRI, PULSE and SAW waveform's pulse width can be adjusted by rotating \textbf{[E
 The Oscillator Mixer Page has volume levels for each of the oscillators which can be adjusted by rotating encoders 1 to 3. \textit{Absolute volume levels are not important here as the resulting waveform will be automatically normalized.}\\
 \\The fourth encoder is used to set the sample slot position. On the MD the sample slots are offset by 1 (00 = 01).\\
 \\
-To render a sample and then transfer it to the MD's selected sample slot, press \textbf{[Write]}.\\
+To render a sample and then transfer it to the MD's selected sample slot, press \textbf{[ Load ]}.\\
 \\
-For convience, pressing the \textbf{[Save]} button will open the SampleManager window on the MD. You can also choose the destination slot from here.
+For convience, pressing the \textbf{[ Save ]} button will open the SampleManager window on the MD. You can also choose the destination slot from here.
 
 \encodersbuttons{Osc1 Level}{Osc2 Level}{Osc3 Level}{Sample Slot}{SubPage Select}{Page Select}{Render+Transfer}{--}

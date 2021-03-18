@@ -1,35 +1,44 @@
 \chapter{Load Page}
-The Load page is used to load slots from the Grid. When a slot is loaded, Machine/Sound data is sent to the attached device and the sequencer data is loaded in to the internal sequencer.\\
+The Load page is used to load slots from the Grid. When a slot is loaded, Machine/Sound data is sent to the corresponding MIDI device and the sequencer track is loaded into the internal sequencer.\\
 \\
-The Load Page behaviour depends on whether the sequencer is actively running.
-If the sequencer is in a stopped state, the selected slots will be loaded immediately.\\\\
-If the sequencer is in a running state, the slots will be placed in the transition queue, to be loaded at the next interval defined by the selected quantization rule.
-
-%\fbox{\includegraphics[scale=.40]{chain_page.png}}
-\screenshot{chain_from_grid.png}
+The Load Page behaviour depends on whether the sequencer is actively running:
+\begin{itemize}
+    \item If the sequencer is in a stopped state, the selected slots will be loaded immediately.
+    \item If the sequencer is in a running state, the slots will be placed in the transition queue, to be loaded at the next interval defined by the selected quantization rule
+\end{itemize}
+\screenshot{load_from_a.png}
 \textit{The Load Page is accessible from the GridPage by pressing the  \textbf{[Load} function button.}
 \encodersbuttons{--}{--}{Quantization (Q)}{--}{Cancel Chain Write.}{--}{--}{Chain Write all tracks.}
 
 \section{Loading Individual Tracks}
-The Load Page uses the Trigger Interface to specify which tracks are to be saved. Pressing multiple trigger buttons on the MD and then releasing them will cause the selected tracks to be stored in the corresponding slots of the current row.
+The Load Page uses the MD's Trigger Interface to specify which slots are to be loaded. Pressing multiple trigger buttons and then releasing them will load the corresponding slots from the current row of the visible Grid.
 \section{Grid Toggle}
-The \textbf{[ Shift 1 ]} button can be used to toggle between Grid A or Grid B.\\\\
-It is possible to simultaneously save a collection of tracks from both Grids A and B. 
+When in the Save or Load page, the \textbf{[ Shift 1 ]} button can be used to toggle between Grid A or Grid B.
+\newpage
+\section{Simultaneous Load from Grid A and Grid B}
+It is possible to simultaneously load a collection of tracks from both Grids A and B. 
 \begin{itemize}
 \item First select the tracks from one grid by pressing and holding the corresponding triggers.
 \item Tap \textbf{[ Shift 1 ]} to switch grids
 \item Release the trig selection
-\item Select tracks from alternate grid by pressing and holding the corresponding triggers. 
+\item Select tracks from the alternate grid by pressing and holding the corresponding triggers. 
 \item Finally release the second grid selection to confirm the action. 
 \end{itemize}
 
-\section{Chain invidiual tracks:}
-Tracks can be placed in the transition queue, to be loaded at the next specified Quantization interval. To do so, simply press and release the corresponding trigger buttons in the Chain Page.
-\section{Chain a pattern/row:}
-From within the Chain Page, pressing \textbf{[Shift2]} will chain an entire row/pattern consisting of all 16 MD tracks + 4 A4/Ext tracks.\\
+\section{Load Track Groups:}
+When in the Save or Load Page, holding the \textbf{[ Shift 2 ]} button opens a Group Select menu,
+allowing you to load or save all tracks corresponding to a group. An entire row/pattern across both grids A+B can be loaded this way.\\
 \\
-\textit{Note: If sequencer playback is stopped, tracks will be loaded immediately. When chaining an entire row, the current Kit will be replaced and master FX settings loaded.}
-\newpage
+There are four groups:
+\begin{enumerate}
+    \item MIDI Device 1 (MD)
+    \item MIDI Device 2 (A4/MNM/Generic MIDI)
+    \item FX (MDFX + LFOTrack + RouteTrack)
+    \item TEMPO
+\end{enumerate}
+From the Group Select Menu each group can be enabled/disabled using the MD's trigger interface.\\
+\\
+Releasing \textbf{[ Shift 2 ]} will save/load tracks corresponding to the active groups.
 \section{Quantization Rules}
 The quantization rules specify the transition interval for the selected slots.\\
 \\
