@@ -1,5 +1,5 @@
 
-\documentclass[openany,a4paper,12pt]{book}
+\documentclass[openany,a4paper,12pt]{memoir}
 %openany causes margins to be different between odd and even pages
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 %\usepackage[utf8]{inputenc}
@@ -87,9 +87,8 @@
     \end{tabular}
 \end{figure}
 }
-
+\setlength\cftsectionnumwidth{3em}
 \begin{document}
-
 \author{
     Justin Mammarella
     \and
@@ -99,7 +98,6 @@
 \date{November 2019}
 
 \frontmatter
-\begin{titlepage}
 
 	\begin{center}
 	%\vspace*{\fill}
@@ -111,13 +109,13 @@
 	\\MegaCommand Live
     \large
 	\\Firmware Version 3.10
-	\footnote{Manual Revision: 10/03/2021}
+	\footnote{Manual Revision: 19/03/2021}
     \vspace*{2cm}
     \\Justin Mammarella
     \\Yatao Li
 \end{center}
-\end{titlepage}
 
+\newpage
 %\maketitle
 
 \tableofcontents
@@ -144,7 +142,6 @@
 \include{./TeX_files/chain_page}
 \include{./TeX_files/internal_sequencer_pages}
 \include{./TeX_files/md_step_edit}
-\include{./TeX_files/parameter_locks}
 \include{./TeX_files/seq_param_page}
 \include{./TeX_files/poly_step_edit}
 \include{./TeX_files/chromatic_page}
@@ -160,7 +157,6 @@
 \include{./TeX_files/ram_page}
 \include{./TeX_files/wav_designer}
 \backmatter
-
 % bibliography, glossary and index would go here.
 
 \end{document}

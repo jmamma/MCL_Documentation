@@ -1,10 +1,10 @@
 \chapter{Chain Mode:}
 Chain mode was inspired by old school music tracker software that generate music by iterating through sequences and sounds stored in vertical columns.
 \section{Functionality:}
-Each slot in the Grid has the ability to play for N loops and then jump to another slot in a specific row of the same column.  These values are specified by the LOOPS and ROW settings in the SlotMenu and apply to the current slot. Jumping between slots is referred to as a transition. Just before a transition occurs, Machine settings are sent to the MD and the internal sequencer data for that track is loaded. All 16 tracks on both Grids A + B can be configured to transition at the same time.\\
- \\
+Each slot in the Grid has the ability to play for N loops and then jump to another slot in a specific row of the same column.  These values are specified by the LOOPS and ROW settings in the SlotMenu and apply to the current slot. Jumping between slots is referred to as a transition. Just before a transition occurs, Machine settings are sent to the MD and the internal sequencer data for that track is loaded. All 16 tracks on both Grids A + B can be configured to transition at the same time.
+\screenshot{slot_menu.png}
 \section{Modes of Operation}
-\textit{Chain Mode behaviour can be changed in the SlotMenu or GlobalSettings-->ChainMode menu by setting ChainMode to one of 3 three settings: Automatic, Manual and Random.}
+\textit{Chain Mode is a global setting. The behaviour can be changed in the SlotMenu or \\GlobalSettings-->ChainMode menu by setting ChainMode to one of 3 three settings: Automatic, Manual and Random.}
 
 \begin{itemize}
 	\item Automatic: If the number of loops is greater than 0, slots will automatically jump to the specified Row after N loops.

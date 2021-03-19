@@ -5,8 +5,8 @@ The Global Settings Menu is used for project management and to change a variety 
 %\fbox{\includegraphics[scale=.40]{global_menu_1.png}}\\\\
 %\fbox{\includegraphics[scale=.40]{global_menu_2.png}}\\
 
-\textit{To enter the Global Settings menu press \textbf{[ Save ] + [ Load ]} from the GridPage.\\
-To enter sub-menus press the \textbf{YES} button. Press the \textbf{NO} button to go back one level or exit the menu.}
+\textit{To enter the Global Settings menu press \textbf{[ Save ] + [ Load ]} from the GridPage.}\\\\
+To enter sub-menus press the \textbf{YES} button. Press the \textbf{NO} button to go back one level or exit the menu.
 \section{Load Project:}
 The Load Project sub-menu will display a list of MCL Projects that are stored on the root folder of the Micro SD card.\\\\
 The current project is always selected first and is indicated by an '>' character next to its name.
@@ -34,3 +34,12 @@ files will remain in the root directory of the SD Card.\\
 
 When initiated, project conversion will create a new project sub-directory on the SD Card under \textbackslash Projects\textbackslash. It will then create the necessary project files and then migrate the 2.X data across.\\\\
 \textit{Projects created in version 3.X are not compatible with earlier version of MCL.}
+\section{Project Files:}
+In 3.0 new and converted projects are now stored in the /Projects/ directory.
+Each project has its own folder, inside the project folder there are 3 files:
+\begin{verbatim}
+\Projects\new_project_000\
+                          |- new_project_000.mcl   <- Project master file
+                          |- new_project_000.0     <- Grid A data
+                          |- new_project_000.1     <- Grid B data
+\end{verbatim}

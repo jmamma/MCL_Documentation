@@ -1,5 +1,5 @@
 \chapter{Chromatic Page:}
-The Chromatic Page, enables the user to play tracks of the Machinedrum or an Ext MIDI device chromatically. Each MD track can be used as a voice of a monophonic/polyphonic synthesizer. Melodies can be recorded in real-time.
+The Chromatic Page, enables the user to play tracks of the Machinedrum or an External MIDI device chromatically. Each MD track can be used as a voice of a monophonic/polyphonic synthesizer. Melodic compositions can be recorded in real-time.
 \screenshot{chroma.png}\\
 \textit{The Chromatic page can be accessed by pressing \textbf{[ PageSelect ]} and \textbf{[ Trigger 8 ]}.}
 \\
@@ -9,13 +9,21 @@ The Chromatic Page, enables the user to play tracks of the Machinedrum or an Ext
 The top left of the screen shows the active device tab and indicates whether the Chromatic Page is targeting the MD or an Ext MIDI device.
 The Octave (OCT) parameter allows for adjusting the relative octave of the track's tuning. The Detune (DET) parameter can be used for offsetting the absolute pitch by small increments (MD only). Length (LEN) controls the length of the associated sequencer track. Scale (SCA) maps MIDI notes to a musical scale type.
 A keyboard at the bottom of the screen is displayed showing notes as they are played.
-\section{Tuning}
+\newpage
+\section{Setup for Chromatic mode:}
+There are two important configurations options that must be understood in order to use the Chromatic Page correctly:
+\begin{itemize}
+    \item The \textbf{Global Settings->Machinedrum->CTRL CHAN} parameter determines whether the MD should receive note input from the Trigger Interface, or from a MIDI channel on an External MIDI Device. \textit{See Chapter: Global Settings}
+    \item The PolyPage is used to allocate one or more MD tracks as dedicated synth voices. \textit{See Chapter: Polyphonic Mode} 
+\end{itemize}
+
+\section{Tuning:}
 For MD tracks hosting a supported machine, the machines’s pitch is tuned to notes of a selected scale. The track can then be played using the MD Trigger interface or an attached MIDI keyboard.\\\\
 The Machinedrum X.04 OS allows for more precise tuning of machines. If the machine's tuning setting is TONAL then the new quarter tone, equal temperament tuning table will be used. If the machine's tuning setting is DEFAULT the legacy microtonal tuning table is used.
-
-\section{Chromatic Page Menu}
+\\
+\section{Chromatic Page Track Menu:}
 \screenshot{chromatic_menu.png}
-Holding \textbf{[ Shift 2 ]} opens the Chromatic Page menu.
+Holding \textbf{[ Shift 2 ]} opens the Track menu.
 \begin{figure}[hb]
     \begin{tabular}{|l|l|}
     \hline
@@ -29,10 +37,11 @@ Holding \textbf{[ Shift 2 ]} opens the Chromatic Page menu.
 \section{Ext MIDI Tracks:}
 The Chromatic Page is also used to record/play the External MIDI tracks.
 Octave and Scale settings from the Chromatic Page are also applied to incoming note data when using the PianoRoll editor.
+\newpage
 \section{Recording a sequence:}
-\textit{Press the \textbf{[ Save ] }button to enable record mode, RPTC.\\}
+\textit{Press the \textbf{[ Save ] }button to enable live record mode.\\}
 
-Play notes on either the MD or A4/ExtMidi to record a melody.
+Play notes on either the MD or External Midi to record a melody.
 
 \section{Clearing recorded sequence:}
 \begin{itemize}
@@ -49,14 +58,14 @@ Play notes on either the MD or A4/ExtMidi to record a melody.
 \end{itemize}
 
 
-\section{ExtMidi}
-Melodies and chords can be played and recorded from an ExtMIDI device on port 2.
+\section{External MIDI Device:}
+Melodies and chords can be played and recorded from an External MIDI device on port 2.
 \\
 
-When MIDI note data is received, MCL will switch to the first ExtMIDI track that has the same MIDI channel.
+When MIDI note data is received, MCL will switch to the first Exteral MIDI sequencer track that has the same MIDI channel.
 \\
 
-\textit{The active device tab will switch over from MD to A4/MI, in the left information panel, when such midi notes are received.}
+\textit{The active device illustrated in the top left corner of the display, will switch over from MD to MI, when MIDI notes are received.}
 \\
 
 Switching Between Low and High Resolution Modes on Poly Sequencer Tracks.
