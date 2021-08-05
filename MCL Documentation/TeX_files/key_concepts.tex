@@ -1,9 +1,22 @@
+\chapter{Terminology and Conventions}
+   \begin{itemize}
+      \item MD - Machinedrum
+      \item MDX - Machinedrum X OS.
+      \item MC - MegaCommand MIDI controller
+      \item MCL - MegaCommand Firmware.
+      \item \textbf{<Button> } Enclosed arrows will be used to reference the use of a MegaCommand function button to perform an action.
+      \item \textbf{[Key] } Enclosed square bracket will be used to reference the use of a Machinedrum key to perform an action.
+
+      
+   \end{itemize}
+   
+\newpage
 \chapter{Key Concepts}
 
 \begin{itemize}
 \item \textbf{Page:}
 \\
-The MCL firmware consists of pages accessible through the MC's GUI. Each page contains distinct functionality and is described in this manual.
+The MCL firmware consists of pages accessible through either the MC's or MD's GUI. Each page contains distinct functionality and is described in this manual.
 \item \textbf{Project:}
 \\
 A project stored on the Micro SD-Card.
@@ -11,11 +24,12 @@ The maximum number of projects is only limited by the SD Card capacity.
 
 \item \textbf{Grid:}
 \\
-The MCL Firmware uses a Grid/Slot system to store Tracks.\\
-Each project contains two grids, A and B. Grid dimensions are 16 Slots x 128 Rows.\\
+The MCL Firmware uses a Grid \& Slot system to store Tracks.\\
+Each project contains two grids, X and Y. Grid dimensions are 16 Slots x 128 Rows.\\
 \\
-Grid A is used to store 16 MD tracks.\\Grid B is used to store 6 External MIDI tracks + 4 AUX tracks.
-
+Grid X is used to store 16 MD tracks.\\Grid Y is used to store 6 External MIDI tracks + 4 AUX tracks.
+\item \textbf{Bank:}\\
+The rows of the Grid X are divided in to groups of 16, forming 8 banks A,B,C,D,E,F,G,H.
 \item \textbf{Row/Pattern:}
 \\
 A row of the Grid.
@@ -23,23 +37,28 @@ A row of the Grid.
 \item \textbf{Slot:}
 \\
 A position in the Grid where a Track can be stored. (Either occupied or unoccupied).
-
 \item \textbf{Track:}
 \\
-An internal sequencer track that may contain both sound and MIDI sequencer data.
+An MCL sequencer track that may contain both sound and MIDI sequencer data.
 
 There are 3 types of tracks.
 \begin{itemize}
 
-\item \textbf{MachineDrum Track} (Grid A: Slots 0-15):
+\item \textbf{MachineDrum Track} (Grid X: Slots 0-15):
 A sequencer track for the Elektron MD. Each MD Track contains the Machine's Sound Settings and Sequencer Data.
 
-\item \textbf{External MIDI Track} (Grid B: Slots 0-5):
+\item \textbf{External MIDI Track} (Grid Y: Slots 0-5):
 A polyphonic sequencer track used to control a sound module connected via MIDI. Each External MIDI track contains Sequencer Data, and for supported Elektron devices sound data is retained. 
 
-\item \textbf{AUX Track} (Grid B: Slots: 12-15)\\
+\item \textbf{AUX Track} (Grid Y: Slots: 12-15)\\
 An auxiliary track. Used to store/recall the Machinedrum's master FX settings, LFO settings, audio Routing and Tempo settings.
 \end{itemize}
 
-\end{itemize}
+\item \textbf{Device:}
+An attached MIDI device. The MC supports a unique device on ports 1 and 2.
 
+\item \textbf{Group:}
+\\
+A collection of slots ordered by the same device type.
+
+\end{itemize}

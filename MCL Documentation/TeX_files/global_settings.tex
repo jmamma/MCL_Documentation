@@ -1,12 +1,12 @@
-\chapter{Global Settings Menu}
-The Global Settings Menu is used for project management and to change a variety of software and hardware settings.
+\chapter{Configuration Menu}
+The Configuration Menu is used for project management and to change a variety of software and hardware settings.
 
 \screenshot{global_menu_1.png}
 %\fbox{\includegraphics[scale=.40]{global_menu_1.png}}\\\\
 %\fbox{\includegraphics[scale=.40]{global_menu_2.png}}\\
 
-\textit{To enter the Global Settings menu press \textbf{[ Save ] + [ Load ]} from the GridPage.}\\\\
-To enter sub-menus press the \textbf{YES} button. Press the \textbf{NO} button to go back one level or exit the menu.
+\textit{The Configuration menu can be opened via the GridPage by pressing \textbf{<Save> and <Load>} buttons simultaneously}\\\\
+To enter sub-menus press the \textbf{<YES>} button. Press the \textbf{<NO>} button to go back one level or exit the menu.
 \section{Load Project:}
 The Load Project sub-menu will display a list of MCL Projects that are stored on the root folder of the Micro SD card.\\\\
 The current project is always selected first and is indicated by an '>' character next to its name.
@@ -14,9 +14,9 @@ The current project is always selected first and is indicated by an '>' characte
 %\fbox{\includegraphics[scale=.40]{project_menu.png}}\\
 
 \subsection{Delete or Rename Project:}
-\textit{From within the Load Project page, press and hold \textbf{[ Shift2 ]} to access the file options menu.}\\\\
+\textit{From within the Load Project page, press and hold \textbf{<Shift>} to access the file options menu.}\\\\
 From the file options menu, you can delete or rename projects.\\
-Use the encoder to make your selection, release \textbf{[ Shift2 ]} to activate your choice.
+Use the encoder to make your selection, release \textbf{[Shift]} to activate your choice.
 
 \newpage
 \section{New Project:}
@@ -27,19 +27,12 @@ The New Project options loads the New Project Page. This page allows you to spec
 \screenshot{charpane.png}
 \textit{All text editing pages in MCL allow access to char pane. Hold \textbf{[ Shift1 ]}}
 
-\section{Convert Project:}
-Version 2.X projects can be converted to the 3.X format using the "CONVERT PROJECT"
-menu option in Global Settings. Project conversion is non-destructive, your original 2.X
-files will remain in the root directory of the SD Card.\\
-
-When initiated, project conversion will create a new project sub-directory on the SD Card under \textbackslash Projects\textbackslash. It will then create the necessary project files and then migrate the 2.X data across.\\\\
-\textit{Projects created in version 3.X are not compatible with earlier version of MCL.}
 \section{Project Files:}
-In 3.0 new and converted projects are now stored in the /Projects/ directory.
+Projects are stored on the SD Card in the \textbackslash{}Projects\textbackslash{} directory.
 Each project has its own folder, inside the project folder there are 3 files:
 \begin{verbatim}
 \Projects\new_project_000\
                           |- new_project_000.mcl   <- Project master file
-                          |- new_project_000.0     <- Grid A data
-                          |- new_project_000.1     <- Grid B data
+                          |- new_project_000.0     <- Grid X data
+                          |- new_project_000.1     <- Grid Y data
 \end{verbatim}
