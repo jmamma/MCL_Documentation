@@ -1,13 +1,14 @@
 \chapter{MCL Sequencer:}
-MCL features a powerful internal sequencer. There are 16 step sequencer tracks dedicated to the MD and 6 polyphonic tracks dedicated to External Midi devices, each has track independent length and playback speed.
+MCL features a powerful sequencer. There are 16 step sequencer tracks dedicated to the MD and 6 polyphonic tracks dedicated to External Midi devices, each has track independent length and playback speed.
 \section{MD Sequencer Tracks:}
 \begin{itemize}
 \item 16 Track Sequencer with 64 max steps per track.
 \item Conditional Trigs, Slide, Mute and Micro Timing per step.
-\item 8 lockable parameters per track with 256 locks available per track. Lockable parameters are MIDI learnt and programmable from the MD.
+\item 8 lockable parameters per track with 256 locks available per track.
 \item Trigless Locks.
 \item Real time record for both step and lock data.
-\item Chromatic Mode. (Machine pitch values are chromatically mapped to the MD. Melodies are recordable)
+\item Chromatic Mode.
+\item Arpeggiator.
 \end{itemize}
 \section{External MIDI Sequencer tracks:}
 \begin{itemize}
@@ -26,6 +27,7 @@ MCL features a powerful internal sequencer. There are 16 step sequencer tracks d
     \item Velocity per step
     \item Each track includes 8 MIDI Control Channel automation parameters with optional slide (linear interpolation).
     \item ProgramChange as CC destination.
+    \item Arpeggiator.
 \end{itemize}
 
 \section{Auxiliary tracks:}
@@ -41,17 +43,17 @@ There are four auxiliary track types
 \end{itemize}
 \chapter{Sequencer: Saving and Loading}
 
-Depending upon the track type, sequencer tracks are saved to or loaded from specific slots on either Grid A or Grid B. 
+Depending upon the track type, sequencer tracks are saved to or loaded from specific slots on either Grid X or Grid Y. 
 
 \begin{itemize}
-    \item 16 x MD Sequencer tracks are stored/loaded from slots 0 to 15 in Grid A, they correspond to MD tracks 1-16.
-    \item 6 x External MIDI Sequencer tracks are stored/loaded from slots 0 to 5 in Grid B. If the Analog4 was attached these would correspond to A4 tracks 1- 4, with 2 spare tracks for general MIDI.
-    \item 4 x Auxiliary tracks are stored/loaded from slots 12 to 15 in Grid B. 
+    \item 16 x MD Sequencer tracks are stored/loaded from slots 0 to 15 in Grid X, they correspond to MD tracks 1-16.
+    \item 6 x External MIDI Sequencer tracks are stored/loaded from slots 0 to 5 in Grid Y. If the Analog4 was attached these would correspond to A4 tracks 1- 4, with 2 spare tracks for general MIDI.
+    \item 4 x Auxiliary tracks are stored/loaded from slots 12 to 15 in Grid Y. 
 \end{itemize}
 
-\textit{Saving/Loading slots is accomplished through the use of the Save and Load pages and is described in the next chapter(s).}\\
+\textit{Saving and Loading slots is accomplished through the use of the Save and Load pages and is described in the next chapter(s).}\\
 
-Loaded tracks can be edited via their respective editor. The Step Edit page is used to edit MD sequencer tracks, whilst the PianoRoll Editor is used to edit External MIDI Sequencer tracks.\\
+Loaded tracks can be edited via their respective editor. The Step Edit page is used to edit MD sequencer tracks whilst the PianoRoll Editor is used to edit External MIDI Sequencer tracks.\\
 
 When loading tracks, the internal sequencer data will be loaded from the slot and placed in the corresponding sequencer track. The slot's sound data is then transmitted to the corresponding track on the attached MIDI device. If the sequencer is stopped this occurs immediately, if the sequencer is running, then loading occurs according to behaviour described in the chapter "Chain Mode".\\
 
@@ -62,19 +64,19 @@ When saving to a slot, the corresponding internal sequencer track's data is stor
 
 \begin{figure}
     \centering
-    \includegraphics[scale=0.7]{save_or_load_grid_a.png}
-    \caption{Save Page / Load Page - Grid A - MD }
+    \includegraphics[scale=0.7]{save_or_load_grid_x.png}
+    \caption{Save Page / Load Page - Grid X - MD }
     \label{fig:my_label}
 \end{figure}
 \begin{figure}
     \centering
-    \includegraphics[scale=0.7]{save_or_load_grid_b.png}
-    \caption{Save Page / Load Page - Grid B - External MIDI}
+    \includegraphics[scale=0.7]{save_or_load_grid_y.png}
+    \caption{Save Page / Load Page - Grid Y - External MIDI}
     \label{fig:my_label}
 \end{figure}
 \begin{figure}
     \centering
-    \includegraphics[scale=0.7]{save_or_load_grid_b_md.png}
-    \caption{Save Page / Load Page - Grid B - Auxiliary}
+    \includegraphics[scale=0.7]{save_or_load_grid_y_md.png}
+    \caption{Save Page / Load Page - Grid Y - Auxiliary}
     \label{fig:my_label}
 \end{figure}
