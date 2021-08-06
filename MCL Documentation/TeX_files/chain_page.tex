@@ -7,7 +7,7 @@ The Load page is used to load slots from the Grid. When a slot is loaded, Machin
 
 \newpage
 \section{Loading Individual Tracks}
-The Load Page uses the MD's \textbf{[Trig]} keys to specify which slots are to be loaded. Pressing multiple \textbf{[Trig]} keys and then releasing them will load the corresponding slots from the current row of the visible Grid.
+The Load Page utilises the MD's \textbf{[Trig]} keys to specify which slots are to be loaded. Pressing multiple \textbf{[Trig]} keys and then releasing them will load the corresponding slots from the current row of the visible Grid.
 \section{Grid Toggle}
 When in the Save or Load page, the \textbf{<Shift 1>} button can be used to toggle between Grid X or Grid Y.
 \section{Simultaneous Load from Grid X and Grid Y}
@@ -41,14 +41,13 @@ Each column of the grid has a dedicated MODE setting. The MODE setting is applie
 \begin{itemize}
     \item Manual (MAN):  The selected slots will be loaded at the next transition interval. Existing queues in matching columns will be discarded.
     \item Auto (AUT): The selected slots will be loaded at the next transition interval. If the slots LOOP setting is greater than 0, the column will begin loading slots automatically based on their LOOP/JUMP settings. Existing queues in matching columns will be discarded.
-    \item Queue (QUE): Each slot will be added to the corresponding column's queue. The slots in the queue will be loaded sequentially and repeat when the end is reached. A maximum of 8 slots can be queued per column. Queued slots are drawn with inverse colours on the grid.
+    \item Queue (QUE): Each slot will be added to the corresponding column's playback queue. The slots in the queue will be loaded sequentially and repeat in a loop. A maximum of 8 slots can be queued per column. Queued slots are drawn with inverse colours on the grid.
 \end{itemize}
 
 As each column has an independent mode setting, it is possible to have some slots loading automatically (Auto) according to their Loop/Jump setting, other slots can be looping in an improvised queue (Queue) the remaining slots could be left static via manual chain (Manual).
 
 \section{Slot Length Override:}
 The LEN paramater allows overriding the loaded slot's length. This can be useful if you have a short track, of say 4 steps, and instead want it to play for 16, looping throughout. Alternatively if you are loading a group of slots, each with different length, it is possible to force them to all play to the same length.
-\end{itemize}
 
 \section{Quantization Rules}
 The quantization rules specify the transition interval for the selected slots.\\
@@ -65,3 +64,7 @@ The minimum Quantization value is 4 steps. Quantization values can be changed by
 \section{Gain staging}
 To provide consistent level mixing across loads, the LEV parameter of a loaded track is never transmitted when the sequencer is running. 
 
+\newpage
+\chapter{Additional Loading:}
+\section{Loading from Grid}
+\section{Loading using Bank + Pattern Select}
