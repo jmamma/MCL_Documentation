@@ -42,24 +42,27 @@ There are four auxiliary track types
     \end{itemize}
 \end{itemize}
 \chapter{Sequencer: Saving and Loading}
-
-Depending upon the track type, sequencer tracks are saved to or loaded from specific slots on either Grid X or Grid Y. 
+For those already familiar with the MD, saving and loading in MCL works differently.\\\\
+MCL has no concept of pattern or kit. Instead the sequencer and kit data for each track are stored together as a single object, a Slot. Kit Master FX settings are stored and loaded independently of individual tracks.
+\\\\
+Depending upon the track type, sequencer tracks are saved to or loaded from specific slots on either Grid X or Grid Y.
 
 \begin{itemize}
     \item 16 x MD Sequencer tracks are stored/loaded from slots 0 to 15 in Grid X, they correspond to MD tracks 1-16.
     \item 6 x External MIDI Sequencer tracks are stored/loaded from slots 0 to 5 in Grid Y. If the Analog4 was attached these would correspond to A4 tracks 1- 4, with 2 spare tracks for general MIDI.
-    \item 4 x Auxiliary tracks are stored/loaded from slots 12 to 15 in Grid Y. 
+    \item 4 x Auxiliary tracks from slots 12 to 15 in Grid Y. These include MasterFX, Routing, LFO and Tempo track types.
 \end{itemize}
 
-\textit{Saving and Loading slots is accomplished through the use of the Save and Load pages and is described in the next chapter(s).}\\
+\textit{Saving and Loading slots is accomplished through the use of the Save and Load pages.  Tracks can either be saved and loaded individually, or by \textbf{Group} and is described in the next chapter(s).}\\
 
 Loaded tracks can be edited via their respective editor. The Step Edit page is used to edit MD sequencer tracks whilst the PianoRoll Editor is used to edit External MIDI Sequencer tracks.\\
 
-When loading tracks, the internal sequencer data will be loaded from the slot and placed in the corresponding sequencer track. The slot's sound data is then transmitted to the corresponding track on the attached MIDI device. If the sequencer is stopped this occurs immediately, if the sequencer is running, then loading occurs according to behaviour described in the chapter "Chain Mode".\\
+When loading tracks, the internal sequencer data will be loaded from the slot and placed in the corresponding sequencer track. The slot's sound data is then transmitted to the corresponding track on the attached MIDI device. If the sequencer is stopped this occurs immediately, if the sequencer is running, then loading occurs in accordance with the Load Page's "MODE" setting. By switching between modes it is possible to automate or queue track loading.
+\\
 
 When saving to a slot, the corresponding internal sequencer track's data is stored, if the slot is mapped to a MIDI device such as the MD, the sound data of the corresponding track is retrieved from the device and also saved.\\
 \\
-\textit{Pattern/step sequencer data from an Elektron device is not retained. However, for the Machinedrum, the Save page offers the possibility of copying the corresponding MD track's pattern data to the slot's internal sequencer data via the options "MD", or "MERGE" (see next chapter, Save Page)}
+\textit{Pattern/step sequencer data from an Elektron device is not retained. However, for the Machinedrum, the Save page offers the possibility of copying the corresponding MD track's pattern data to the slot's internal sequencer data via the options "IMPORT", or "MERGE" (see next chapter, Save Page)}
 \\\\
 
 \begin{figure}

@@ -5,29 +5,53 @@ The Load Page behaviour depends on whether the sequencer is actively running:
 \begin{itemize}
     \item If the sequencer is in a stopped state, the selected slots will be loaded immediately.
     \item If the sequencer is in a running state, the slots will be placed in the transition queue, to be loaded at the next interval defined by the selected quantization rule
+    \item To provide consistent level mixing across loads, the LEV parameter of a loaded track is never transmitted when the sequencer is running. 
 \end{itemize}
-\screenshot{load_from_a.png}
-\textit{The Load Page is accessible from the GridPage by pressing the  \textbf{[ Load ]} function button.}
-\encodersbuttons{--}{--}{Quantization (Q)}{--}{Cancel Load}{--}{--}{Group Select}
+ Each column in the grid now has it's own dedicated load mode setting. It can be either Manual, Auto or Queue.\\
+\\
+ Each column of the Grid can have up to 8 slots queued at any time. Queued slots are played in order
+ and then the sequence is repeated indefinately.\\\\
 
-\section{Loading Individual Tracks}
-The Load Page uses the MD's Trigger Interface to specify which slots are to be loaded. Pressing multiple trigger buttons and then releasing them will load the corresponding slots from the current row of the visible Grid.
-\section{Grid Toggle}
-When in the Save or Load page, the \textbf{[ Shift 1 ]} button can be used to toggle between Grid X or Grid Y.
-\newpage
-\section{Simultaneous Load from Grid X and Grid Y}
-It is possible to simultaneously load a collection of tracks from both Grids A and B. 
+ When Queue mode is selected from the Load page, each loaded slot will be added to the corresonding column's
+ queue.\\\\
+ 
+ A column's queue can be cleared by switching chain mode to either Manual or Auto and then loading a slot in
+ that column.\\\\
+
+ As each column has an independent load setting, it is possible to have some slots loading automatically
+ (Auto) according to their Loop/Jump setting, other slots can be looping in an improvised queue (Queue),
+ and then the remaining slots could be left static via manual chain (Manual).
+
+Available load modes:
 \begin{itemize}
-\item First select the tracks from one Grid Yy pressing and holding the corresponding triggers.
-\item Tap \textbf{[ Shift 1 ]} to switch grids
-\item Release the trig selection
-\item Select tracks from the alternate Grid Yy pressing and holding the corresponding triggers. 
-\item Finally release the second grid selection to confirm the action. 
+    \item MAN: Save the MCL's sequencer data and associated device's sound data.
+    \item AUT: save MD sequencer data and MD sound data.
+    \item QUE: Merge MD Sequencer data with MCL's loaded sequencer data and then save sequencer data and MD sound data.
+\end{itemize}
+\textit{IMPORT and MERGE modes are only available when the sequencer playback is stopped.}
+\\
+\screenshot{load_from_a.png}
+\textit{The Load Page is accessible from the GridPage by pressing the  \textbf{<Load>} function button.\\
+Alternatively, pressing the MD's \textbf{[YES]} key will open the Load Page.}
+\encodersbuttons{--}{--}{Quantization (Q)}{--}{Cancel Load}{--}{--}{Group Select}
+\newpage
+\section{Loading Individual Tracks}
+The Load Page uses the MD's \textbf{[Trig]} keys to specify which slots are to be loaded. Pressing multiple \textbf{[Trig]} keys and then releasing them will load the corresponding slots from the current row of the visible Grid.
+\section{Grid Toggle}
+When in the Save or Load page, the \textbf{<Shift 1>} button can be used to toggle between Grid X or Grid Y.
+\section{Simultaneous Load from Grid X and Grid Y}
+It is possible to simultaneously load a collection of tracks from both Grids X and Y. 
+\begin{itemize}
+\item First select the tracks from Grid X pressing and holding the corresponding \textbf{[Trig]} keys.
+\item Tap \textbf{<Shift 1>} to switch grids
+\item Release the \textbf{[Trig]} selection
+\item Select tracks from the alternate Grid Y pressing and holding the corresponding \textbf{[Trig]} keys. 
+\item Finally release the second grid \textbf{[Trig]} selection to confirm the action. 
 \end{itemize}
 
 \section{Load Track Groups:}
-When in the Save or Load Page, holding the \textbf{[ Shift 2 ]} button opens a Group Select menu,
-allowing you to load or save all tracks corresponding to a group. An entire row/pattern across both grids A+B can be loaded this way.\\
+When in the Save or Load Page, holding the \textbf{<Shift 2>} button or MD's \textbf{[YES]} key opens the Group Select menu,
+allowing you to load or save all tracks corresponding to a group.\\An entire row/pattern across both Grids X + Y can be saved this way.\\
 \\
 There are four groups:
 \begin{enumerate}
@@ -36,9 +60,9 @@ There are four groups:
     \item FX (MDFX + LFOTrack + RouteTrack)
     \item TEMPO
 \end{enumerate}
-From the Group Select Menu each group can be enabled/disabled using the MD's trigger interface.\\
+From the Group Select Menu each group can be enabled/disabled using the MD's \textbf{[Trig]} keys.\\
 \\
-Releasing \textbf{[ Shift 2 ]} will save/load tracks corresponding to the active groups.
+Releasing \textbf{<Shift 2> / [YES]} will save/load tracks corresponding to the active groups.ve/load tracks corresponding to the active groups.
 \section{Quantization Rules}
 The quantization rules specify the transition interval for the selected slots.\\
 \\
