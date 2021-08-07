@@ -28,10 +28,12 @@ Version X.05 of the MD firmware introduces a third editing mode beyond Classic a
 Enhanced mode is activated automatically when the MD is connected to the MegaCommand.\\
 \\
 When in Enhanced mode, both Classic and Extended LEDs will be lit. The three modes can be toggled using the Classic/Extended button.\\
-\\
-Enhanced mode disable access to the MD's internal sequencer and enables the Machinedrum's GUI to be fully integrated with MCL as described on the next page.
-\\
-\includegraphics[width=10cm]{enhanced_mode.png}
+\includegraphics[width=10cm]{enhanced_mode.png}\\
+Enhanced mode disables editing access to the MD's internal sequencer and enables the Machinedrum's GUI to be fully integrated with MCL. This is all described in detail on the next page, and in subsequent chapters.
+\\\\
+\textit{When using MCL with the MD, it is recommended that you switch  to Classic or Extended and load a blank pattern, then switch back to Enhanced. The MD's internal sequencer is never disabled, and the MCL sequencer will play alongside it.\\\\
+The KitName + Pattern fields shown on the MD display are re-purposed to illustrate the position and name of MCL's last loaded row.
+}
 \newpage
 \section{MD + MCL command summary}
 \begin{itemize}
@@ -51,7 +53,7 @@ Enhanced mode disable access to the MD's internal sequencer and enables the Mach
       \item \textbf{[Function] + [Scale]} Opens the scale menu to set length and speed settings of all MD tracks.
       \item Hold \textbf{[No]} key to open Slot Menu.
       \begin{itemize}
-                \item \textbf{[Bank]} keys can be used to select load mode: Manual, Auto or Queue.
+                \item \textbf{[Bank A,B,C]} keys can be used to select load mode: Manual, Auto or Queue.
                 \item \textbf{[Up/Down/Left/Right]} to select multiple slots in the grid.
                 \item \textbf{[Clear/Copy/Paste]} to clear/copy/paste selected slot(s).
                 \item \textbf{[Yes]} load selected slots. Slots are loaded according to the current load MODE setting. If more than one row is selected, the MODE is automatically set to QUE, and the loaded slots are added to each column's playback queue.                
@@ -93,7 +95,7 @@ Enhanced mode disable access to the MD's internal sequencer and enables the Mach
       \item \textbf{[Step] + [Up/Down]} Conditional.
       \item \textbf{[Function] + [Left/Right]} Shift track.
       \item \textbf{[Function] + [Up]} Reverse track.
-      \item \textbf{[Function] + [Scale]} Opens the scale menu to set length and speed settings of the current MD track.
+      \item \textbf{[Function] + [Scale]} Opens the "Scale Setup" menu to set length and speed settings of the current MD track.
       \item \textbf{[Function] + [Bank B]} Edit Lock toggle
       \item \textbf{[Function] + [Bank C]} Edit Mute toggle
       \item \textbf{[Function] + [Bank D]} Edit Slide toggle

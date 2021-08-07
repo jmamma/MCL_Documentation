@@ -1,22 +1,30 @@
-\chapter{MD StepEdit Page:}
-
-The Step Edit page is used to program MCL's internal sequencer for a selected MD track. 
-\screenshot{step.png}
-
-\textit{To enter the MD Step Edit Page: First select desired track on the MD \textbf{[Function + Track N]}. Then press \textbf{[PageSelect + Trigger 5]} to open the StepEdit page.}
-
+\chapter{Step Editor Page:}
+The Step Editor (StepEdit) page is used to program MCL's internal sequencer for the focused MD track and is fully synchronised with the MD's pattern editing interface.
+\screenshot{step.png}\\
+\textit{Press \textbf{<Page> + [Trig 5]} key to open the StepEdit page.}\\\\
+\textit{Pressing the MD's \textbf{[REC]} button will allow you to toggle in and out of the StepEdit page from anywhere within MCL.}
 %\fbox{\includegraphics[scale=.40]{seq_step_page.png}}
 \screenshot{step_action.png}
 
-\encodersbuttons{Trig Condition}{Micro-Timing}{Track Length}{Note}{Toggles MD/Ext}{PageSelect}{Rotate View}{Track/Trig Menu}
-
+\encodersbuttons{Trig Condition}{Micro-Timing}{Track Length}{Note}{Toggles REC}{}{Rotate Sequencer Page}{Track/Trig Menu}
+\newpage
 \section{GUI:}
 \begin{itemize}
-\item The Step Edit Page uses the TI. The trigger buttons on the MD correspond to the 16 steps on the current page of the current track.
-\item The 16 steps are displayed on the bottom row
-\item Trig Conditions and Micro-Timing settings are per step and are chosen from encoders 1 and 2 respectively.
-\end{itemize}
+\item The StepEdit page leverages the MD's GUI for editing.
+\item The editing mode can be toggled between Trig, Lock, Mute and Slide by pressing \textbf{[Func] + [Bank C/D/E]}.
+\item The 16 steps of the current page for the current track are displayed on the bottom row.
+\item The \textbf{[Trig]} buttons on the MD correspond to the visible steps. Pressing a \textbf{[Trig]} will add the step. A press followed by quick release will remove the step. 
+\item Trig Conditions and Micro-Timing settings are per step and are set by holding \textbf{[Trig]} and rotating \textbf{<Encoder1>} or \textbf{<Encoder 2>}. Alternatively the MD's \textbf{[Up,Down]} keys can be used to change Trig Conditions and \textbf{[Left,Right]} for Micro-Timing.
+\item Parameter locks can be added to a step by selecting a \textbf{[Trig]}, and rotating the corresponding parameter on the MD.
+\item When a parameter lock is set, the step sequencer LEDs will blink on the MD, and the MCL will display a filled rectangle above step trig on screen.
+\item Parameter locks can be removed by selecting a \textbf{[Trig]} and tapping the MD's matching \textbf{[Encoder]}.
+\item A step can be previewed by holding down the matching \textbf{[Trig]} key and pressing \textbf{[Enter]}.
+\item The visible sequencer page can be rotated pressing \textbf{<Load | Yes>} or the MD's \textbf{[Scale]} key.
+\item The steps of the sequence can be shifted left or right by holding the MD's \textbf{[Func]} key and pressing \textbf{[Left]} or \textbf{[Right]}
+\item The MD's \textbf{[Clear/Copy/Paste]} functions work across Track, Sequencer Page and Step.
+\item The Length and Speed of the track can be set via the MD's Scale menu by pressing \textbf{[Func]} followed by \textbf{[Scale]}
 
+\end{itemize}
 \section{Trig Conditions:}
 \begin{itemize}
 \item L1,L2,L3,L4,L5,L6,L7,L8 (For Ln, step is only triggered after every n iterations of track)
@@ -24,65 +32,40 @@ The Step Edit page is used to program MCL's internal sequencer for a selected MD
 \item 1S. (One Shot trig, step is only triggered once)
 \item Each trig condition above has a twin denoted by the \^{} character e.g L1\^{}, L2\^{}, P1\^{}. When these condition modes are selected, parameter locks and slides must also obey the trig condition.
 \end{itemize}
-\section{Micro Timing:}
+\section{Micro-Timing:}
+When editing Micro-timing, the uTIMING window will be visible on both the MC and MD. The number of divisions between notes is dependent on the track's Speed setting.\\\\\textit{The MC finest sequencer resolution is 1/192th notes.}
 \screenshot{utiming1.png}
-
-\vspace{-0.3cm}
-
-\section{Track Speed:}
-All sequencer tracks can be played at various speeds. 1x, 2x, 3/2x, 3/4x, 1/2x, 1/4x, 1/8x. Triplets can be achieved using either 3/2x, 3/4x. 
-Track speed can be adjusted from the Track Menu as explained in the previous chapter.
-
-\section{Program a sequence:}
-\begin{itemize}
-\item Press and hold trigger button(s) on the MD to place triggers in the sequence.
-\item Rotate encoders 1 and 2 to change the conditional mode or micro-timing if desired.
-\end{itemize}
-
+\section{Track Speed \& Length:}
+All sequencer tracks can be played at an independent speed and length.\\\\
+The chosen speed can be one of either: 1x, 2x, 3/2x, 3/4x, 1/2x, 1/4x, 1/8x.\\Triplets can be achieved using either 3/2x, 3/4x.\\\\
+\textit{Track speed can be adjusted from MCL's Track Menu.\\Track length can be adjusted by rotating \textbf{<Encoder3>}.\\\\The MD's "Scale Setup" Menu accessible via \textbf{[Func] + [Scale]} can be used to quickly change the track speed \& length.}
+\\\\If the "Scale Setup" menu is opened outside of Step Edit mode, the speed \& length changes will apply to all 16 tracks.
 \section{Change Edit Mode:}
 By default, the Step Edit page opens in Trig Edit mode. It is possible to change this edit mode to program the track's sequencer data for either Trigs, Locks, Slides or Mutes.
 \begin{itemize}
-\item To change the Edit mode, press and hold the\textbf{ [ Shift2 ]} to open the track menu, rotate \textbf{[ Encoder 2 ]} to the entry \textbf{Edit:}, then rotate \textbf{[ Encoder1 ]} to select either \textbf{"Trig, Lock, Slide or Mute"}.
+\item To change the Edit mode, press and hold the \textbf{<Shift>} to open the track menu, rotate \textbf{<Encoder 2>} to the entry \textbf{Edit}, then rotate \textbf{<Encoder 1>} to select one of either Trig, Lock, Slide or Mute.
+\item Alternatively, the Edit mode can be rotated between Lock, Mute and Slide by pressing the MD's \textbf{[Func] + [Bank C/D/E]} keys.
 \end{itemize}
-\vspace{-0.3cm}
-
+\newpage
 \section{Clearing a sequence:}
 \begin{itemize}
-\item To clear the current track, press and hold the\textbf{ [ Shift2 ]} to open the track menu, rotate \textbf{[ Encoder2 ]} to the entry \textbf{CLEAR}, then rotate \textbf{[ Encoder1 ]} to select \textbf{TRK}.
+\item To clear the current track, press and hold the\textbf{<Shift>} to open the track menu, rotate \textbf{<Encoder 2>} to the entry \textbf{CLEAR}, then rotate \textbf{<Encoder 1>} to select \textbf{TRK}.
 \item To clear all MD tracks, select \textbf{ALL}
+\item The MD's \textbf{[Clear]} function can be used to clear a track, or all track.
 \end{itemize}
-
-\vspace{-0.3cm}
-
 \section{Rotating visible sequence:}
 Each track consists of 4 pages of 16 steps, for a total of 64 steps per track.
 \begin{itemize}
-\item Rotate the current track-page by pressing the \textbf{[ Load ] }button.
-\item The MD's \textbf{[ Scale ]} button can also be used to rotate the sequence.
+\item Rotate the current track-page by pressing the \textbf{<Load>}button.
+\item The MD's \textbf{[Scale]} button can also be used to rotate the sequence.
 \end{itemize}
-
-\vspace{-0.3cm}
-
-\section{Changing track length:}
-\begin{itemize}
-\item Track length is controlled by rotating \textbf{[ Encoder 3 ]}. Only steps less than the current track length are drawn.
-\item To change the lengths of all 16 tracks simultaneously hold down \textbf{[ Load ]} whilst rotating \textbf{[ Encoder 3 ]}.
-\item Track length can also be set by holding \textbf{[ Load ]} and then selecting the corresponding step from the MD trigger interface. The track length is offset by the current track-page.
-\end{itemize}
-
 \section{Chromatic Step Edit:}
 The Step Edit allows you to adjust a step's pitch by setting a note value. 
 \begin{itemize}
-\item Press and hold trigger button(s) on the MD. Rotating \textbf{[ Encoder 4 ]} will allow you change the note value of the selected steps.
+\item Press and hold trigger button(s) on the MD. Rotating \textbf{<Encoder 4 >} will allow you change the note value of the selected steps.
 \item A keyboard will be drawn on the display, showing the current note.
 \end{itemize}
 \screenshot{step_keyboard.png}
-
-\section{Parameter Locks:}
-The Step Edit page now allows you to enter parameter locks directly from the MD. Simply select a trigger button and rotate the corresponding parameter on the MD. Up to four parameter types can be locked on any given track. See the Sequencer Parameter Locks pages more details.
-\newpage
-\section{Trig Preview:}
-Hold down the desired trigger and press \textbf{[ Enter ]} on the Machinedrum.
 \section{Slides:}
 Each parameter lock can be made to slide up or down to the nearest step containing a parameter lock of the same type.
 \\\\
@@ -91,12 +74,12 @@ To add slides to your sequence change the Edit Mode to "SLIDE" (see above).
 Individual steps of your sequence can be muted, by placing a mute trig at the corresponding position. Mutes are reset on sequencer restart.\\\\ 
 To add mutes to your sequence change the Edit Mode to "MUTE" (see above).
 \section{Shift Sequence:}
-The sequence of an individual track can be shifted left of right. Press \textbf{[ Function ]} + \textbf{[ Left ]} or \textbf{[ Right ]} on the MD. The sequencer menu can also be used to shift the entire pattern via the SHIFT option.
+The sequence of an individual track can be shifted left of right. Press \textbf{[Function]} + \textbf{[Left]} or \textbf{[Right]} on the MD. The sequencer menu can also be used to shift the entire pattern via the SHIFT option.
 Similarly you can reverse a track's sequence from the sequencer menu option REVERSE.
 \section{Step Menu:}
 
 \screenshot{step_menu.png}
-The step menu will be opened by selecting one or more step/trig from the TI and when holding \textbf{[Shift 2]}. The entry activated on release, similar to the slot menu.
+The step menu will be opened by selecting one or more step/trig from the TI and when holding \textbf{<Shift>}. The entry activated on release, similar to the slot menu.
 The step menu consists of the following entries:
 
 \begin{figure}[hb]

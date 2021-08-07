@@ -1,16 +1,18 @@
 \chapter{Machinedrum Settings Menu:}
 The Machinedrum settings are used to control how the MCL firmware interacts with the MD.
 \screenshot{machinedrum_menu.png}
-\section{Track Select}
-When set to AUTO (default), the MCL sequencer pages will automatically change track when the current track is changed on the MD.
-
 \section{Normalize:}
-When set to AUTO (default), all saved MD tracks have their LEV boosted to 127, and parameters controlling VOL (including parameter locks) are lowered
-to compensate. LFOs with destination VOL are 
-adjusted too.
 
-The resulting track loudness remains the same, but the Track LEV parameter is no longer set arbitrarily. The maximum value of LEV (127), will always be the loudest volume for each track.
-\section{CTRL CHAN:}
+When the NORMALIZE option is set to AUTO (default), all saved MD tracks have their LEV boosted to 127, and parameters controlling VOL (including parameter locks) are lowered
+to compensate. LFOs with destination VOL are 
+adjusted too.\\
+\\
+The resulting track loudness remains the same, but the Track LEV parameter is no longer set arbitrarily. The maximum value of LEV (127), will always be the loudest volume for each track.\\
+\\
+When the sequencer is running, the LEV paramater is never transmitted to the MD. This allows the performer to fade tracks in and out of a mix using the LEV parameter.\\
+\\
+The performer can then confidently raise the LEV of the track to 127, knowing this is the is the intended maximum loudness for the track.
+\section{CTRL Chan:}
 The CTRL CHAN setting is used to control which input  source the MD should use for note data when in Chromatic mode.
 
 When set to INT (default) the MD will be controlled by the MD's \textbf{[Trig]} keys in chromatic mode.

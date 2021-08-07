@@ -1,32 +1,29 @@
 \chapter{MCL Sequencer Pages:}
 
-\textit{The primary Sequencer Pages are accessed using the \textbf{<Page>} button. These include:
+\textit{The primary Sequencer Pages are accessed using the \textbf{<Page>} button.} These include:
 \begin{itemize}
-    \item (MD) Step Edit Page
-    \item (Ext MIDI) PianoRoll Page
+    \item (MD) Step Editor Page
+    \item (Ext MIDI) PianoRoll Editor Page
     \item (MD/Ext MIDI) Chromatic Page
-\end{itemize}}
-MCL's Step Edit page is fully synchronised with the MD's user interface. Pressing the MD's \textbf{[REC]} button will allow you to toggle in and out of the StepEdit page.
+\end{itemize}
 \section{Track selection}
-For the Step Edit page the current track selection is synced to the Machinedrum. When you change track on the MD the track will change on the MegaCommand.\\\\
-For the PianoRoll page, the current track can be selected from the PianoRoll menu's TRACK SELECT option. Alternatively, if an external MIDI device is connected to port 2, the track will automatically change to the first EXT track that is set to the same MIDI channel as incoming note data.
-\\\\
-\textit{Automatic track select can be disabled from the MCL configuration menu option:\\Config -> Machinedrum -> TRACK SELECT}
+For the Step Editor page the current track selection is synced to the Machinedrum. When you change track on the MD the track will change on the MegaCommand.\\\\
+For the PianoRoll Editor page, the current track can be selected from the PianoRoll menu's TRACK SELECT option. Alternatively, if an external MIDI device is connected to port 2, the track will automatically change to the first EXT track that is set to the same MIDI channel as incoming note data.
 \section{Live Record:}
-Live Record mode can be activated from any Sequencer page by pressing \textbf{<Save >}. \\Alternatively, hold \textbf{[REC]} and press \textbf{Play} on the MD to activate record mode. \\Depending upon the page type, Live Record can be used to capture:
+\textit{Live Record mode can be activated from any Sequencer page by pressing \textbf{<Save >}.\\Alternatively, hold \textbf{[REC]} and press \textbf{[Play]} on the MD to activate record mode.}\\\\Depending upon the page type, Live Record can be used to capture:
 \begin{itemize}
     \item Trig presses
     \item Parameter changes, CC Automation
     \item Notes played in Chromatic Mode
     \item Notes played on the PianoRoll page.
 \end{itemize}
-Pressing \textbf{<Load>} during a recording will clear the sequence for the current track.
+\textit{Pressing \textbf{<Load>} during a recording will clear the sequence for the current track.}
 
 \newpage
 \section{Track menu}
 \screenshot{track_menu.png}
 
-The track menu will be opened when holding \textbf{<Shift>}, and the entry activated on release, similar to the slot menu.
+\textit{From within a sequencer page, the track menu can be opened by holding \textbf{<Shift>}.\\The selected entry is activated upon release.}\\\\
 The track menu consists of the following entries that are common to all Sequencer Pages:
 
 \begin{figure}[hb]
@@ -35,7 +32,7 @@ The track menu consists of the following entries that are common to all Sequence
     \rowcolor[HTML]{C0C0C0} 
     Entry            & Function                                                        \\ \hline
     Edit     & change editor mode   \\ \hline
-    Track Select     & select active track                  *only visible when TRACK SELECT = MAN                                              \\ \hline
+    Track Select     & select active track \\ \hline
     Copy             & \begin{tabular}[c]{@{}l@{}}TRK: copy track, ALL: copy pattern\end{tabular}                                             \\ \hline
     Clear            & \begin{tabular}[c]{@{}l@{}}TRK: clear track, ALL: clear pattern\end{tabular}                                           \\ \hline
     Paste            & \begin{tabular}[c]{@{}l@{}}TRK: paste track, ALL: paste pattern\end{tabular}                                           \\ \hline
