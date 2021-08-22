@@ -1,11 +1,11 @@
 \chapter{Chromatic Page:}
 The Chromatic Page, enables the user to play tracks of the Machinedrum or an External MIDI device chromatically. Each MD track can be used as a voice of a monophonic/polyphonic synthesizer. Melodic compositions can be recorded in real-time.
 \screenshot{chroma.png}\\
-\textit{The Chromatic page can be accessed by pressing \textbf{<Page>} and \textbf{[Trig 8]}.}
+\textit{The Chromatic page can be accessed by pressing \textbf{<Page>/[Global]} and \textbf{[Trig 8]}.}
 \\
 \section{Using the Chromatic Page:}
 \screenshot{chromat_action.png}
-\encodersbuttons{Octave (OC)}{Fine Tune (F)}{Track Length}{Scale Type (S)}{Record}{PageSelect}{Clear Track}{Track/Trig Menu}
+\encodersbuttons{Octave (OC)}{Fine Tune (F)}{Track Length}{Scale Type (S)}{Record}{PageSelect}{Apply All}{Track/Trig Menu}
 The top left of the screen shows the active device tab and indicates whether the Chromatic Page is targeting the MD or an Ext MIDI device.
 The Octave (OCT) parameter allows for adjusting the relative octave of the track's tuning. The Detune (DET) parameter can be used for offsetting the absolute pitch by small increments (MD only). Length (LEN) controls the length of the associated sequencer track. Scale (SCA) maps MIDI notes to a musical scale type.
 A keyboard at the bottom of the screen is displayed showing notes as they are played.
@@ -13,12 +13,12 @@ A keyboard at the bottom of the screen is displayed showing notes as they are pl
 \section{Setup for Chromatic mode:}
 There are two important configurations options that must be understood in order to use the Chromatic Page correctly:
 \begin{itemize}
-    \item The \textbf{Configuration-->Machinedrum-->CTRL CHAN} parameter determines whether the MD should receive note input from the Trigger Interface, or from a MIDI channel on an External MIDI Device. \textit{See Chapter: Global Settings}
+    \item The \textbf{Config-->Machinedrum-->CTRL CHAN} parameter determines whether the MD should receive note input from the MD's \textbf{[Trig]} keys, or from a MIDI channel on an External MIDI Device. \textit{See Chapter: Global Settings}
     \item The PolyPage is used to allocate one or more MD tracks as dedicated synth voices. \textit{See Chapter: Polyphonic Mode} 
 \end{itemize}
 
 \section{Tuning:}
-For MD tracks hosting a supported machine, the machines’s pitch is tuned to notes of a selected scale. The track can then be played using the MD Trigger interface or an attached MIDI keyboard.\\\\
+For MD tracks hosting a supported machine, the machines’s pitch is tuned to notes of a selected scale. The track can then be played using the MD's \textbf{[Trig]} keys or an attached MIDI keyboard.\\\\
 The Machinedrum X.05 OS allows for more precise tuning of machines. If the machine's tuning setting is TONAL then the new quarter tone, equal temperament tuning table will be used. If the machine's tuning setting is DEFAULT the legacy microtonal tuning table is used.
 \\
 \section{Chromatic Page Track Menu:}
@@ -34,30 +34,36 @@ Holding \textbf{[ Shift 2 ]} opens the Track menu.
     Polyphony        & Opens the PolyPage, for voice selection\\ \hline
     \end{tabular}
 \end{figure}
+\newpage
 \section{Ext MIDI Tracks:}
 The Chromatic Page is also used to record/play the External MIDI tracks.
 Octave and Scale settings from the Chromatic Page are also applied to incoming note data when using the PianoRoll editor.
-\newpage
-\section{Recording a sequence:}
-\textit{Press the \textbf{<Save>}button to enable live record mode.\\}
+\section{Ext MIDI Track Selection \& Mutes:}
+When opening the Track Menu \textbf{<Shift>} from within in either the PianoRoll Editor or Chromatic Page, the MD's \textbf{[Trig]} keys can be used to switch between Ext MIDI Tracks and or  mute/unmute them.
+\begin{itemize}
+    \item MD \textbf{[Trig]} keys 1-6 correspond to Ext MIDI Track selection 1-6.
+    \item MD \textbf{[Trig]} keys 8-12 correspond to Ext MIDI Track mutes 1-6.
+\end{itemize}
+\section{Recording a Sequence:}
+\textit{Press the \textbf{<Save>} button ot use the MD's \textbf{[Rec]} function to enable live record mode.\\}
 
 Play notes on either the MD or External Midi to record a melody.
 
-\section{Clearing recorded sequence:}
+\section{Clearing Recorded Sequence:}
 \begin{itemize}
 \item To clear the current track, press and hold the\textbf{<Shift>} to open the track menu, rotate \textbf{<Encoder2>} to the entry \textbf{CLEAR}, then rotate \textbf{<Encoder1>} to select \textbf{TRK}.
 \item To clear all tracks of the current track type, select \textbf{ALL}.
-\item The current track can also be quickly cleared by pressing \textbf{<Load >}.
+\item A recorded track can be quickly cleared using the MD's \textbf{[Clear]} function.
 \end{itemize}
 
-\section{Changing track length:}
+\section{Track Speed and Length:}
 \begin{itemize}
 \item Track length is controlled by rotating \textbf{<Encoder 3>}.
 \item To change the lengths of all tracks of the current track type, simultaneously hold down \textbf{<Load>} whilst rotating \textbf{<Encoder 3>}.
-\item Track length can also be set by holding \textbf{<Load>} and then selecting the corresponding step from the MD trigger interface. The track length is offset by the current track-page.
+\item Speed and length can be set via the Track menu, by holding \textbf{<Shift>}.
+\item For the Machinedrum, track speed and length can also be set using the MD's Scale menu by pressing \textbf{[Func] + [Scale]}.
 \end{itemize}
-
-
+\newpage
 \section{External MIDI Device:}
 Melodies and chords can be played and recorded from an External MIDI device on port 2.
 \\
@@ -67,6 +73,3 @@ When MIDI note data is received, MCL will switch to the first Exteral MIDI seque
 
 \textit{The active device illustrated in the top left corner of the display, will switch over from MD to MI, when MIDI notes are received.}
 \\
-
-Switching Between Low and High Resolution Modes on Poly Sequencer Tracks.
-Press \textbf{<Shift>} then rotate \textbf{<Encoder>} to select the \textbf{TRACK RES.} entry.

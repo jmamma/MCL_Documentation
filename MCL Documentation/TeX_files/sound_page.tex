@@ -1,33 +1,54 @@
-\chapter{Sound Browser Page:}
-The Sound Browser page is used to store and recall sounds from the Machinedrum.
+\chapter{Sound Manager Page:}
+The Sound Manager page is used to manage the following types of sounds: 
+\begin{enumerate}
+    \item \textbf{SOUND} -- a sound preset, including the machine assignments, and its associated parameters. It can consist of machine settings from a single track, or two tracks linked by TrigGroup.
+    \item \textbf{WAV} -- (UW models only) $.wav$ PCM samples.
+    \item \textbf{SYSEX} -- (UW models only) $.syx$ Midi SDS samples, like the ones in the official Machinedrum sound packs.
+\end{enumerate}
+You can load and save these sounds between the Machinedrum and the Megacommand's micro SD card.
 
 \screenshot{sound_manager.png}
-\textit{To enter the Sound Browser Page: press and hold \textbf{<Page>}, then press \textbf{[Trig 8]}.}
+\textit{To enter the Sound Manager Page: press and hold \textbf{<Page>/[Global]}, then press \textbf{[Trig 9]}.}
 
-A sound can consist of machine settings from a single track, or two linked tracks.\\
-\\
-Two tracks can be linked by configuring the TrigGroup settings on one, to trigger the other. When two tracks are linked, both the source and destination track machine settings will be stored together to form a single sound.
+\section{Navigating the Sound Browser Page.}
+
+The user interface consists of two panels. The currently active sound type is displayed on the left, and a file browser on the right. When the save action is supported by a sound type (currently \textbf{SOUND} and \textbf{WAV} are supported), the [SAVE] entry will also be shown in the file browser panel.
 
 %\fbox{\includegraphics[scale=.40]{sound_page.png}}
 \screenshot{sound_page.png}
 
- \section{Navigating the Sound Browser Page.}
-Rotate \textbf{<Encoder 2>} to iterate through the menu items.\\
-Press \textbf{<Load>} to make your selection.
-
-The \textbf{<Save>} buttons can be used to exit/cancel.
+Rotate \textbf{<Encoder 1>} to switch between different sound types.\\
+Rotate \textbf{<Encoder 2>} to iterate through the files.\\
+Press \textbf{<Load>} to enter a directory, or make your selection.\\
+Press \textbf{<Save>} to exit/cancel.\\
+\\
+Note that the file browser will filter the directory content based on the active sound type. For example, if you select \textbf{WAV}, only $.wav$ files will be shown.
  
- \section{Saving Sounds}
- To save a new Sound. 
+\section{Saving Sounds}
+Save means from MD to MC.\\
+To save a \textbf{SOUND}:
 \begin{enumerate}
  \item Select the desired track on the MD.
- \item From the Sound Page, select save.
+ \item From the Sound Manager, select \textbf{SOUND} in the left panel.
+ \item Select [SAVE] in the right panel.
+ \item From within the MD, two tracks can be linked by configuring the TrigGroup settings on one, to trigger the other. When two tracks are linked, both the source and destination track machine settings will be stored together to form a single sound.
 \end{enumerate}
+To save a \textbf{WAV}:
+\begin{enumerate}
+    \item From the Sound Manager, select \textbf{WAV} in the left panel.
+    \item Select [SAVE] in the right panel.
+    \item The file browser panel will now display the sample slots in the MD, with ROM slots first, and RAM slots (shown as R1-R4) in the end.
+    \item Select the slot to receive sample from.
+    \item The SDS dump will be converted to a PCM wave file on the fly, and saved to the micro SD card.
+\end{enumerate}
+
 \section{Loading Sounds}
-To load a new sound, select the sound the from the Sound Browser page.
-\newpage
+Load means MC to MD.\\
+To load a sound, select the sound file the from the file browser panel.\\
+For \textbf{WAV} and \textbf{SYSEX}, the file browser panel will now display the ROM slots in the MD, and you can select one slot to send the sample to.
+
 \section{Delete or Rename Sounds:}
 \screenshot{file_menu.png}
 \textit{From within the Sound Browser, press and hold \textbf{<Shift>} to access the file options menu.}\\\\
-From the file options menu, you can delete or rename sound files or create new directories.\\\\\\
+From the file options menu, you may delete or rename sound files or create new directories.\\
 Use the encoder to make your selection, release \textbf{<Shift>} to activate your choice.

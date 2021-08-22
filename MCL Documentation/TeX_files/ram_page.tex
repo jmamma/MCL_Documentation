@@ -1,7 +1,7 @@
 \chapter{RAM Page:}
 A RAM page is used to automate the recording and playback of the MD's RAM machines. The MCL firmware is equipped with two RAM Pages.
 \\\\
-A RAM page can be used to sample the MD main outputs or the External Inputs in either Mono or Stereo. The recorded loop can then be played.
+A RAM page may be used to sample the MD main outputs or the External Inputs in either Mono or Stereo. The recorded loop can then be played.
 Slicing with the various 'slice modes' allows for interesting musical and performance effects.
 \\\\
 RAM Page 1 will record and playback on MD track 15\\
@@ -11,7 +11,7 @@ RAM Page 2 will record and playback on MD track 16\\
 \screenshot{ram1.png}
 \\
 \textit{To enter RAM Page one or two: \\Press and hold
-\textbf{<Page>}, then press \textbf{[Trig 15]} or \textbf{[Trig 16]}.}
+\textbf{<Page>/[Global]}, then press \textbf{[Trig 15]} or \textbf{[Trig 16]}.}
 \screenshot{ram1_action.png}
 
 \encoders{Record Source}{Slice Modulation}{Number of Slices}{Record/Playback Length}
@@ -39,15 +39,15 @@ When in Stereo mode RAM machine one will record MD output A and RAM machine 2 wi
 
 On playback stereo tracks are panned and linked. Parameter changes across tracks 15 and 16 are synchronised.
 \newpage
-\section{Slicing}
+\section{Slice}
 Slicing will divide the recorded sample in to N slices, and set up a playback trigger for each slice. It does this by setting start/end parameters locks for each trig/slice. The default number of slices is 1.\\
 \\
 To slice the recorded sample, select the number of slices using Encoder 3 and then press \textbf{<Load>}.
 \\
 
-\section{Slicing Modes}
+\section{Dice}
 
-The modulation modes affect how slices are played back.
+The dice modes affect how slices are played back.
 \begin{itemize}
     \item 0: Reverse slices
     \item 1-4: Reverse every nth slice

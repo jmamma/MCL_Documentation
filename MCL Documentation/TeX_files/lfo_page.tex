@@ -1,13 +1,10 @@
 \chapter{LFO Page:}
-The MCL firmware is equipped with its own LFO modulation source, and controls both track parameters and master FX parameters.\\\textit{LFO settings can be either stored or recalled by saving or loading to the corresponding Auxiliary track LFO slot.}
+The MCL firmware is equipped with its own LFO modulation source, and controls both track parameters and master FX parameters.\\\\\textit{LFO settings can be either stored or recalled by saving or loading to the corresponding Auxiliary track LFO slot.}
 
 \screenshot{lfo.png}
-\textit{To enter the LFO Page: press and hold \textbf{<Page>}, then press \textbf{[Trig 4]}.}
-
+\textit{To enter the LFO Page: press and hold \textbf{<Page>/[Global]}, then press \textbf{[Trig 4]}.}
+\buttons{Toggle LFO ON/OFF}{PageSelect}{Toggle MOD/DST}{LFO Mode}\\
 By default the LFO engine is deactivated. To toggle it ON, press \textbf{< Save>}.
-
-\buttons{Toggle LFO ON/OFF}{PageSelect}{Toggle MOD/DST}{LFO Mode}
-
 \section{Modulation Source}
 
 The modulation source shape, speed and depth can be controlled. The subpage index will show as ``LFO>MOD'' on the left information panel.
@@ -36,4 +33,4 @@ The LFO engine operates in different modes, namely \textbf{FREE}, \textbf{TRIG},
     \item ONESHOT: The LFO is reset each trig but only plays through one cycle
 \end{itemize}
 \section{Parameter Offset}
-The LFO modulation is relative to the destination parameter's original value (the lfo offset). The lfo offset will automatically be updated by adjusting the corresponding parameter on the MD's parameter page. For FX parameters it is best to adjust the offset from the FX Pages as changes in the MD FX page will not be immediately received by the MC.
+The LFO modulation is relative to the destination parameter's original value (the lfo offset). The LFO offset will automatically be updated by adjusting the corresponding parameter on the MD's parameter page. For FX parameters it is best to adjust the offset from the FX Pages as changes in the MD FX page will not be immediately received by the MC.

@@ -3,18 +3,11 @@ The MIDI menu allows you to configure MIDI ports one and two.
 \screenshot{midi_menu.png}
 \\
 \textit{Changes to MIDI settings are applied upon exiting the MIDI menu.}
-
-%\fbox{\includegraphics[scale=.40]{midi_menu.png}}
 \section{Turbo MIDI:}
-The TURBO MIDI speed can be set for each port (8x turbo is recommended for best performance.) To disabled turbo MIDI set the speed to 1x.
-\section{MIDI Clock:}
-MCL does not generate its own MIDI Clock, instead it relies on a clock signal from either port 1 or port 2.\\\\
-The CLK REC parameter can be used to set the receive port for the MIDI clock.\\
-The CLK SEND parameter can be used to forward the MIDI Clock from port 1 to port 2.\\\\
-\textit{Note: The MD's clock settings are controlled by MCL and will be automatically configured based on the options selected above.}
-
-\section{MIDI Forward:}
-The MIDI FWD option allows you to forward non-realtime MIDI messages received on port 1 to the MIDI out of port 2 or vice versa.
+The TURBO MIDI speed can be set for each port. To disabled turbo MIDI set the speed to 1x.\\\\
+\textit{8x TURBO is recommended for best performance.\\
+The MD MK1's max TURBO speed is limited to 4x when connected to the MC.
+}
 \section{Device 2: }
 Set to either: General MIDI (Gener) or Elektron (Elekt)\\
 
@@ -24,3 +17,12 @@ The general MIDI driver will only save/load MIDI sequencer data.\\
 \\
 \textit{If you are intending to pair your Megacommand with an Elektron device
 (MNM, A4) set this to Elektron. For all other MIDI devices, set this to General MIDI (default setting).}
+\section{MIDI Clock:}
+MCL does not generate its own MIDI Clock, instead it relies on a clock signal from either port 1 or port 2.\\\\
+The CLK REC parameter can be used to set the receive port for the MIDI clock.\\
+The CLK SEND parameter can be used to forward the MIDI Clock from port 1 to port 2.\\\\
+\textit{Note: The MD's clock settings are controlled by MCL and will be automatically configured based on the options selected above.}
+\section{MIDI Forward:}
+The MIDI FWD option allows you to forward non-realtime MIDI messages received on port 1 to the MIDI out of port 2 or vice versa.
+\section{CC Forward:}
+The CC FWD option allows you to forward CC MIDI messages received on port 2 IN to the MIDI OUT of port 2.
