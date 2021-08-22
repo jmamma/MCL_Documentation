@@ -3,20 +3,39 @@ The PianoRoll page is used to edit External MIDI sequencer tracks 1-6.\\
 The editor features two modes: Note editing and Automation editing.
 \screenshot{proll.png}
 \\
-\textit{Press \textbf{<Page> + [Tri 7]} to open the Pianoroll Editor page}
+\textit{Press \textbf{<Page>/[Global] + [Trig 7]} to open the Pianoroll Editor page}
 \encodersbuttons{Cursor X}{Cursor Y / Note Value}{Cursor Width / Note Width }{Zoom}{Record}{PageSelect}{Add or Remove Note}{Pianoroll Menu}
-\section{Using the PianoRoll Editor:}
+\section{GUI:}
 \screenshot{proll_edit.png}
-The PianoRoll works in continuous time. The finest resolution is 1/192th per quater note. The cursor can be moved to a specific time offset by rotating \textbf{<Encoder 1>}. \textbf{<Encoder 4>} adjusts the zoom along time the time axis. The note value is chosen using \textbf{<Encoder 2>} and the note width controlled using \textbf{<Encoder 3>}. Notes can be both entered and deleted by pressing the \textbf{<Load>} button.
+The PianoRoll editor works in continuous time. The finest resolution is 1/192th per quater note. The cursor can be moved to a specific time offset by rotating \textbf{<Encoder 1>}. \textbf{<Encoder 4>} adjusts the zoom along time the time axis. The note value is chosen using \textbf{<Encoder 2>} and the note width controlled using \textbf{<Encoder 3>}. Notes can be both entered and deleted by pressing the \textbf{<Load>} button.
 \newpage
-The MD Trigger Interface can be used to position the cursor at screen intervals of 1/16th.\\
-Note width can also be adjusted by holding one MD Trigger button and then pressing another.\\\\
-An external MIDI keyboard connected on port 2 can also be used to change the note value.\\
-Using a simultaneous combination of the MD Trigger Interface and an external MIDI Keyboard, chords can be entered into the Note Editor.
-\section{Live Record:}
-Live Record mode can be activated by pressing  \textbf{<Save>}. Both note and automation \\(ControlChange) data can be recorded. All 8 tracks can be recorded to simultaneously.
-\\Tracks will only record incoming data that is on the same MIDI Channel. \textit{(see section MIDI Channel Selection)}
+Alternatively, the MD's GUI can be used to navigate the piano roll, and edit the sequence.
+\begin{itemize}
+     \item \textbf{[Yes]} add or remove notes.
+     \item \textbf{[Left/Right]} move cursor along time axis.
+     \item \textbf{[Yes] + [Left/Right]} nudge cursor along time axis (fine control).
+     \item \textbf{[No] + [Left/Right]} adjust cursor width.
+     \item \textbf{[Yes] + [No] + [Left/Right]} nudge cursor width (fine control).
+     \item \textbf{[Up/Down]} move cursor along note axis.
+     \item \textbf{[No] + [Up/Down]} zoom in and out.
+     \item \textbf{[Func] + [Left/Right]} shift sequence left or right.
+     \item \textbf{[Clear/Copy/Paste]} clear/copy/paste for track.
+\end{itemize}
+The MD's \textbf{[Trig]} keys can be used to position the cursor at screen intervals of 1/16th.\\
+Note width can also be adjusted by holding one \textbf{[Trig]} key and then pressing another.
+\section{External MIDI Keyboard}
+An external MIDI keyboard connected on port 2 can be used to position the cursor's vertical position.\\
 
+\textit{When using an external MIDI keyboard, the octave, and scale mapping can be changed from the Chromatic Page as discussed in the next chapter.}\\
+
+Using a simultaneous combination of the MD's \textbf{[Trig]} keys and an external MIDI Keyboard, chords can be entered into the Note Editor. First play a chord on the Keyboard, then press \textbf{[Yes]} or a \textbf{[Trig]} key to store the chord in the cursor location.
+\\\\
+Similarly, by holding notes on an external MIDI keyboard, and then pressing the MD's \textbf{[Yes]} key, notes can be added at the cursor position.
+\section{Live Record:}
+Live Record mode can be activated either by pressing  \textbf{<Save>} or using the MD's \textbf{[Rec]} function. Both note and automation data can be recorded simultaneously. Automation data includes all ControlChannel, Pitchbend and channel pressure messages received on MIDI port 2.\\\\All 6 tracks can be recorded to simultaneously.\\
+\\Tracks will only record incoming data that is on the same MIDI Channel. \textit{(see section MIDI Channel Selection)}\\\\
+
+\newpage
 \section{PianoRoll Editor Track Menu:}
 \screenshot{proll_menu.png}
 Holding \textbf{<Shift 2>} opens the Track menu. For each track you can adjust the MIDI Channel, track length and playback speed. Cursor editing options are also included here including note velocity and note conditional settings.
@@ -33,13 +52,19 @@ Holding \textbf{<Shift 2>} opens the Track menu. For each track you can adjust t
     Channel     & MIDI Channel\\ \hline
     \end{tabular}
 \end{figure}
+\section{Ext MIDI Track Selection \& Mutes:}
+When opening the Track Menu \textbf{<Shift>} from within in either the PianoRoll Editor or Chromatic Page, the MD's \textbf{[Trig]} keys can be used to switch between Ext MIDI Tracks and or  mute/unmute them.
+\begin{itemize}
+    \item MD \textbf{[Trig]} keys 1-6 correspond to Ext MIDI Track selection 1-6.
+    \item MD \textbf{[Trig]} keys 8-12 correspond to Ext MIDI Track mutes 1-6.
+\end{itemize}
+
 \section{MIDI Channel Selection}
 Each Ext MIDI track listens and transmits on a set MIDI Channel. The channel defaults to the track number. This can be easily changed by modifying the Track  menu CHAN option.\\
-
+\newpage
 \section{Change Edit Mode:}
 From the PianoRoll menu, the "Edit" parameter changes the editing mode. Switch between either Note editing, or editing automation parameters 1-8.
 
-\newpage
 \section{Automation Editing}
 \screenshot{proll_aut.png}
 \textit{The PianoRoll Editor page allows for automation editing. From the Track menu, use the "Edit" menu option to select one of eight Automation Parameters.}
@@ -54,12 +79,14 @@ Hold \textbf{<Shift 2>} to open the Track menu.
     Entry        & Function \\ \hline
     Edit         & Note or Automation editing modes\\ \hline
     Slide      & Linear slide between automation values \\ \hline
-    CC         & CC destination, Program Change,  MIDI learn \\ \hline
+    CC         & CC destination, Program Change, Pitch Bend, Channel Pressure,  MIDI learn \\ \hline
     \end{tabular}
 \end{figure}
 \\
 Slide: enables/disable interpolation between automation events.\\\\
 CC: allows a specific MIDI Control Channel number to be chosen per parameter, Alternatively you can select LEARN, to Automatically learn the next received CC on the same MIDI channel.\\\\
 CC: When set to PRG, the track will send Program Change messages.
+CC: When set to PB, the track will send pitch bend messages.
+CC: When set to CHP, the track will send channel pressure messages.
 
 
