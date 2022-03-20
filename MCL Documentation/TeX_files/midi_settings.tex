@@ -23,6 +23,21 @@ The CLK REC parameter can be used to set the receive port for the MIDI clock.\\
 The CLK SEND parameter can be used to forward the MIDI Clock from port 1 to port 2.\\\\
 \textit{Note: The MD's clock settings are controlled by MCL and will be automatically configured based on the options selected above.}
 \section{MIDI Forward:}
-The MIDI FWD option allows you to forward non-realtime MIDI messages received on port 1 to the MIDI out of port 2 or vice versa.
+The MIDI FWD option allows you to forward non-realtime MIDI messages received on Port 1 to the MIDI out of Port 2 or vice versa.
 \section{CC Forward:}
-The CC FWD option allows you to forward CC MIDI messages received on port 2 IN to the MIDI OUT of port 2.
+The CC FWD option allows you to forward CC MIDI messages received on Port 2 IN to the MIDI OUT of Port 2.
+\section{PRG Mode:}
+MIDI Program Change IN has two modes of operation, BASIC or ADV (Advanced).
+\begin{itemize}
+    \item{ \textbf{BASIC:} Program Change Receive will "Group Load" an entire row according to Load Page mode and Group Select settings. }
+    \item{  \textbf{ADV:} Program change receive will set the row for slots to be loaded from.\\\\ MIDI notes from C3 upwards on Port 2 can be used to select slots to be loaded.\\\\  In this way, you can load any slot (or multiple slots) using a combination of Program Change + MIDI note. \\\\
+ If Program Change is not received before MIDI note on/off, MCL will load from the current selected GUI row. }
+ \\
+ MCL cannot load instantaneously, there is a minimum 1 bar delay.
+\end{itemize}
+\section{PRG In:}
+Set the receive channel for Program Change and Note messages on Port 2.\\\\
+When set to -- (default) Program Change In is disabled.
+\section{PRG Out:}
+Set the send channel for Program Change messages on Port 2, which are sent when loading slots or rows.\\\\
+When set to -- (default) Program Change Out is is disabled.

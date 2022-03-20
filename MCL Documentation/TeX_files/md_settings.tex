@@ -17,6 +17,17 @@ The CTRL CHAN setting is used to control which input source the MD should use fo
 \\\\
 When set to INT (default) the MD will be controlled by the MD's \textbf{[Trig]} keys in chromatic mode.
 \\\\
-If set to a specific MIDI channel number, the MD will be controlled by note data on that channel when received on MC's port 2. If set to OMNI the MD will be controlled by any channel on port 2.
-\section{Poly Config}
-The POLY CONFIG option opens the Voice Select page and allows two or more voices of the MD to act as voices of a polyphonic synthesizer.
+If set to a specific MIDI channel number, the MD will be controlled by note data on that channel when received on MC's Port 2. If set to OMNI the MD will be controlled by any channel on Port 2.
+\newpage
+\section{POLY Chan:}
+The POLY CHAN setting is used to exclusively trigger the designated MD poly voices from a chosen MIDI channel on Port 2.
+\\\\
+When set to -- (default) the poly channel is disabled.
+\\\\
+If set to a specific MIDI channel number, the MD will be controlled by note data on that channel when received on MC's Port 2. If set to OMNI the MD will be controlled by any channel on port 2.
+\section{Poly Config:}
+The POLY CONFIG option opens the Voice Select page and allows one or more tracks of the MD to act as voices of a polyphonic synthesizer.
+\section{Import:}
+The Import option opens the Machinedrum Pattern Import Page.\\ 
+Multiple patterns starting at location (SRC) can be imported from the MD to a position (DEST) on the MCL grid. The COUNT parameter specifies the number of patterns to be  imported.
+\screenshot{machinedrum_import.png}

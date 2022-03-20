@@ -54,12 +54,8 @@ TRI, PULSE and SAW waveform's pulse width can be adjusted by rotating \textbf{<E
 \section{OSC Mixer Page:}
 \fbox{\includegraphics[scale=.40]{wav_designer_mixer.png}}\\\\
 The Oscillator Mixer Page has volume levels for each of the oscillators which can be adjusted by rotating encoders 1 to 3. \textit{Absolute volume levels are not important here as the resulting waveform will be automatically normalized.}\\
-\\\textbf{<Encoder 4>} is used to set the sample slot position. On the MD the sample slots are offset by 1 (00 = SampleSlot 01).\\
 \\
-For convenience, pressing the \textbf{<Load>} button will open the SampleManager window on the MD. You can also choose the destination slot from here which will override the sample slot position set via \textbf{<Encoder 4 >}.
-
-\encodersbuttons{Osc1 Level}{Osc2 Level}{Osc3 Level}{Sample Slot}{SubPage Select}{Page Select}{Render+Transfer}{OscMixer Menu}
-\newpage
+\encodersbuttons{Osc1 Level}{Osc2 Level}{Osc3 Level}{}{SubPage Select}{Page Select}{Render+Transfer}{OscMixer Menu}
 \subsection{Oscillator Mixer Page Menu:}
 \screenshot{oscmixer_menu.png}
 Holding \textbf{<Shift>} opens the Oscillator Mixer Page Menu.
@@ -73,4 +69,4 @@ Holding \textbf{<Shift>} opens the Oscillator Mixer Page Menu.
     \end{tabular}
 \end{figure}
 \\
-Use the \textbf{TRANSFER} menu option to render the final waveform and send the resulting WAV file to the specified sample slot on the MD.
+Use the \textbf{TRANSFER} menu option to render the final waveform. This will open the ROM slot selection menu, and allow you to send the resulting WAV file to a chosen sample slot on the MD.

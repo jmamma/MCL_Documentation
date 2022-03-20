@@ -33,10 +33,10 @@ To save a \textbf{SOUND}:
  \item Select [SAVE] in the right panel.
  \item From within the MD, two tracks can be linked by configuring the TrigGroup settings on one, to trigger the other. When two tracks are linked, both the source and destination track machine settings will be stored together to form a single sound.
 \end{enumerate}
-To save a \textbf{WAV}:
+To save a \textbf{WAV} sample from the MD:
 \begin{enumerate}
     \item From the Sound Manager, select \textbf{WAV} in the left panel.
-    \item Select [SAVE] in the right panel.
+    \item Select [RECV] in the right panel.
     \item The file browser panel will now display the sample slots in the MD, with ROM slots first, and RAM slots (shown as R1-R4) in the end.
     \item Select the slot to receive sample from.
     \item The SDS dump will be converted to a PCM wave file on the fly, and saved to the micro SD card.
@@ -46,7 +46,15 @@ To save a \textbf{WAV}:
 Load means MC to MD.\\
 To load a sound, select the sound file the from the file browser panel.\\
 For \textbf{WAV} and \textbf{SYSEX}, the file browser panel will now display the ROM slots in the MD, and you can select one slot to send the sample to.
-
+\\
+\section{Bulk WAV Load and Receive:}
+To send or receive multile WAVs:
+\begin{enumerate}
+\item Highlight the menu option SoundBrowser -> Wav -> [ RECV ]
+\item Press <Shift> to access the Send All / Recv All functions.\\
+\end{enumerate}
+\textit{When receiving WAVs, sample are saved to the current directory. Sample names are prefixed with a 2 digit slot number. This 2 digit number is used to preserve sample order when re-uploading. Sample names that do not start with a slot number will be excluded from the bulk upload.}
+\newpage
 \section{Delete or Rename Sounds:}
 \screenshot{file_menu.png}
 \textit{From within the Sound Browser, press and hold \textbf{<Shift>} to access the file options menu.}\\\\

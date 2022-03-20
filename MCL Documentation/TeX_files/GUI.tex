@@ -23,7 +23,7 @@ Holding down an encoder button whilst rotating the encoder will increase the upd
 \section{Machinedrum GUI: Enhanced Mode}
 \includegraphics[width=18cm]{machinedrum_gui.png}
 
-Version X.05 of the MD firmware introduces a third editing mode beyond Classic and Extended termed \textbf{Enhanced Mode}.\\
+The MDX firmware introduces a third editing mode beyond Classic and Extended termed \textbf{Enhanced Mode}.\\
 \\
 Enhanced mode is activated automatically when the MD is connected to the MegaCommand.\\
 \\
@@ -39,8 +39,15 @@ The KitName + Pattern fields shown on the MD display are re-purposed to illustra
 \begin{itemize}
 \item \textbf{General:}
    \begin{itemize}
-      \item \textbf{[Classic/Extended] } toggle between Classic, Extended and Enhanced Modes.
-      \item \textbf{[Global] + [Trig] } MCL page select.
+      \item \textbf{[Classic/Extended] } toggle between Classic, Extended and Enhanced Modes. (Sequencer must be stopped when in Enhanced)
+      \item \textbf{[Function] + [BankGroup]} toggle Bank Group.
+      \item \textbf{[Global]} opens the current Page's shift menu.
+      \item \textbf{[Bank Group] + [Trig]} MCL Page Select.
+      \item \textbf{[Bank Group] + [Global]} MCL Config Menu. 
+ \end{itemize}
+ 
+\item \textbf{Loading:}
+   \begin{itemize}
       \item \textbf{[Bank] + [Trig]} loads slots from the selected row according to Group selection.
       \item \textbf{[Bank] + [Multiple Trigs]} creates a chain of slots from selected rows according to Group selection.
    \end{itemize}
@@ -48,7 +55,8 @@ The KitName + Pattern fields shown on the MD display are re-purposed to illustra
 \item \textbf{Grid Page:}
     \begin{itemize}
       \item \textbf{[Up/Down/Left/Right]} position grid cursor.
-      \item \textbf{[Bank]} position grid cursor to start of bank.
+      \item \textbf{[Function] + [Up/Down/Left/Right]} grid cursor position fast travel.
+      \item \textbf{[Global] + [Bank Group]} Toggle active grid X or Y. 
       \item \textbf{[Clear/Copy/Paste]} all MD tracks.
       \item \textbf{[Function] + [Scale]} open "Scale Setup" menu adjust current track's length and speed settings.
       \item Hold \textbf{[No]} key to open Slot Menu.
@@ -70,7 +78,6 @@ The KitName + Pattern fields shown on the MD display are re-purposed to illustra
     \begin{itemize}
     \item Hold \textbf{[Yes]} to open slot Group Select. Release \textbf{[Yes]} to save by group.  Group selection editable via \textbf{[Trig]} keys 1-4.
     \item \textbf{[Trig]} keys are used to select and save sequencer tracks to slots of the current row.
-    \item \textbf{[Bank]} keys can be used to quickly select the save mode: Save, Merge or Import.
     \end{itemize}
 \end{itemize}
 
