@@ -1,32 +1,75 @@
 \chapter{MIDI Settings Menu:}
-The MIDI menu allows you to configure MIDI ports one and two.
+The MIDI menu provides access to six MIDI configuration sub-menus.
 \screenshot{midi_menu.png}
 \\
-\textit{Changes to MIDI settings are applied upon exiting the MIDI menu.}
-\section{Turbo MIDI:}
-The TURBO MIDI speed can be set for each port. To disabled turbo MIDI set the speed to 1x.\\\\
-\textit{8x TURBO is recommended for best performance.\\
-The MD MK1's max TURBO speed is limited to 4x when connected to the MC.
-}
-\section{Device 2: }
-Set to either: General MIDI (Gener) or Elektron (Elekt)\\
+\textit{Changes made in each MIDI configuration are applied upon menu exit.}
 
-This option sets the default MIDI driver for port 2. Supported Elektron devices have
-more advanced features such as retaining kit/sound data when saving/loading slots,
-The general MIDI driver will only save/load MIDI sequencer data.\\
+\section{Port Config:}
+The Port Config menu is used to configure the MIDI port settings.
+\screenshot{midi_ports_menu.png}\\
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Entry                                  & Function                                                                       \\ \hline
+TURBO 1: {[} 1x, 2x, 4x, 8x {]}        & Port 1's Turbo MIDI speed                                                             \\ \hline
+TURBO 2: {[} 1x, 2x, 4x, 8x {]}        & Port 2's Turbo MIDI speed                                                             \\ \hline
+TURBO USB: {[} 1x, 2x, 4x, 8x {]}      & USB Port's Turbo MIDI speed                                                           \\ \hline
+Driver 2: {[} Gener, Elekt {]}         &  Port 2's MIDI driver, either Generic or Elektron                                   \\ \hline
+CTRL Port: {[} 2, USB, 2 + USB) {]}    & Which MIDI port provides control input (Note + CC)\\& for Sequencer + Chromatic pages.  \\ \hline                                    
+\end{tabular}
+\\\\
+\textit{If using the Machinedrum MK1, set Turbo Speed no greater than 4x.}\\\\
+\textit{{If you are intending to pair your Megacommand with an Elektron device}
+(MNM, A4) set \textbf{Driver 2}  to Elektron. For all other MIDI devices, set \textbf{Driver 2} to General MIDI (default setting).}\\\\
+\textit{If you are intending to use the paired Elektron device's MIDI thru to control further external equipment, you must set Turbo 2 speed to 1x.}
+
+\newpage
+
+\section{Sync:}
+The Sync Config menu is used to configure MIDI clock + transport receive and destination settings.
+\screenshot{midi_sync_menu.png}\\
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Entry                                  & Function                                                                       \\ \hline
+CLOCK RECV: {[}1, 2, USB{]}                & Receive MIDI Clock from port.                                                  \\ \hline
+TRANS RECV: {[}1, 2, USB{]}                & Receive MIDI Transport from port.                                               \\ \hline
+CLOCK SEND: {[}OFF, 2, 2 + USB{]}          & Forward MIDI Clock to selected port(s)                                            \\ \hline
+TRANS SEND: {[}OFF, 2, 2 + USB{]}          & Forward MIDI Transport to selected port(s)                                        \\ \hline
+\end{tabular}
+\\\\
+\textit{Note: MCL does not generate its own MIDI Clock, instead it relies on a clock signal from either Port 1, Port 2 or USB.}
 \\
-\textit{If you are intending to pair your Megacommand with an Elektron device
-(MNM, A4) set this to Elektron. For all other MIDI devices, set this to General MIDI (default setting).}
-\section{MIDI Clock:}
-MCL does not generate its own MIDI Clock, instead it relies on a clock signal from either port 1 or port 2.\\\\
-The CLK REC parameter can be used to set the receive port for the MIDI clock.\\
-The CLK SEND parameter can be used to forward the MIDI Clock from port 1 to port 2.\\\\
-\textit{Note: The MD's clock settings are controlled by MCL and will be automatically configured based on the options selected above.}
-\section{MIDI Forward:}
-The MIDI FWD option allows you to forward non-realtime MIDI messages received on Port 1 to the MIDI out of Port 2 or vice versa.
-\section{CC Forward:}
-The CC FWD option allows you to forward CC MIDI messages received on Port 2 IN to the MIDI OUT of Port 2.
-\section{PRG Mode:}
+\textit{The MD's internal clock settings are controlled by MCL and will be automatically configured based on the options selected above.}
+
+\section{Routing:}
+The MIDI Routing configuration menu can be used to set MIDI traffic forwarding between ports.
+\screenshot{midi_route_menu.png}\\
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Entry                                  & Function                                                                       \\ \hline
+MIDI1 FWD: {[}OFF, 2, USB, 2 + USB{]}                & Forward non-realtime MIDI data from Port 1 input \\ & to the selected MIDI output port(s).                                                \\ \hline
+MIDI2 FWD: {[}OFF, 1, USB, 1 + USB{]}                & Forward non-realtime MIDI data from Port 2 input \\ & to the selected MIDI output port(s).                                               \\ \hline
+USB FWD: {[}OFF, 1, 2, 1 + 2{]}          & Forward non-realtime MIDI data from USB-MIDI \\ & input to the selected MIDI output port(s).                                            \\ \hline
+CC LOOP: {[}OFF, 2->2{]}          & Loopback MIDI CC messages on same port.                                      \\ \hline
+\end{tabular}
+
+
+\newpage
+\section{Program:}
+The Program menu is used to enable the sending and receiving of MIDI Program Change messages.
+\screenshot{midi_prog_menu.png}\\
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Entry                                  & Function                                                                       \\ \hline
+PROG Mode: {[}BASIC, ADV{]}                & Basic or Advanced. 
+\\ \hline
+PRG IN: {[}--, 1 .. 16, OMNI{]}            & Program change receive channel.                                            \\ \hline
+PRG OUT: {[}--, 1 .. 16{]}          & Program change transmit channel.                                          \\ \hline
+\end{tabular}
+
 MIDI Program Change IN has two modes of operation, BASIC or ADV (Advanced).
 \begin{itemize}
     \item{ \textbf{BASIC:} Program Change Receive will "Group Load" an entire row according to Load Page mode and Group Select settings. }
@@ -41,3 +84,24 @@ When set to -- (default) Program Change In is disabled.
 \section{PRG Out:}
 Set the send channel for Program Change messages on Port 2, which are sent when loading slots or rows.\\\\
 When set to -- (default) Program Change Out is is disabled.
+
+\newpage
+
+\section{MD MIDI:}
+The MD MIDI configuration menu is used to configure Machinedrum driver's MIDI settings.
+\screenshot{midi_md_menu.png}\\
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Entry                                  & Function                                                                       \\ \hline
+CHRO CHAN: {[}INT, 1..16, OMNI{]}        & MIDI Channel for MD Chromatic mode. \\ \hline
+POLY CHAN: {[}--, 1..16, OMNI{]}         & MIDI Channel for MD Polyphonic mode. \\ \hline
+TRIG CHAN: {[}INT, 1..16, OMNI{]}        & MIDI Channel for MD Trig mode. \\ \hline
+\end{tabular}
+
+\begin{itemize}
+\item{\textbf{CHRO CHAN:} The CHRO CHAN setting is used to control which input channel the MD should receive note data from when in Chromatic mode. When set to INT (default) the MD will be controlled by the MD's \textbf{[Trig]} keys in chromatic mode. \\\\\textit{For this setting to work correctly, CTRL PORT in PORT CONFIG must also be set to the desired port.}}
+
+\item{\textbf{POLY CHAN:} Dedicated MIDI Channel for playing designated Polyphonic tracks chromatically.}
+\item{\textbf{TRIG CHAN:} Dedicated MIDI channel for triggering MD tracks via Note On message. Useful for triggering sounds using a MIDI drum pad. Track Mapping starts from note C2. Note Velocity is mapped to volume.}
+\end{itemize}

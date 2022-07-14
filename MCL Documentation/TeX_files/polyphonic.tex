@@ -7,7 +7,8 @@ The voice select page is used to allocate MD tracks as polyphonic voices.\\
 \section{Voice Assignment:}
 MD track's 1-16 can be assigned as polyphonic voices by pressing the matching \textbf{[Trig]} keys.
 \section{Saving/Loading:}
-The polyphonic voice selection can be saved and loaded from Grid Y in Auxiliary slot 14 (Route) along with audio Routing configuration. In addition, polyphonic voice selection is automatically retained across power on/off.
+The polyphonic voice selection can be saved and loaded from Grid Y in Auxiliary slot position 14, labelled "RT (Route)". 
+\\\\Polyphonic voice selection is automatically retained across power on/off.
 \\\\
 \textit{For more information on slot positions and their corresponding tracks see  "Sequencer: Saving and Loading".}
 \section{Voice Modes:}
@@ -21,10 +22,13 @@ When POLY mode is active, tracks become 'linked'. Track length and parameter cha
 For best results, make sure that the tracks allocated as a poly voice are all set to the same machine type on the MD. You can quickly copy one track to another using the MD's \textbf{[Copy ] / [Paste]} functions.\\\\
 Use the MD's \textbf{[Encoder]} wheel to focus on on the allocated poly voices.\\
 Enter the Chromatic page, press the \textbf{[Trig]} buttons to be begin playing the MD polyphonically.
-\section{Machinedrum External MIDI}
-The MD can be played chromatically using an attached MIDI keyboard/sequencer connected to MIDI input port 2.\\\\
-To enable/disable control from an external device you must change the MCL's \textbf{Config-->Machinedrum-->CTRL CHAN} setting from INT (internal) to a desired MIDI channel or OMNI (all channels).\\
-\\
+\section{PolyMode External MIDI}
+The MD can be played polyphonically using an attached MIDI keyboard/sequencer connected to MIDI input on Port 2 or via USB MIDI.\\\\
+To enable/disable control from an external device you must:  
+\begin{itemize}
+    \item Ensure that the \textbf{Config-->MIDI-->CTRL PORT} is set to the MIDI port that your external keyboard/sequencer is connected.
+    \item Set \textbf{Config-->MIDI-->MD MIDI-->POLY CHAN} from INT (internal) to a desired MIDI channel or OMNI (all channels).
+\end{itemize}
 When external control mode is enabled, the MD's \textbf{[Trig]} keys will be disabled.\\\\
 \subsection{MIDI CC:}
 You can control the voice parameters by sending MIDI CC messages via an External MIDI controller to port 2.\\\\CC 16 to 39 control MD parameters 1 to 24 on the active track, or across all polyphonic tracks.

@@ -11,15 +11,16 @@ The Octave (OCT) parameter allows for adjusting the relative octave of the track
 A keyboard at the bottom of the screen is displayed showing notes as they are played.
 \newpage
 \section{Setup for Chromatic mode:}
-There are two important configurations options that must be understood in order to use the Chromatic Page correctly:
+There are three important configurations options that must be understood in order to use the Chromatic Page correctly:
 \begin{itemize}
-    \item The \textbf{Config-->Machinedrum-->CTRL CHAN} parameter determines whether the MD should receive note input from the MD's \textbf{[Trig]} keys, or from a MIDI channel on an External MIDI Device. \textit{See Chapter: Global Settings}
+    \item The \textbf{Config-->MIDI-->PORT CONFIG-->CTRL PORT} parameter determines which Port the MCL should receive note input from. 
+    \item The \textbf{Config-->MIDI-->MD MIDI-->CHRO CHAN} parameter determines whether the MD should receive note input from the MD's \textbf{[Trig]} keys, or from a MIDI channel on an External MIDI Device. \textit{See Chapter: Global Settings}
     \item The PolyPage is used to allocate one or more MD tracks as dedicated synth voices. \textit{See Chapter: Polyphonic Mode} 
 \end{itemize}
 
 \section{Tuning:}
-For MD tracks hosting a supported machine, the machines’s pitch is tuned to notes of a selected scale. The track can then be played using the MD's \textbf{[Trig]} keys or an attached MIDI keyboard.\\\\
-The Machinedrum X.05 OS allows for more precise tuning of machines. If the machine's tuning setting is TONAL then the new quarter tone, equal temperament tuning table will be used. If the machine's tuning setting is DEFAULT the legacy microtonal tuning table is used.
+For MD tracks that are assigned a melodic machine, the machines’s pitch is tuned to notes of a selected scale. The track can then be played using the MD's \textbf{[Trig]} keys or an attached MIDI keyboard.\\\\
+The Machinedrum X OS allows for more precise tuning of machines. If the machine's tuning setting is TONAL then the new quarter tone, equal temperament tuning table will be used. If the machine's tuning setting is DEFAULT the legacy microtonal tuning table is used.
 \\
 \section{Chromatic Page Track Menu:}
 \screenshot{chromatic_menu.png}
@@ -63,13 +64,3 @@ Play notes on either the MD or External Midi to record a melody.
 \item Speed and length can be set via the Track menu, by holding \textbf{<Shift>}.
 \item For the Machinedrum, track speed and length can also be set using the MD's Scale menu by pressing \textbf{[Func] + [Scale]}.
 \end{itemize}
-\newpage
-\section{External MIDI Device:}
-Melodies and chords can be played and recorded from an External MIDI device on port 2.
-\\
-
-When MIDI note data is received, MCL will switch to the first Exteral MIDI sequencer track that has the same MIDI channel.
-\\
-
-\textit{The active device illustrated in the top left corner of the display, will switch over from MD to MI, when MIDI notes are received.}
-\\

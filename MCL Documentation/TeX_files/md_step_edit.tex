@@ -11,7 +11,7 @@ The Step Editor (StepEdit) page is used to program MCL's internal sequencer for 
 \section{GUI:}
 \begin{itemize}
 \item The StepEdit page leverages the MD's GUI for editing.
-\item The editing mode can be toggled between Trig, Lock, Mute and Slide by pressing \textbf{[Func] + [Bank C/D/E]}.
+\item The editing mode can be toggled between Trig, Lock, Mute and Slide by pressing \textbf{[Function] + [Bank C/D/E]}.
 \item The 16 steps of the current page for the current track are displayed on the bottom row.
 \item The \textbf{[Trig]} buttons on the MD correspond to the visible steps. Pressing a \textbf{[Trig]} will add the step. A press followed by quick release will remove the step. 
 \item Trig Conditions and Micro-Timing settings are per step and are set by holding \textbf{[Trig]} and rotating \textbf{<Encoder1>} or \textbf{<Encoder 2>}. Alternatively the MD's \textbf{[Up/Down]} keys can be used to change Trig Conditions and \textbf{[Left/Right]} for Micro-Timing.
@@ -21,7 +21,7 @@ The Step Editor (StepEdit) page is used to program MCL's internal sequencer for 
 \item Parameter lock transmission can be disabled for any step by removing the lock step in LOCK editor mode.
 \item Trigs and parameter lock transmission can be temporarily disabled by adding a step in MUTE editor mode.
 \item A step can be previewed by holding down the matching \textbf{[Trig]} key and pressing \textbf{[Enter]}.
-\item The visible sequencer page can be rotated pressing \textbf{<Load | Yes>} or the MD's \textbf{[Scale]} key.
+\item The visible sequencer page can be toggled by pressing \textbf{<Load | Yes>} or the MD's \textbf{[Scale]} key.
 \item The steps of the sequence can be shifted left or right by holding the MD's \textbf{[Func]} key and pressing \textbf{[Left]} or \textbf{[Right]}
 \item The MD's \textbf{[Clear/Copy/Paste]} functions work across Track, Sequencer Page and Step.
 \item The Length and Speed of the track can be set via the MD's Scale menu by pressing
@@ -86,9 +86,14 @@ To add mutes to your sequence change the Edit Mode to "MUTE" (see above).
 The sequence of an individual track can be shifted left of right. Press \textbf{[Function]} + \textbf{[Left/Right]} on the MD. The sequencer menu can also be used to shift the entire pattern via the SHIFT option.
 Similarly you can reverse a track's sequence from the sequencer menu option REVERSE.
 \section{Live Record:}
-Live Record mode can be activated either by pressing  \textbf{<Save>} or using the MD's \textbf{[Rec]} function. Both trig and parameter locks can be recorded simultaneously.
+Live Record mode can be activated either by pressing  \textbf{<Save>} or using the MD's \textbf{[Rec]} function. Both trig and parameter locks can be recorded simultaneously.\\
+To record from an external DrumPad or Keyboard:
+\begin{itemize}
+    \item Ensure that the \textbf{Config-->MIDI-->CTRL PORT} is set to the MIDI port your external DrumPad/keyboard is connected.
+    \item Set \textbf{Config-->MIDI-->MD MIDI-->TRIG CHAN} from INT (internal) to a desired MIDI channel or OMNI (all channels).
+\end{itemize}
+\newpage
 \section{Step Menu:}
-
 \screenshot{step_menu.png}
 The step menu will be opened by selecting one or more step/trig from the TI and when holding \textbf{<Shift>}. The entry activated on release, similar to the slot menu.
 The step menu consists of the following entries:

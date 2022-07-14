@@ -47,8 +47,11 @@ Load means MC to MD.\\
 To load a sound, select the sound file the from the file browser panel.\\
 For \textbf{WAV} and \textbf{SYSEX}, the file browser panel will now display the ROM slots in the MD, and you can select one slot to send the sample to.
 \\
+\\
+\textit{Files with names over 16 characters (including the last four, e.g., $.wav$) will not display or be selectable in MC.}
+\\
 \section{Bulk WAV Load and Receive:}
-To send or receive multile WAVs:
+To send or receive multiple WAVs:
 \begin{enumerate}
 \item Highlight the menu option SoundBrowser -> Wav -> [ RECV ]
 \item Press <Shift> to access the Send All / Recv All functions.\\
@@ -60,3 +63,21 @@ To send or receive multile WAVs:
 \textit{From within the Sound Browser, press and hold \textbf{<Shift>} to access the file options menu.}\\\\
 From the file options menu, you may delete or rename sound files or create new directories.\\
 Use the encoder to make your selection, release \textbf{<Shift>} to activate your choice.
+\\
+\section{Preparing and Transferring Files With a Computer}
+You can mount the SD card as a drive on your computer. \\
+\\
+\textbf{WAV} files must meet the following requirements:
+\begin{itemize}
+    \item Filename up to 16 characters including extension. (When loaded into ROM, MD will truncate this to the first two and last two characters of the filename before the extension.)
+    \item Mono
+    \item Sample speeds from 4kHz to 48kHz, ideally 44100Hz or 22050Hz to avoid resampling
+    \item Any bit depth is accepted (MD stores samples at 16bit and plays back at 12bit)
+\end{itemize}
+
+To transfer samples to or from the MD, go to the following path on the mounted drive:
+\texttt{/Samples/WAV/}\\
+\\
+You can create directories with names having up to 16 characters in this folder for organization.
+\\
+

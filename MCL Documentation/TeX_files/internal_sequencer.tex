@@ -43,14 +43,14 @@ There are four auxiliary track types
 \end{itemize}
 \chapter{Sequencer: Saving and Loading}
 Saving and Loading in MCL works differently to the Machinedrum.\\\\
-MCL has no internal conception of pattern or kit. Instead the sequencer and kit data for each track are stored together as a single object, a Slot. Kit Master FX settings are stored and loaded independently of individual tracks.
+MCL has no internal conception of pattern or kit. Instead the sequencer and kit data for each track are stored together as a single object, a Track. Kit Master FX settings are stored and loaded independently of individual tracks.
 \\\\
 Depending upon the track type, sequencer tracks are saved to or loaded from specific slots on either Grid X or Grid Y.
 
 \begin{itemize}
-    \item 16 x MD Sequencer tracks are stored/loaded from slots 0 to 15 in Grid X, they correspond to MD tracks 1-16.
-    \item 6 x External MIDI Sequencer tracks are stored/loaded from slots 0 to 5 in Grid Y. If the Analog4 was attached these would correspond to A4 tracks 1- 4, with 2 spare tracks for general MIDI.
-    \item 4 x Auxiliary tracks from slots 12 to 15 in Grid Y. These include MasterFX, Routing, LFO and Tempo track types.
+    \item 16 x MD Sequencer tracks are stored/loaded from slots 1 to 16 in Grid X, they correspond to MD tracks 1-16.
+    \item 6 x External MIDI Sequencer tracks are stored/loaded from slots 1 to 6 in Grid Y. If the Analog4 was attached these would correspond to A4 tracks 1- 4, with 2 spare tracks for general MIDI. With Monomachine, it covers all 6 tracks.
+    \item 4 x Auxiliary tracks from slots 13 to 16 in Grid Y. These include MasterFX, Routing, LFO and Tempo track types.
 \end{itemize}
 
 Loaded tracks can be edited via their respective editor. The Step Editor page is accessed to edit MD sequencer tracks whilst the PianoRoll Editor is used to edit External MIDI Sequencer tracks. Any changes made during editing are not automatically persistent, they must be saved.\\
