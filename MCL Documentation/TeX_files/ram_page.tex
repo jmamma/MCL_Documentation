@@ -11,7 +11,7 @@ RAM Page 2 will record and playback on MD track 16\\
 \screenshot{ram1.png}
 \\
 \textit{To enter RAM Page one or two: \\Press and hold
-\textbf{<Page>/[Global]}, then press \textbf{[Trig 15]} or \textbf{[Trig 16]}.}
+\textbf{[Bank Group]}, then press \textbf{[Trig 15]} or \textbf{[Trig 16]}.}
 \screenshot{ram1_action.png}
 
 \encoders{Record Source}{Slice Modulation}{Number of Slices}{Record/Playback Length}
@@ -21,13 +21,13 @@ RAM Page 2 will record and playback on MD track 16\\
 \begin{itemize}
     \item{To use the RAM Machines, first start playing a pattern on the MD.}
     \item{Leave tracks 15 + 16 available as these will be overwritten for RAM machine sampling and playback.}
-    \item{From the RAM Page, choose the recording source. INT for sampling the MD internal sound engine. Select the recording length and press \textbf{<Save>} to initiate recording. Recording is quantized with respect to the chosen length.}
+    \item{From the RAM Page, choose the recording source \textbf{<Encoder1>}, INT for sampling the MD internal sound engine or A/B from the respective external input. Select the recording length \textbf{<Encoder4>} and press \textbf{[Enter/Yes]} to initiate recording. Recording is quantized with respect to the chosen length.}
     \item The status text "Queue" will be displayed indicating that record event is about to occur. The status text "Recording" will be displayed indicating that the RAM machines are recording. Recording is continuous and can only be stopped by initiating playback.
 \end{itemize}
 
 \section{Playback:}
 \begin{itemize}
-\item Press \textbf{<Load>} to initiate playback. The status text "Queue" will be displayed indicating that play event is about to occur. 
+\item Press \textbf{[Exit/No]} to initiate playback. The status text "Queue" will be displayed indicating that play event is about to occur. 
 \item The status text "Playback" will be displayed indicating that the RAM machine(s) are playing. Playback is continuous until recording is re-initiated. 
 \end{itemize}
 
@@ -42,7 +42,7 @@ On playback stereo tracks are panned and linked. Parameter changes across tracks
 \section{Slice}
 Slicing will divide the recorded sample in to N slices, and set up a playback trigger for each slice. It does this by setting start/end parameters locks for each trig/slice. The default number of slices is 1.\\
 \\
-To slice the recorded sample, select the number of slices using Encoder 3 and then press \textbf{<Load>}.
+To slice the recorded sample, select the number of slices using \textbf{<Encoder 3>} and then press \textbf{[Exit/No]}.
 \\
 
 \section{Dice}
@@ -55,5 +55,5 @@ The dice modes affect how slices are played back.
     \item 6: Play slices in random order
 \end{itemize}
 
-
+To dice the recorded sample, select the dice mode using \textbf{<Encoder 2>} and then press \textbf{[Global]}.
 

@@ -2,7 +2,7 @@
  The Route Page is used to direct the audio of a specific MD track to a selected output.\\\\\textit{Routing configuration can be either stored or recalled by saving or loading to the corresponding Auxiliary track Route slot.} \\
  
 \screenshot{route.png}
-\textit{The Chromatic page can be accessed by pressing \textbf{<Page>/[Global]} and \textbf{[Trig 3]}.}
+\textit{The Route page can be accessed by pressing \textbf{[Bank Group]} and \textbf{[Trig 4]}.}
 %\fbox{\includegraphics[scale=.40]{route_page.png}}
 
 \encodersbuttons{Output Selection}{--}{Quantization}{--}{--}{PageSelect}{--}{--}
@@ -13,10 +13,12 @@ The MD's \textbf{[Trig]} keys are used to toggle the output of selected tracks, 
 
 \screenshot{route_action.png}
 \newpage
-\section{Quantization Modes:}
- Quantization modes are used to control the timing of the routing changes so that they are in sync with the sequencer.
- \\
- When a numerical quantization value is chosen the selected track’s cue will be toggled on the next specified multiple of the step-count. Holding down the encoder button will step increment the quantization value.
+\section{Quantization Rules:}
+The quantization rules specify the timing of the routing changes so that they are in sync with the sequencers.\\
+The minimum quantization value is 2 steps. Quantization values can be changed by adjusting
+the ”Q:” parameter, and increase in powers of 2. Holding down the encoder button will step
+increment the quantization value.
+ \begin{itemize}
 \item --: No quantization.
 \item 02: Toggle cue on next possible 2nd step
 \item 04: Toggle cue on next possible 4th step

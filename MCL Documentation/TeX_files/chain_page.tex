@@ -1,8 +1,7 @@
 \chapter{Load Page}
-The Load page is used to load slots from the Grid. When a slot is loaded, Machine/Sound data is sent to the corresponding MIDI device and the sequencer data is loaded into the matching sequencer track.\\
-\\
+The Load page is used to load slots from the current row of the active Grid. When a slot is loaded, Machine/Sound data is sent to the corresponding MIDI device and the sequencer data is loaded into the matching sequencer track.
 \screenshot{load_from_a.png}\\
-\textit{The Load Page is accessible from the GridPage by pressing the  \textbf{<Load>} function button or by pressing the MD's \textbf{[YES]} key.}
+\textit{The Load Page is accessible from the GridPage by pressing the MD's \textbf{[Enter/Yes]} key.}
 \encodersbuttons{Load MODE: [ MAN, AUT, QUE ]}{Length Override: [ -, N ]}{--}{ Quantization}{Cancel Load}{--}{--}{Group Select}\\
 \textit{The Length and Quantization encoders can be toggled between exponential and incremental value changes by holding down the encoder button when rotating.}
 \\\\
@@ -11,32 +10,31 @@ The MD's \textbf{[Bank A/B/C]} keys can be used to quickly change the load MODE 
 \section{Loading Individual Tracks}
 The Load Page utilises the MD's \textbf{[Trig]} keys to specify which slots are to be loaded. Pressing and then releasing multiple \textbf{[Trig]} keys will load the corresponding slots from the current row of the visible Grid.
 \section{Grid Toggle}
-When in the Save or Load page, the \textbf{<Shift>} button can be used to toggle between Grid X or Grid Y.
+The \textbf{[Scale]} button can be used to toggle between Grid X, the 16 MD tracks, or Grid Y, the EXT (1-6) and AUX (12-16) tracks, over the MDs \textbf{[Trig]} keys.
 \section{Simultaneous Load from Grid X and Grid Y}
 It is possible to simultaneously load a collection of tracks from both Grids X and Y. 
 \begin{itemize}
 \item First select the tracks from Grid X pressing and holding the corresponding \textbf{[Trig]} keys.
-\item Tap \textbf{<Shift>} to switch grids
+\item Tap \textbf{[Global]} to switch grids
 \item Release the \textbf{[Trig]} selection
 \item Select tracks from the alternate Grid Y pressing and holding the corresponding \textbf{[Trig]} keys. 
 \item Finally release the second grid \textbf{[Trig]} selection to confirm the action. 
 \end{itemize}
 
 \section{Load Track Groups:}
-When in the Save or Load Page, holding the \textbf{<Shift>} button or MD's \textbf{[YES]} key opens the Group Select menu,
-allowing you to load or save all tracks corresponding to a group.\\An entire row/pattern across both Grids X + Y can be loaded or saved this way.\\
-\\
-There are four groups:
+When in the Save or Load Page, holding the MD's \textbf{[Enter/Yes]} key opens the Group Select menu, allowing you to load or save all tracks corresponding to a group. An entire row (pattern) including tracks across both Grids X + Y can be loaded or saved this way.\\\\
+\screenshot{group_select_page.png}
+There are five groups:
 \begin{enumerate}
-    \item MIDI Device 1 (MD)
-    \item MIDI Device 2 (A4/MNM/Generic MIDI)
-    \item FX (MDFX + LFOTrack + RouteTrack)
-    \item TEMPO
+    \item MACHINEDRUM \textit{(Grid X tracks 1-16) + MDFX (\textbf{FX} = Grid Y track 13)}
+    \item EXT MIDI DEVICE (A4/MNM/Generic MIDI) \textit{(Grid Y tracks 1-6)}
+    \item PERF \textit{(\textbf{PF} = Grid Y track 12) + LFOTrack (\textbf{LF }= Grid Y track 15) }
+    \item  RouteTrack \textit{(\textbf{RT} = Grid Y track 14) }
+    \item TEMPO \textit{(\textbf{TP} = Grid Y track 16)}
 \end{enumerate}
-From the Group Select Menu each group can be enabled/disabled using the MD's \textbf{[Trig]} keys.\\
+From the Group Select Menu each group can be enabled/disabled using the MD's \textbf{[Trig]} keys 1-5. \\
 \\
-Releasing \textbf{<Shift> / [YES]} will load tracks corresponding to the active groups.
-\newpage
+Releasing \textbf{[Enter/Yes]} will load tracks corresponding to the active groups.
 
 \section{Playback Queue:}
 Each column of the grid has a dedicated Playback Queue.\\\\Up to 8 slots can be queued in each column.  The slots in the queue form a repeating chain, each slot will be loaded sequentially. When the end of the queue is reached the first slot is loaded again.\\\\Queued slots are drawn with inverse colours on the Grid Page.\\\\The Playback Queue for any column can be activated by setting the load MODE to QUE and then loading a slot in that column.
@@ -61,7 +59,7 @@ When load mode is set to QUE, the LEN parameter allows overriding the loaded slo
 
 \section{Quantization Rules:}
 The quantization rules specify the transition interval for the selected slots.\\
-The minimum quantization value is 2 steps. Quantization values can be changed by adjusting the "Q:" parameter and increase in powers of 2. Holding down the encoder button will step increment the quantization value.
+The minimum quantization value is 2 steps. Quantization values can be changed by adjusting the "Q:" parameter, and increase in powers of 2. Holding down the encoder button will step increment the quantization value.
 \begin{itemize}
 \item 02: Toggle cue on next possible 2nd step
 \item 04: Toggle cue on next possible 4th step
@@ -75,18 +73,19 @@ The minimum quantization value is 2 steps. Quantization values can be changed by
 \textit{To provide consistent level mixing across slot loading, the LEV parameter of a loaded track is never transmitted when the sequencer is running.}\\\\This allows the performer to use the LEV parameter to fade the loaded track in and out of the mix. The MD's track's VOL parameter should therefor be used to control the relative track loudness.\\\\
 \textit{Please read the manual section describing the \textbf{Config-->Machinedrum-->Normalize} setting which automatically adjusts a saved track's gain staging for this purpose.}
 
-\chapter{Other Loading Methods:}
+\chapter{Additional Loading Methods:}
 \section{Loading via [Bank] + [Trig]:}
-The Machinedrum's pattern changing functionality has been replicated in MCL. Each row of the Grid can be imagined as a pattern, compromising of slots for each of the MD's 16 tracks, plus Auxiliary slots containing the Master FX settings.\\
-\\
-\textit{A combination of \textbf{[Bank]} + \textbf{[Trig]} will load the corresponding row of the grid.\\\\
-When multiple \textbf{[Trig]} keys are pressed, rows are chained together. This is achieved by automatically setting each column's load MODE setting to QUE and then adding slots to each Playback Queue.}
-\\\\
-When loading via \textbf{[Bank] + [Trig]} slots are loaded from the chosen row, according to the Load Page's Group Selection settings. If both the MD and FX groups are active, this is effectively the same behaviour as pattern loading on the MD.
+The Machinedrum's pattern changing functionality has been replicated in MCL. Each row of the Grid can be imagined as a pattern, compromising of slots for each of the MD's 16 tracks, plus Auxiliary slots containing the Master FX settings.
 
-\section{Loading via the Grid:}
-From the Grid Page, pressing and holding the \textbf{<Shift>/[NO]} button will open the Slot Menu. The MD's \textbf{[Up/Down/Left/Right]} keys can then be used to highlight a selection of slots.\\\\
-\textit{When the Slot Menu is active, selected slots can be loaded by pressing the MD's \textbf{[YES]} key.}
-\\\\Slots are loaded according to the current load MODE setting. If more than one row is selected, the load MODE is temporarily set to QUE, and the loaded slots are added to each column's Playback Queue.
-\\\\
-\textit{The MD's \textbf{[Bank A/B/C]} keys can be used to quickly change the load MODE setting between [ MAN, AUT, QUE ].}
+\begin{itemize}
+   \item A combination of \textbf{[Bank]} + \textbf{[Trig]} will load the corresponding row of the grid.\\\\ \textit{Slots are loaded from the chosen row, according to the Load Page's Group Selection settings. If the MD groups is active, this mimics the behaviour of pattern loading on the MD.}
+   \item A combination of \textbf{[Bank]} + multiple \textbf{[Trig]} will chain multiple rows together.\\\\\textit{This is achieved by automatically setting each column's load MODE setting to QUE and then adding slots to each Playback Queue.}
+\end{itemize}
+\section{Loading via the Grid Slot Menu:}
+Slots can be loaded directly from the Grid Page's Slot Menu.
+\begin{itemize}
+\item From the Grid Page, pressing and holding the \textbf{[Exit/No]} button will open the Slot Menu. The MD's \textbf{[Up/Down/Left/Right]} keys can then be used to highlight a selection of slots
+\item When the Slot Menu is active, selected slots can be loaded by pressing the MD's \textbf{[Enter/Yes]} key.
+\item Slots are loaded according to the current load MODE setting. If more than one row is selected, the load MODE is temporarily set to QUE, and the loaded slots are added to each column's Playback Queue.
+\item The MD's \textbf{[Bank A/B/C]} keys can be used to quickly change the load MODE setting between [ MAN, AUT, QUE ].
+\end{itemize}

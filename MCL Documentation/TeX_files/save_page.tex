@@ -1,6 +1,6 @@
 \chapter{Save Page}
 
-The Save Page is used to save track data to specific slots in the current row of the visible  Grid.\\
+The Save Page is used to save track data to specific slots in the current row of the active Grid.\\
 \\
 Available save modes:
 \begin{itemize}
@@ -9,37 +9,37 @@ Available save modes:
 
 \screenshot{save_to_a.png}
 
-\textit{The Save Page is accessible from the GridPage by pressing the \textbf{<Save>} function button. Alternatively, pressing the MD's \textbf{[Function] + [YES]} keys will open the Save Page.}
+\textit{The Save Page is accessible from the GridPage by pressing the MD's \textbf{[Function] + [Enter/Yes]} keys.}
 
 \encodersbuttons{Mode}{--}{--}{--}{Cancel Save}{Toggle Grid}{--}{Group Select}
-\newpage
 \section{Saving Individual Tracks}
 The Save Page utilises the MD's \textbf{[Trig]} keys to specify which tracks are to be stored. Pressing and releasing multiple \textbf{[Trig]} keys will  save the corresponding sequencer tracks to the matching slots in the current row of the visible Grid.
 \section{Grid Toggle}
-When in the Save or Load page, the \textbf{<Shift>} button can be used to toggle between Grid X or Grid Y.
+The \textbf{[Scale]} button can be used to toggle between Grid X, the 16 MD tracks, or Grid Y, the EXT (1-6) and AUX (12-16) tracks, over the MDs \textbf{[Trig]} keys.
+\newpage
 \section{Simultaneous Save from Grid X and Grid Y}
-It is possible to simultaneously save a collection of tracks from both Grids X and Y. 
+It is possible to simultaneously save a collection of tracks from both Grids X and Y.
 \begin{itemize}
 \item First select the tracks from Grid X pressing and holding the corresponding \textbf{[Trig]} keys.
-\item Tap \textbf{<Shift>} to switch grids
+\item Tap \textbf{[Scale]} to switch grids
 \item Release the \textbf{[Trig]} selection
-\item Select tracks from the alternate Grid Y pressing and holding the corresponding \textbf{[Trig]} keys. 
+\item Select the EXT tracks pressing and holding the corresponding \textbf{[Trig]} keys. 
 \item Finally release the second grid \textbf{[Trig]} selection to confirm the action. 
 \end{itemize}
 
 \section{Save Track Groups:}
-When in the Save or Load Page, holding the \textbf{<Shift>} button or MD's \textbf{[YES]} key opens the Group Select menu,
-allowing you to load or save all tracks corresponding to a group.\\An entire row/pattern across both Grids X + Y can be loaded or saved this way.\\
-\\
-There are four groups:
+When in the Save or Load Page, holding the MD's \textbf{[Enter/Yes]} key opens the Group Select menu, allowing you to load or save all tracks corresponding to a group. An entire row (pattern) including tracks across both Grids X + Y can be loaded or saved this way.\\\\
+\screenshot{group_select_page.png}
+There are five groups:
 \begin{enumerate}
-    \item MIDI Device 1 (MD)
-    \item MIDI Device 2 (A4/MNM/Generic MIDI)
-    \item FX (MDFX + LFOTrack + RouteTrack)
-    \item TEMPO
+    \item MACHINEDRUM \textit{(Grid X tracks 1-16) + MDFX (\textbf{FX} = Grid Y track 13)}
+    \item EXT MIDI DEVICE (A4/MNM/Generic MIDI) \textit{(Grid Y tracks 1-6)}
+    \item PERF \textit{(\textbf{PF} = Grid Y track 12) + LFOTrack (\textbf{LF }= Grid Y track 15) )}
+    \item  RouteTrack \textit{(\textbf{RT} = Grid Y track 14) }
+    \item TEMPO \textit{(\textbf{TP} = Grid Y track 16)}
 \end{enumerate}
-From the Group Select Menu each group can be enabled/disabled using the MD's \textbf{[Trig]} keys.\\
+From the Group Select Menu each group can be enabled/disabled using the MD's \textbf{[Trig]} keys 1-5. \\
 \\
-Releasing \textbf{<Shift> / [YES]} will save tracks corresponding to the active groups.
+Releasing \textbf{[Enter/Yes]} will save tracks corresponding to the active groups.
 
 

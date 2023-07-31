@@ -3,33 +3,35 @@
 \section{Voice Select Page}
 The voice select page is used to allocate MD tracks as polyphonic voices.\\
 \fbox{\includegraphics[scale=.40]{voice_select_page.png}}\\\\
-\textit{To open the voice select page: Enter \textbf{Config-->Machinedrum-->Poly Config}.\\Alternatively press \textbf{<Save>} + \textbf{<Load>} from  Chromatic Page, or access via the Chromatic Page's Track Menu item \textbf{"POLYPHONY".}}
+Access the voice select page via the Chromatic Page's Track Menu item \textbf{"Polyphony"}
 \section{Voice Assignment:}
 MD track's 1-16 can be assigned as polyphonic voices by pressing the matching \textbf{[Trig]} keys.
 \section{Saving/Loading:}
 The polyphonic voice selection can be saved and loaded from Grid Y in Auxiliary slot position 14, labelled "RT (Route)". 
-\\\\Polyphonic voice selection is automatically retained across power on/off.
+\\\\Last loaded Polyphonic voice selection is automatically retained across power on/off.
 \\\\
 \textit{For more information on slot positions and their corresponding tracks see  "Sequencer: Saving and Loading".}
 \section{Voice Modes:}
-When in the Chromatic Page, the Machinedrum's current active track will be used as a monophonic voice.\\
+
+When in the Chromatic Page if the current active track is part of the Polyphonic track selection POLY mode will be activated. In this mode the MD will be played polyphonically using voices selected from the POLY Page.\\
 \\
-If the current active track is part of the Polyphonic track selection POLY mode will be activated. In this mode the MD will be played polyphonically using voices selected from the POLY Page.\\
-\\
-When POLY mode is active, tracks become 'linked'. Track length and parameter changes will be synchronised across the voices. Clearing a polyphonic track via the MD's \textbf{[Clear]} function will clear all polyphonic tracks.
+When POLY mode is active, tracks become 'linked'. Track length via the Track menu and parameter changes will be synchronised across the voices. 
+\\\\
+Combinations of voice and NFX machines can be simultaneously set in POLY mode.  MCL separates the synthesis pages of the POLY channels linking only matching machines, maintaining synchronisation over the effects and routing pages. 
 \newpage
 \section{Getting started with Poly Mode}
-For best results, make sure that the tracks allocated as a poly voice are all set to the same machine type on the MD. You can quickly copy one track to another using the MD's \textbf{[Copy ] / [Paste]} functions.\\\\
-Use the MD's \textbf{[Encoder]} wheel to focus on on the allocated poly voices.\\
-Enter the Chromatic page, press the \textbf{[Trig]} buttons to be begin playing the MD polyphonically.
+Enter the Chromatic page, and via the Track Menu, open the Polyphony page to assign the designated tracks as polyphonic voices.\\\\
+For best results, make sure that sound generating voices designated as a poly voice are all set to the same machine type on the MD.\\\textit{You can quickly copy one track to another using the MD's \textbf{[Copy ] / [Paste]} functions.}
+\\\\From the Chromatic Page, Press the \textbf{[Trig]} buttons to be begin playing the MD polyphonically.\\\\
+Use the MD’s \textbf{[Rec] + [Play]} function to enable live record mode.  Sequence data will be stored across the POLY tracks.\\\\
+All POLY tracks can be quickly cleared using the MD’s \textbf{[Clear]} function. (repeat to UNDO)
 \section{PolyMode External MIDI}
-The MD can be played polyphonically using an attached MIDI keyboard/sequencer connected to MIDI input on Port 2 or via USB MIDI.\\\\
+The MD can be played polyphonically using an attached MIDI keyboard/sequencer connected to MIDI input on Port 2 or via USB MIDI.  Poly channels can be played from this channel regardless of current track selection.\\\\
 To enable/disable control from an external device you must:  
 \begin{itemize}
     \item Ensure that the \textbf{Config-->MIDI-->CTRL PORT} is set to the MIDI port that your external keyboard/sequencer is connected.
     \item Set \textbf{Config-->MIDI-->MD MIDI-->POLY CHAN} from INT (internal) to a desired MIDI channel or OMNI (all channels).
 \end{itemize}
-When external control mode is enabled, the MD's \textbf{[Trig]} keys will be disabled.\\\\
-\subsection{MIDI CC:}
+\textbf{MIDI CC:}\\\\
 You can control the voice parameters by sending MIDI CC messages via an External MIDI controller to port 2.\\\\CC 16 to 39 control MD parameters 1 to 24 on the active track, or across all polyphonic tracks.
 

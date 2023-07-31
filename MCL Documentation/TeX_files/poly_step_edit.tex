@@ -3,43 +3,50 @@ The PianoRoll page is used to edit External MIDI sequencer tracks 1-6.\\
 The editor features two modes: Note editing and Automation editing.
 \screenshot{proll.png}
 \\
-\textit{Press \textbf{<Page>/[Global] + [Trig 7]} to open the Pianoroll Editor page}
+\textit{Press \textbf{[Bank Group] + [Trig 7]} to open the Pianoroll Editor page}
 \encodersbuttons{Cursor X}{Cursor Y / Note Value}{Cursor Width / Note Width }{Zoom}{Record}{PageSelect}{Add or Remove Note}{Pianoroll Menu}
 \section{GUI:}
 \screenshot{proll_edit.png}
-The PianoRoll editor works in continuous time. The finest resolution is 1/192th per quater note. The cursor can be moved to a specific time offset by rotating \textbf{<Encoder 1>}. \textbf{<Encoder 4>} adjusts the zoom along time the time axis. The note value is chosen using \textbf{<Encoder 2>} and the note width controlled using \textbf{<Encoder 3>}. Notes can be both entered and deleted by pressing the \textbf{<Load>} button.
+The PianoRoll editor operates in continuous time, with the finest resolution being 1/192nd of a quarter note. Dots are drawn to illustrate each quarter note. Vertical lines denote the commencement of a new beat.
 \newpage
+\begin{itemize}
+\item The cursor can be moved to a specific time offset by rotating \textbf{<Encoder 1>}. 
+\item \textbf{<Encoder 4>} adjusts the zoom along time the time axis.
+\item  The note value is chosen using \textbf{<Encoder 2>}
+\item The note width controlled using \textbf{<Encoder 3>}. 
+\item Notes can be both entered and deleted by pressing the \textbf{<Load>} button.
+\end{itemize}
 Alternatively, the MD's GUI can be used to navigate the piano roll, and edit the sequence.
 \begin{itemize}
-     \item \textbf{[Yes]} add or remove notes.
+     \item \textbf{[Enter/Yes]} add or remove notes.
      \item \textbf{[Left/Right]} move cursor along time axis.
-     \item \textbf{[Yes] + [Left/Right]} nudge cursor along time axis (fine control).
-     \item \textbf{[No] + [Left/Right]} adjust cursor width.
-     \item \textbf{[Yes] + [No] + [Left/Right]} nudge cursor width (fine control).
+     \item \textbf{[Enter/Yes] + [Left/Right]} nudge cursor along time axis (fine control).
+     \item \textbf{[Exit/No] + [Left/Right]} adjust cursor width.
+     \item \textbf{[Enter/Yes] + [Exit/No] + [Left/Right]} nudge cursor width (fine control).
      \item \textbf{[Up/Down]} move cursor along note axis.
-     \item \textbf{[Func] + [Up/Down/Left/Right]} cursor fast travel.
-     \item \textbf{[No] + [Up/Down]} zoom in and out.
+     \item \textbf{[Function] + [Up/Down/Left/Right]} cursor fast travel.
+     \item \textbf{[Exit/No] + [Up/Down]} zoom in and out.
      \item \textbf{[Clear/Copy/Paste]} clear/copy/paste for track.
+      \item \textbf{[Scale]} Toggle sequencer page.
+     \item \textbf{[Function] + [Scale]} The MD's scale menu can be used to configure the length and speed of the current track.
+     \item The MD's \textbf{[Trig]} keys can be used to position the cursor at step intervals relative to the current page.
 \end{itemize}
-The MD's \textbf{[Trig]} keys can be used to position the cursor at step intervals relative to the current page.\\
 \section{External MIDI Control:}
 An external MIDI device connected on Port 2 or USB MIDI can be used to position the cursor's vertical position.
 \begin{itemize}
     \item Ensure that the \textbf{Config-->MIDI-->CTRL PORT} is set to the MIDI port your external keyboard/sequencer is connected.
 \end{itemize}
-\textit{When using an external MIDI keyboard, the octave, and scale mapping can be changed from the Chromatic Page as discussed in the next chapter.}\\
-
-Using a simultaneous combination of the MD's \textbf{[Trig]} keys and an external MIDI Keyboard, chords can be entered into the Note Editor. First play a chord on the Keyboard, then press \textbf{[Yes]} or a \textbf{[Trig]} key to store the chord in the cursor location.
+\textit{When using an external MIDI keyboard, the octave, and scale mapping can be changed from the Chromatic Page as discussed in the next chapter.}
+Holding a note on an external MIDI keyboard, and then pressing the MD's \textbf{[Enter/Yes]} or a \textbf{[Trig]} key, allows individual notes to  be added at the cursor position.
 \\\\
-Similarly, by holding notes on an external MIDI keyboard, and then pressing the MD's \textbf{[Yes]} key, notes can be added at the cursor position.
+Similarly, using a simultaneous combination of the MD's \textbf{[Trig]} keys and an external MIDI Keyboard, chords can be entered into the Note Editor. First play a chord on the Keyboard, then press \textbf{[Enter/Yes]} or a \textbf{[Trig]} key to store the chord at the cursor location.
 \section{Live Record:}
-Live Record mode can be activated either by pressing  \textbf{<Save>} or using the MD's \textbf{[Rec]} function. Both note and automation data can be recorded simultaneously. Automation data includes all ControlChannel, Pitchbend and channel pressure messages received on MIDI port 2.\\\\All 6 tracks can be recorded to simultaneously.\\
+Live Record mode can be activated using the MD's \textbf{[Rec]} function. Both note and automation data can be recorded simultaneously. Automation data includes all ControlChannel, Pitchbend and channel pressure messages received on MIDI port 2.\\\\All 6 tracks can be recorded to simultaneously.\\
 \\Tracks will only record incoming data that is on the same MIDI Channel. \textit{(see section MIDI Channel Selection)}\\\\
-
-\newpage
+To disable Automation Recording use the CC Rec option in the Track Menu.
 \section{PianoRoll Editor Track Menu:}
 \screenshot{proll_menu.png}
-Holding \textbf{<Shift 2>} opens the Track menu. For each track you can adjust the MIDI Channel, track length and playback speed. Cursor editing options are also included here including note velocity and note conditional settings.
+Holding \textbf{[Global]} opens the Track menu. For each track you can adjust the MIDI Channel, track length and playback speed. Cursor editing options are also included here including note velocity and note conditional settings.
 
 \begin{figure}[hb]
     \begin{tabular}{|l|l|}
@@ -51,20 +58,22 @@ Holding \textbf{<Shift 2>} opens the Track menu. For each track you can adjust t
     VEL         & Note Velocity\\ \hline
     Cond        & Trig Condition\\ \hline
     Channel     & MIDI Channel\\ \hline
+    Key         & MIDI Channel\\ \hline
+    CC Rec      & Enable/Disable Automation recording.\\ \hline
     \end{tabular}
 \end{figure}
 \section{Ext MIDI Track Selection \& Mutes:}
-When opening the Track Menu \textbf{<Shift>} from within in either the PianoRoll Editor or Chromatic Page, the MD's \textbf{[Trig]} keys can be used to switch between Ext MIDI Tracks and or  mute/unmute them.
+When opening the Track Menu \textbf{[Global]} from within in either the PianoRoll Editor or Chromatic Page, the MD's \textbf{[Trig]} keys can be used to switch between Ext MIDI Tracks and/or mute/unmute them. 
 \begin{itemize}
     \item MD \textbf{[Trig]} keys 1-6 correspond to Ext MIDI Track selection 1-6.
-    \item MD \textbf{[Trig]} keys 8-12 correspond to Ext MIDI Track mutes 1-6.
+    \item MD \textbf{[Trig]} keys 9-14 correspond to Ext MIDI Track mutes 1-6.
 \end{itemize}
 
 \section{MIDI Channel Selection}
-Each Ext MIDI track listens and transmits on a set MIDI Channel. The channel defaults to the track number. This can be easily changed by modifying the Track  menu CHAN option.\\
-\newpage
+Each Ext MIDI track listens and transmits on a set MIDI Channel. The channel defaults to the track number. This can be easily changed by modifying the Track menu CHAN option.\\
 \section{Change Edit Mode:}
 From the PianoRoll menu, the "Edit" parameter changes the editing mode. Switch between either Note editing, or editing automation parameters 1-8.
+\newpage
 
 \section{Automation Editing}
 \screenshot{proll_aut.png}
@@ -72,7 +81,7 @@ From the PianoRoll menu, the "Edit" parameter changes the editing mode. Switch b
 \\\\
 Each External MIDI track features 8 automation parameters.\\
 \section{Automation Editor Track Menu:}
-Hold \textbf{<Shift 2>} to open the Track menu.
+Hold \textbf{[Global]} to open the Track menu.
 \begin{figure}[hb]
     \begin{tabular}{|l|l|}
     \hline
@@ -81,13 +90,20 @@ Hold \textbf{<Shift 2>} to open the Track menu.
     Edit         & Note or Automation editing modes\\ \hline
     Slide      & Linear slide between automation values \\ \hline
     CC         & CC destination, Program Change, Pitch Bend, Channel Pressure,  MIDI learn \\ \hline
+    CC Rec      & Enable/Disable Automation recording.\\ \hline
     \end{tabular}
 \end{figure}
 \\
 Slide: enables/disable interpolation between automation events.\\\\
-CC: allows a specific MIDI Control Channel number to be chosen per parameter, Alternatively you can select LEARN, to Automatically learn the next received CC on the same MIDI channel.\\\\
-CC: When set to PRG, the track will send Program Change messages.
-CC: When set to PB, the track will send pitch bend messages.
-CC: When set to CHP, the track will send channel pressure messages.
+CC: Allows a specific MIDI Control Channel number to be a chosen parameter.
+\begin{itemize}
+    \item When set to LEARN, to Automatically learn the next received CC on the same MIDI channel.
+    \item When set to PRG, the track will send Program Change messages.
+    \item When set to PB, the track will send pitch bend messages.
+    \item When set to CHP, the track will send channel pressure messages.
+\end{itemize}
+
+\section{Automation Step Locks}
+It's possible to enter CC automation data at specific steps, by holding down the corresponding \textbf{[Trig]} and rotating the external MIDI CC control knob. This feature is available from both the Piano Roll and Automation Editor.
 
 

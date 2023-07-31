@@ -1,19 +1,21 @@
 \chapter{MCL Sequencer Pages:}
 
-\textit{The primary Sequencer Pages are accessed using the \textbf{<Page>/[Bank Group]} button.} These include:
+\textit{The primary Sequencer Pages are accessed from the Page Select menu via the \textbf{[Bank Group]} key.} These include:
 \begin{itemize}
-    \item (MD) Step Editor Page
-    \item (Ext MIDI) PianoRoll Editor Page
-    \item (MD/Ext MIDI) Chromatic Page
+    \item \textbf{Step Editor} (MD) (PageSelect: 5)
+    \item \textbf{PianoRoll Editor} (Ext MIDI) (PageSelect: 7)
+    \item \textbf{Chromatic} (MD/Ext MIDI) (PageSelect: 8)
 \end{itemize}
 \section{Track selection}
-The current track in any sequencer page can be chosen by pressing \textbf{<Shift>} or \textbf{[Global]} to enter the Track Menu and modifying the TRACK SELECT option.
+The current track in any sequencer page can be chosen by pressing \textbf{[Global]} to enter the Track Menu and modifying the TRACK SELECT option.
 \\\\
 For the Step Editor page the current track selection is automatically synced to the Machinedrum. When you change track on the MD the track will change on the MegaCommand.\\\\
 Alternatively, if a MIDI device is connected to port 2 and you are in either the Chromatic or PianoRoll pages, the track will automatically change to the first Ext MIDI track that is set to the same channel as incoming note data.\\\\
 From the Chromatic or PianoRoll page, by pressing MD \textbf{[Trig]} keys 1-6 whilst the Track menu is open will change the focused Ext MIDI track.
+\section{Track Expansion}
+When a track's length is extended and the added steps are clear from step or lock data, MCL fills these steps by repeating the initial sequence to meet the new length.
 \section{Live Record:}
-\textit{Live Record mode can be activated from any Sequencer page by pressing \textbf{<Save >}.\\Alternatively, hold \textbf{[REC]} and press \textbf{[Play]} on the MD to activate record mode.}\\\\Depending upon the page type, Live Record can be used to capture:
+\textit{Live Record mode can be activated from any Sequencer page by holding \textbf{[Rec]} and pressing \textbf{[Play]} on the MD to activate record mode.}\\\\Depending upon the page type, Live Record can be used to capture:
 \begin{itemize}
     \item Trig presses.
     \item Parameter changes, CC Automation.
@@ -21,12 +23,11 @@ From the Chromatic or PianoRoll page, by pressing MD \textbf{[Trig]} keys 1-6 wh
     \item Notes played, Pitch Bend + Channel Pressure on the PianoRoll Editor page.
 \end{itemize}
 \textit{The MD's \textbf{[Clear]} function can be used to clear the recorded sequence for the current track.}
-
 \newpage
 \section{Track menu}
 \screenshot{track_menu.png}
 
-\textit{From within a sequencer page, the track menu can be opened by holding \textbf{<Shift>/[Global]}.\\The selected entry is activated upon release.}\\\\
+\textit{From within a sequencer page, the track menu can be opened by holding \textbf{[Global]}.\\The selected entry is activated upon release.}\\\\
 The track menu consists of the following entries that are common to all Sequencer Pages:
 
 \begin{figure}[hb]
@@ -40,8 +41,10 @@ The track menu consists of the following entries that are common to all Sequence
     Clear            & \begin{tabular}[c]{@{}l@{}}TRK: clear track, ALL: clear pattern.\end{tabular}                                           \\ \hline
     Paste            & \begin{tabular}[c]{@{}l@{}}TRK: paste track, ALL: paste pattern.\end{tabular}                                           \\ \hline
     Speed & \begin{tabular}[c]{@{}l@{}}The current track's playback speed\\ 1x, 2x, 3/2x, 3/4x, 1/2x, 1/4x, 1/8x.\\ Hold <Load> and release <Shift> to change speed of all tracks. \end{tabular}                          \\ \hline
+    Length           & \begin{tabular}[c]{@{}l@{}}Track Length\end{tabular}\\ \hline
     Shift            & \begin{tabular}[c]{@{}l@{}}L/R: shifts the track left/right.\\ L ALL/R ALL: shifts the pattern left/right.\end{tabular} \\ \hline
     Reverse          & TRK: reverse the track, ALL: reverse the pattern.  \\ \hline
-    Rec Quant        & ON: quantize record enabled, OFF: quantize record disabled. \\ \hline
+    Quant        & Toggle Live Record and Arpeggiator Quantization. \\ \hline
     \end{tabular}
 \end{figure}
+Most sequencer pages feature extra parameters in the Track Menu, which will be detailed in subsequent sections of this manual.

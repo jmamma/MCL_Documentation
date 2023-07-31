@@ -1,0 +1,43 @@
+\chapter{Performance Page:}
+The Performance (Perf) Page features four user programmable Performance Controllers (A,B,C,D) sharing a common pool of eight scenes. Each controller can be assigned two scenes from the shared pool, with each scene comprised of 16 parameter locks.  When rotated, a performance controller will morph between the parameter locks of its two assigned scenes.\\
+
+\textit{Perf controller data, scenes and performance locks can be either stored or recalled by saving or loading to the PF track slot.}
+
+\screenshot{perf.png}
+\textit{To enter the Perf Page: press and hold \textbf{[Bank Group]}, then press \textbf{[Trig 3]}.}
+\buttons{}{PageSelect}{Toggle SubPage}{Controller Menu}
+\screenshot{perf_page.png}\\
+To indicate the \textbf{active controller}, a character  A,B,C or D is positioned in the top left of the screen.\\\\
+The \textbf{active controller} can be chosen from the controller menu accessible by holding \textbf{[Global]} and selecting \textbf{[Trig]} keys 1->4.\\
+\newpage
+The controller name is shown at the bottom left of the screen, and defaults to "CONTROL". Each controller can be \textbf{renamed} from the controller menu.
+\screenshot{perf_controller_menu.png}
+\section{Control}
+\textbf{<Encoder 1>} controls the value of the active Performance Controller, rotating it will morph between the assigned scenes. Holding \textbf{[Function]} whilst rotating encoder 1 will hard pan the controller left or right.\\
+\encoders{Controller}{Source}{Parameter}{Threshold}\\
+Performance Controllers A,B,C,D can be controlled externally by mapping them to any MD parameter, or any MIDI Channel + CC on port 2. \\\\
+\textbf{<Encoders 2 and 3>} assign the \textbf{Source} track/channel and \textbf{Parameter} values for which the controller will respond to External Control.\\\\
+A parameter "LEARN" feature can be used to automate mapping by setting Source to "--" and Para to "LER".
+\screenshot{perf_page_learn.png}\\
+The \textbf{<Encoder 4>} is the \textbf{Threshold} encoder and can be used to restrict the operating range of the external control to above a specified value.
+
+\section{Scenes}
+The Performance Page features a shared pool of 8 Scenes. Each scene can store 16 parameter locks. A parameter lock can be any MD track parameter and Master FX parameter, or any external MIDI CC. Each scene is mapped to the MD's \textbf{[Trig]} keys 1 through 8.\\
+\subsection{Assigning Scenes}
+Each performance Controller can be assigned two scenes from the pool, one LEFT and one RIGHT. The scenes assignment is shown at the bottom right of the screen.\\\\
+To assign the left most scene, hold \textbf{[Left]} and select a scene from the MD \textbf{[Trig]} keys.\\
+To assign the right most scene, hold \textbf{[Right]} and select a scene from the MD \textbf{[Trig]} keys.\\\\
+\subsection{Scene Locks}
+\screenshot{perf_page_scene_locks.png}
+\encoders{Controller}{Lock Destination}{Lock Parameter}{Value}
+
+To assign a lock to a scene, hold the corresponding Scene \textbf{Trig} and rotate the desired parameter on the MD or external MIDI.\\\\
+With the scene \textbf{Trig} held down, it is possible to view and edit the active locks by pressing the \textbf{[Up]} and \textbf{[Down]} arrows.
+\\\\
+\subsection{Scene Clear/Copy/Paste}
+Each scene can be cleared, copied or pasted to another scene by holding the corresponding \textbf{[Trig]}, and pressing the respective key \textbf{[Clear]}, \textbf{[Copy]}, \textbf{[Paste]}.\\\\
+\subsection{Scene Preview}
+To preview a scene, hold the corresponding \textbf{[Trig]} and then press \textbf{[Enter/YES]}.
+\section{Saving or Loading}
+All four Performance Controllers and the shared pool of eight Scenes can be stored or recalled from the \textbf{PF} slot in column 12 in Grid Y.\\\\
+Additonally, the \textbf{PF} slot also stores the MixerPage's Mute Sets and Performance Controller locks.

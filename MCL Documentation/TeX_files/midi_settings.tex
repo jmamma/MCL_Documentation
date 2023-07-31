@@ -69,21 +69,21 @@ PROG Mode: {[}BASIC, ADV{]}                & Basic or Advanced.
 PRG IN: {[}--, 1 .. 16, OMNI{]}            & Program change receive channel.                                            \\ \hline
 PRG OUT: {[}--, 1 .. 16{]}          & Program change transmit channel.                                          \\ \hline
 \end{tabular}
-
-MIDI Program Change IN has two modes of operation, BASIC or ADV (Advanced).
+\begin{itemize}
+    \item{\textbf{PROG Mode:} MIDI Program Change IN has two modes of operation, BASIC or ADV (Advanced).
 \begin{itemize}
     \item{ \textbf{BASIC:} Program Change Receive will "Group Load" an entire row according to Load Page mode and Group Select settings. }
     \item{  \textbf{ADV:} Program change receive will set the row for slots to be loaded from.\\\\ MIDI notes from C3 upwards on Port 2 can be used to select slots to be loaded.\\\\  In this way, you can load any slot (or multiple slots) using a combination of Program Change + MIDI note. \\\\
- If Program Change is not received before MIDI note on/off, MCL will load from the current selected GUI row. }
- \\
- MCL cannot load instantaneously, there is a minimum 1 bar delay.
-\end{itemize}
-\section{PRG In:}
+ If Program Change is not received before MIDI note on/off, MCL will load from the current selected GUI row.\\\\ 
+ MCL cannot load instantaneously, there is a minimum 1 bar delay.}
+\end{itemize}}
+\item{\textbf{PRG In:}
 Set the receive channel for Program Change and Note messages on Port 2.\\\\
-When set to -- (default) Program Change In is disabled.
-\section{PRG Out:}
+When set to -- (default) Program Change In is disabled.}
+\item{\textbf{PRG Out:}
 Set the send channel for Program Change messages on Port 2, which are sent when loading slots or rows.\\\\
-When set to -- (default) Program Change Out is is disabled.
+When set to -- (default) Program Change Out is is disabled.}
+\end{itemize}
 
 \newpage
 
@@ -94,9 +94,9 @@ The MD MIDI configuration menu is used to configure Machinedrum driver's MIDI se
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Entry                                  & Function                                                                       \\ \hline
-CHRO CHAN: {[}INT, 1..16, OMNI{]}        & MIDI Channel for MD Chromatic mode. \\ \hline
-POLY CHAN: {[}--, 1..16, OMNI{]}         & MIDI Channel for MD Polyphonic mode. \\ \hline
-TRIG CHAN: {[}INT, 1..16, OMNI{]}        & MIDI Channel for MD Trig mode. \\ \hline
+CHRO CHAN: {[}--, 1..16{]}        & MIDI Channel for MD Chromatic mode. \\ \hline
+POLY CHAN: {[}--, 1..16{]}         & MIDI Channel for MD Polyphonic mode. \\ \hline
+TRIG CHAN: {[}--, 1..16{]}        & MIDI Channel for MD Trig mode. \\ \hline
 \end{tabular}
 
 \begin{itemize}
