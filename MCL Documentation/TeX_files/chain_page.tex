@@ -1,5 +1,5 @@
 \chapter{Load Page}
-The Load page is used to load slots from the current row of the active Grid. When a slot is loaded, Machine/Sound data is sent to the corresponding MIDI device and the sequencer data is loaded into the matching sequencer track.
+The Load Page is used to load tracks from slots in the current row of the active Grid. When a slot is loaded, Machine/Sound data is sent to the corresponding MIDI device and the sequencer data is loaded into the matching sequencer track.
 \screenshot{load_from_a.png}\\
 \textit{The Load Page is accessible from the GridPage by pressing the MD's \textbf{[Enter/Yes]} key.}
 \encodersbuttons{Load MODE: [ MAN, AUT, QUE ]}{Length Override: [ -, N ]}{--}{ Quantization}{Cancel Load}{--}{--}{Group Select}\\
@@ -10,7 +10,8 @@ The MD's \textbf{[Bank A/B/C]} keys can be used to quickly change the load MODE 
 \section{Loading Individual Tracks}
 The Load Page utilises the MD's \textbf{[Trig]} keys to specify which slots are to be loaded. Pressing and then releasing multiple \textbf{[Trig]} keys will load the corresponding slots from the current row of the visible Grid.
 \section{Grid Toggle}
-The \textbf{[Scale]} button can be used to toggle between Grid X, the 16 MD tracks, or Grid Y, the EXT (1-6) and AUX (12-16) tracks, over the MDs \textbf{[Trig]} keys.
+The \textbf{[Scale]} button can be used to toggle loading between Grid X, the 16 MD tracks, or Grid Y, the EXT (1-6) and AUX (12-16) tracks.
+\textbf{[Trig]} keys.
 \section{Simultaneous Load from Grid X and Grid Y}
 It is possible to simultaneously load a collection of tracks from both Grids X and Y. 
 \begin{itemize}
@@ -68,7 +69,9 @@ The minimum quantization value is 2 steps. Quantization values can be changed by
 \item 32: Toggle cue on next possible 32th step 
 \item 64: Toggle cue on next possible 64th step
 \end{itemize}
-
+\section{Load Destination:}
+\screenshot{load_destination.png}
+In Manual mode, pressing the \textbf{[ Function ]} key from the Load Page will allow you to specify a DESTINATION track for the next load. The offset track is chosen by pressing a \textbf{[ Trig ]} key.
 \section{Track Levels:}
 \textit{To provide consistent level mixing across slot loading, the LEV parameter of a loaded track is never transmitted when the sequencer is running.}\\\\This allows the performer to use the LEV parameter to fade the loaded track in and out of the mix. The MD's track's VOL parameter should therefor be used to control the relative track loudness.\\\\
 \textit{Please read the manual section describing the \textbf{Config-->Machinedrum-->Normalize} setting which automatically adjusts a saved track's gain staging for this purpose.}

@@ -1,5 +1,5 @@
 \chapter{MIDI Settings Menu:}
-The MIDI menu provides access to six MIDI configuration sub-menus.
+The MIDI menu provides access to seven MIDI configuration sub-menus.
 \screenshot{midi_menu.png}
 \\
 \textit{Changes made in each MIDI configuration are applied upon menu exit.}
@@ -19,8 +19,8 @@ CTRL Port: {[} 2, USB, 2 + USB) {]}    & Which MIDI port provides control input 
 \end{tabular}
 \\\\
 \textit{If using the Machinedrum MK1, set Turbo Speed no greater than 4x.}\\\\
-\textit{{If you are intending to pair your Megacommand with an Elektron device}
-(MNM, A4) set \textbf{Driver 2}  to Elektron. For all other MIDI devices, set \textbf{Driver 2} to General MIDI (default setting).}\\\\
+\textit{{If you are intending to pair your Megacommand with a supported Elektron device}
+(MNM, A4) set \textbf{Driver 2}  to Elektron. For all other MIDI devices (including unsupported Elektron machines), set \textbf{Driver 2} to General MIDI (default setting).}\\\\
 \textit{If you are intending to use the paired Elektron device's MIDI thru to control further external equipment, you must set Turbo 2 speed to 1x.}
 
 \newpage
@@ -105,3 +105,14 @@ TRIG CHAN: {[}--, 1..16{]}        & MIDI Channel for MD Trig mode. \\ \hline
 \item{\textbf{POLY CHAN:} Dedicated MIDI Channel for playing designated Polyphonic tracks chromatically.}
 \item{\textbf{TRIG CHAN:} Dedicated MIDI channel for triggering MD tracks via Note On message. Useful for triggering sounds using a MIDI drum pad. Track Mapping starts from note C2. Note Velocity is mapped to volume.}
 \end{itemize}
+
+\section{General MIDI:}
+The General MIDI configuration menu is used to configure the Generic MIDI driver's settings.
+\screenshot{general_md_menu.png}\\
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Entry                                  & Function                                                                       \\ \hline
+MUTE CC: {[} 0..127,--{]}        & CC parameter for sending/receving Ext MIDI track\\& mute state on Mixer Page. \\ 
+\hline
+\end{tabular}
