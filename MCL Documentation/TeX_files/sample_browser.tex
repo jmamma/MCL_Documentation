@@ -1,4 +1,4 @@
-\chapter{Sample Manager Page:}
+\chapter{Sample Manager Page}
 Samples can be transferred to and received from the Machinedrum via the Sample Manager Page. Two file types are supported: 
 \begin{enumerate}
     \item \textbf{WAV} -- (UW models only) $.wav$ PCM samples.
@@ -8,7 +8,7 @@ Samples can be transferred to and received from the Machinedrum via the Sample M
 \screenshot{sample_manager.png}
 \textit{To enter the Sound Manager Page: press and hold \textbf{[Global]}, then press \textbf{[Trig 9]}.}
 
-\section{Navigating the Sound Browser Page.}
+\section{Navigating the Sound Browser Page}
 
 
 %\fbox{\includegraphics[scale=.40]{sound_page.png}}
@@ -34,16 +34,17 @@ To receive a \textbf{WAV} sample from the MD:
 \section{Transferring Samples}
 To transfer, select the file the from the Sample Manager. The display will now show the ROM slots availble in the MD, and you can select one slot to send the sample to.
 \screenshot{rom_select.png}
-\section{Bulk Sample Load and Receive:}
-To send or receive multiple WAVs:
-\begin{enumerate}
-\item Press and hold \textbf{[Global]} to access the \textbf{Send All / Recv All} functions which will transfer files from/to the current folder.
-\end{enumerate}
-\textit{When receiving, samples are saved to the current directory. Sample names are prefixed with a 2 digit slot number. This 2 digit number is used to preserve sample order when re-uploading. Sample names that do not start with a slot number will be excluded from the bulk upload.}
-\section{Cancelling Transfer:}
+\section{Bulk Sample Load and Receive}
+To send or receive multiple WAVs, press and hold \textbf{[Global]} to access the \textbf{Send All / Recv All} functions which will transfer files from/to the current folder.
+\begin{itemize}
+\item When receiving, samples are saved to the current directory.
+\item Sample names are prefixed with a 2 digit slot number. This 2 digit number is used to preserve sample order when re-uploading. (Therefore, ROM positions can be saved and recalled for each project.)
+\item Sample names that do not start with a slot number will be excluded from bulk upload.
+\end{itemize}
+\section{Cancelling Transfer}
 Sample transfers between can be cancelled by pressing the MD's \textbf{[No]} key.
 \newpage
-\section{Delete or Rename Samples:}
+\section{Delete or Rename Samples}
 \screenshot{file_menu.png}
 \textit{From within the Sample Manager, press and hold \textbf{[Global]} to access the file options menu.}\\\\
 From the file options menu, you may delete or rename sound files or create new directories.\\\\
@@ -54,7 +55,8 @@ Using an appropriate adaptor, you can mount the SD card as a drive on your compu
 \textbf{WAV} files must meet the following requirements:
 \begin{itemize}
     \item Filename up to 31 characters including extension. (When loaded into ROM, MD will truncate this to the first two and last two characters of the filename before the extension.)
-    \item Mono
     \item Sample speeds from 4kHz to 48kHz, ideally 44100Hz or 22050Hz to avoid resampling
     \item Any bit depth is accepted (MD stores samples at 12bit)\newline
 \end{itemize}
+\
+MD UW only plays back mono samples.

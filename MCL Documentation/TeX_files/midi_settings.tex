@@ -1,10 +1,10 @@
-\chapter{MIDI Settings Menu:}
+\chapter{MIDI Settings Menu}
 The MIDI menu provides access to seven MIDI configuration sub-menus.
 \screenshot{midi_menu.png}
 \\
 \textit{Changes made in each MIDI configuration are applied upon menu exit.}
 
-\section{Port Config:}
+\section{Port Config}
 The Port Config menu is used to configure the MIDI port settings.
 \screenshot{midi_ports_menu.png}\\
 \begin{tabular}{|l|l|}
@@ -14,6 +14,7 @@ Entry                                  & Function                               
 TURBO 1: {[} 1x, 2x, 4x, 8x {]}        & Port 1's Turbo MIDI speed                                                             \\ \hline
 TURBO 2: {[} 1x, 2x, 4x, 8x {]}        & Port 2's Turbo MIDI speed                                                             \\ \hline
 TURBO USB: {[} 1x, 2x, 4x, 8x {]}      & USB Port's Turbo MIDI speed                                                           \\ \hline
+Driver 1: {[} Gener, MD {]}         &  Port 1's MIDI driver, either Generic or MD                                   \\ \hline
 Driver 2: {[} Gener, Elekt {]}         &  Port 2's MIDI driver, either Generic or Elektron                                   \\ \hline
 CTRL Port: {[} 2, USB, 2 + USB) {]}    & Which MIDI port provides control input (Note + CC)\\& for Sequencer + Chromatic pages.  \\ \hline                                    
 \end{tabular}
@@ -25,7 +26,7 @@ CTRL Port: {[} 2, USB, 2 + USB) {]}    & Which MIDI port provides control input 
 
 \newpage
 
-\section{Sync:}
+\section{Sync}
 The Sync Config menu is used to configure MIDI clock + transport receive and destination settings.
 \screenshot{midi_sync_menu.png}\\
 \begin{tabular}{|l|l|}
@@ -42,7 +43,7 @@ TRANS SEND: {[}OFF, 2, 2 + USB{]}          & Forward MIDI Transport to selected 
 \\
 \textit{The MD's internal clock settings are controlled by MCL and will be automatically configured based on the options selected above.}
 
-\section{Routing:}
+\section{Routing}
 The MIDI Routing configuration menu can be used to set MIDI traffic forwarding between ports.
 \screenshot{midi_route_menu.png}\\
 \begin{tabular}{|l|l|}
@@ -57,7 +58,7 @@ CC LOOP: {[}OFF, 2->2{]}          & Loopback MIDI CC messages on same port.     
 
 
 \newpage
-\section{Program:}
+\section{Program}
 The Program menu is used to enable the sending and receiving of MIDI Program Change messages.
 \screenshot{midi_prog_menu.png}\\
 \begin{tabular}{|l|l|}
@@ -87,7 +88,7 @@ When set to -- (default) Program Change Out is is disabled.}
 
 \newpage
 
-\section{MD MIDI:}
+\section{MD MIDI}
 The MD MIDI configuration menu is used to configure Machinedrum driver's MIDI settings.
 \screenshot{midi_md_menu.png}\\
 \begin{tabular}{|l|l|}
@@ -106,7 +107,7 @@ TRIG CHAN: {[}--, 1..16{]}        & MIDI Channel for MD Trig mode. \\ \hline
 \item{\textbf{TRIG CHAN:} Dedicated MIDI channel for triggering MD tracks via Note On message. Useful for triggering sounds using a MIDI drum pad. Track Mapping starts from note C2. Note Velocity is mapped to volume.}
 \end{itemize}
 
-\section{General MIDI:}
+\section{General MIDI}
 The General MIDI configuration menu is used to configure the Generic MIDI driver's settings.
 \screenshot{general_md_menu.png}\\
 \begin{tabular}{|l|l|}

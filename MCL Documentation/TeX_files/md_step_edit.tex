@@ -1,4 +1,4 @@
-\chapter{Step Editor Page:}
+\chapter{Step Editor Page}
 The Step Editor (StepEdit) page is used to program MCL's internal sequencer for a selected MD track and is fully integrated with the MD's pattern editing user interface.
 \screenshot{step.png}\\
 \textit{Press \textbf{[Bank Group] + [Trig 5]} key to open the StepEdit page.}\\\\
@@ -8,7 +8,7 @@ The Step Editor (StepEdit) page is used to program MCL's internal sequencer for 
 
 \encodersbuttons{Trig Condition}{Micro-Timing}{Track Length}{Note}{Toggles REC}{}{Rotate Sequencer Page | Apply All}{Track Menu}
 \newpage
-\section{GUI:}
+\section{GUI}
 \begin{itemize}
 \item The StepEdit page leverages the MD's GUI for editing.
 \item Trig editing mode can be switched between Lock, Mute and Slide by pressing \textbf{[Function] + [Bank B/C/D] }respectively .
@@ -31,38 +31,38 @@ The Step Editor (StepEdit) page is used to program MCL's internal sequencer for 
 
 \end{itemize}
 \newpage
-\section{Trig Conditions:}
+\section{Trig Conditions}
 \begin{itemize}
 \item L1,L2,L3,L4,L5,L6,L7,L8 (For Ln, step is only triggered after every n iterations of track)
 \item P10, P25, P50, P75, P90 (For Pxx, step has a xx percent chance of being triggered)
 \item 1S. (One Shot trig, step is only triggered once after load)
 \item Each trig condition above has a twin denoted by the \^{} character e.g L1\^{}, L2\^{}, P1\^{}. When these condition modes are selected, parameter locks and slides must also obey the trig condition.
 \end{itemize}
-\section{Micro-Timing:}
+\section{Micro-Timing}
 When editing Micro-timing, the uTIMING window will be visible on both the MC and MD. The number of divisions between notes is dependent on the track's Speed setting.\\\\\textit{The MC's sequencer has a resolution of 1/192th per quarter notes}\\
 \screenshot{utiming1.png}
-\section{Track Speed \& Length:}
+\section{Track Speed \& Length}
 All sequencer tracks can be played at an independent speed and length.\\\\
 The chosen speed can be one of either: 1x, 2x, 3/2x, 3/4x, 1/2x, 1/4x, 1/8x.\\Triplets can be achieved using either 3/2x, 3/4x.
 \begin{itemize}
 \item The MD's "Scale Setup" Menu accessible via \textbf{[Func] + [Scale]} can be used to quickly change the track speed \& length. If the "Scale Setup" menu is opened outside of Step Edit mode, the speed \& length changes will apply to all 16 tracks.
 \end{itemize}
 \newpage
-\section{Change Edit Mode:}
+\section{Change Edit Mode}
 By default, the Step Edit page opens in Trig Edit mode. It is possible to change this edit mode to program the track's sequencer data for either Trigs, Locks, Slides or Mutes.
 \begin{itemize}
 \item Edit mode can be toggled between Trig, Lock, Mute and Slide by pressing the MD's \textbf{[Func] + [Bank B/C/D]} keys.
 \end{itemize}
-\section{Clearing a Sequence:}
+\section{Clearing a Sequence}
 \begin{itemize}
 \item Enter [\textbf{Func]} + \textbf{[Clear]} to clear the current track when [\textbf{Rec}] LED lit, or all tracks when [\textbf{Rec]} LED unlit. (repeat the input to UNDO)
 \end{itemize}
-\section{Rotate Track Page:}
+\section{Rotate Track Page}
 Each track consists of 4 pages of 16 steps, for a total of 64 steps per track.
 \begin{itemize}
 \item The MD's \textbf{[Scale]} button can be used to rotate the visible track page.
 \end{itemize}
-\section{Chromatic Step Edit:}
+\section{Chromatic Step Edit}
 The Step Edit allows you to adjust a step's pitch by setting a note value. 
 \begin{itemize}
 \item Press and hold trigger button(s) on the MD. Adjusting \textbf{<Encoder 4 >} will allow you change the note value of the selected steps.
@@ -70,19 +70,19 @@ The Step Edit allows you to adjust a step's pitch by setting a note value.
 \item A keyboard will be drawn on the display, showing the current note.
 \end{itemize}
 \screenshot{step_keyboard.png}
-\section{Slides:}
+\section{Slides}
 Each parameter lock can be made to slide up or down to the nearest step containing a parameter lock of the same type.
 \\\\
 To add slides to your sequence change the Edit Mode to "SLIDE" (see above).
-\section{Mutes:}
+\section{Mutes}
 Individual steps of your sequence can be muted, by placing a mute trig at the corresponding position. Mutes are reset on sequencer restart.\\\\ 
 To add mutes to your sequence change the Edit Mode to "MUTE" (see above).\\\\
 Alternatively, from Pattern Edit, a step can be muted/unmuted by holding down the matching \textbf{[Trig]} key and pressing \textbf{[Exit/No]}.
 
-\section{Shift Sequence:}
+\section{Shift Sequence}
 The sequence of an individual track can be shifted left or right. Press \textbf{[Function]} + \textbf{[Left/Right]} on the MD. \\\\You can also shift the entire pattern left or right from the SHIFT menu via [\textbf{Global}].\\\\
 Similarly you can reverse a track's sequence by pressing [\textbf{Function}] + [\textbf{Up}]
-\section{Live Record:}
+\section{Live Record}
 Live Record mode can be activated using the MD's \textbf{[Rec]} + [\textbf{Play}] function.  The [\textbf{Rec}] LED will then blink to signify live recording is active. Both trig and parameter locks can be recorded simultaneously.\\
 To record from an external DrumPad or Keyboard:
 \begin{itemize}

@@ -5,13 +5,13 @@ It features a 3 oscillator additive synthesis engine with a level mixer.\\
 Each oscillator can be set to a unique waveform and pitch. The 3 oscillators are then mixed together and rendered to a WAV file which can be transferred to the MD using the MIDI Sample Dump Specification (SDS).\\
 \\
 To ensure optimal sample playback, WAV Designer performs all the heavy lifting for you. This involves calculating sample length and rate based on the fundamental frequency, auto detecting loop points and normalizing the waveform.
-\section{Oscillators Pages:}
+\section{Oscillators Pages}
 Each oscillator can be tuned to a unique frequency. The pitch is adjusted in note increments by rotating \textbf{<Encoder 1>}. Rotating \textbf{<Encoder 2 >} will adjust the frequency in cents +/-100. \textbf{[Exit/No]} will toggle display of the corresponding frequency.\\
 \\The fundamental frequency of the rendered waveform is automatically selected from the oscillator that has the lowest frequency.\\
 
 \encodersbuttons{Pitch, note increments.}{Fine Tune, +/- 100 cents}{Pulse Width}{Modify}{Frequency}{Page Select}{--}{Oscillator Menu}
 \newpage
-\subsection{Oscillator Page Menu:}
+\subsection{Oscillator Page Menu}
 \screenshot{osc_menu.png}
 Holding \textbf{[Global]} opens the Oscillator Page menu.
 Each of the 3 oscillator pages can be accessed via the Oscillator menu's "EDIT" parameter.
@@ -27,7 +27,7 @@ Each of the 3 oscillator pages can be accessed via the Oscillator menu's "EDIT" 
 \newpage
 
 
-\subsection{Waveforms:}
+\subsection{Waveforms}
 Every oscillator can be set to a unique waveform chosen from the Oscillator Menu.
 \\
 The available waveforms are described below:
@@ -51,12 +51,12 @@ Sample values are modified by using the MD \textbf{[Trigs]} and rotating \textbf
 TRI, PULSE and SAW waveform's pulse width can be adjusted by rotating \textbf{<Encoder 3>}.\\
 \fbox{\includegraphics[scale=.40]{wav_designer_pulse_width.png}}\\
 \newpage
-\section{OSC Mixer Page:}
+\section{OSC Mixer Page}
 \fbox{\includegraphics[scale=.40]{wav_designer_mixer.png}}\\\\
 The Oscillator Mixer Page has volume levels for each of the oscillators which can be adjusted by rotating encoders 1 to 3. \textit{Absolute volume levels are not important here as the resulting waveform will be automatically normalized.}\\
 \\
 \encodersbuttons{Osc1 Level}{Osc2 Level}{Osc3 Level}{}{SubPage Select}{Page Select}{Render+Transfer}{OscMixer Menu}
-\subsection{Oscillator Mixer Page Menu:}
+\subsection{Oscillator Mixer Page Menu}
 \screenshot{oscmixer_menu.png}
 Holding \textbf{[Global]} opens the Oscillator Mixer Page Menu.
 \begin{figure}[hb]

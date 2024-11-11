@@ -2,7 +2,7 @@
 \begin{center}
    \includegraphics[width=18cm]{megacommand_gui.png}
 \end{center}
-\section{Function Buttons:}
+\section{Function Buttons}
 From the Grid Page the MC's function buttons perform the following actions:
 \begin{itemize}
 \item{\textbf{<Save | No>}: Enters the Save Page.}
@@ -34,7 +34,7 @@ Enhanced mode disables editing access to the MD's internal sequencer and enables
 \newpage
 \section{MD + MCL command summary}
 
-\textbf{General:}
+\textbf{General}
    \begin{itemize}
       \item \textbf{[Classic/Extended] } toggle between Classic, Extended and Enhanced Modes.\\(When in Enhanced mode, the sequencer must be stopped to switch modes.)
       \item \textbf{[Function] + [Bank Group]} toggle Bank Group selection.
@@ -49,13 +49,13 @@ Enhanced mode disables editing access to the MD's internal sequencer and enables
        \item \textbf{[Function] + [Classic/Extended]} Simultaneously reset parameters to last load value across all tracks.
  \end{itemize}
  
-\textbf{Loading:}
+\textbf{Loading}
    \begin{itemize}
       \item \textbf{[Bank] + [Trig]} loads slots from the selected row according to Group selection.
       \item \textbf{[Bank] + [Multiple Trigs]} creates a chain of slots from selected rows according to Group selection.
    \end{itemize}
 
-\textbf{Grid Page:}
+\textbf{Grid Page}
     \begin{itemize}
       \item \textbf{[Up/Down/Left/Right]} position grid cursor. 
       \item \textbf{[Function] + [Up/Down/Left/Right]} grid cursor position fast travel.
@@ -70,7 +70,7 @@ Enhanced mode disables editing access to the MD's internal sequencer and enables
                 \item \textbf{[Enter/Yes]} load selected slots. Slots are loaded according to the current load MODE setting. If more than one row is selected, the MODE is automatically set to QUE, and the loaded slots are added to each column's playback queue.                
       \end{itemize}
 
-\textbf{[Enter/Yes]} opens \textbf{Load Page:}
+\textbf{[Enter/Yes]} opens \textbf{Load Page}
     \begin{itemize}
     \item Hold \textbf{[Enter/Yes]} to open slot Group Select. Release \textbf{[Enter/Yes]} to load by group. Group selection is editable via \textbf{[Trig]} keys 1-5.
     \item \textbf{[Trig]} keys are used to select and load sequencer tracks from slots of the current row.
@@ -78,26 +78,31 @@ Enhanced mode disables editing access to the MD's internal sequencer and enables
     \item \textbf{[Function]} to specify a destination track offset for the next load.
     \end{itemize}
     
-\textbf{[Function] + [Enter/Yes]} opens \textbf{Save Page:}
+\textbf{[Function] + [Enter/Yes]} opens \textbf{Save Page}
     \begin{itemize}
     \item Hold \textbf{[Enter/Yes]} to open slot Group Select. Release \textbf{[Enter/Yes]} to save by group.  Group selection editable via \textbf{[Trig]} keys 1-5.
     \item \textbf{[Trig]} keys are used to select and save individual sequencer tracks to slots of the current row. If none are selected entire row (pattern) will be saved.
     \end{itemize}
 \end{itemize}
 
-\textbf{Mixer Page:}
+\textbf{Mixer Page}
       \begin{itemize}
        \item \textbf{[Classic/Extended]} Open/Close the Mixer Page.
+              \item \textbf{[Classic/Extended]} +  \textbf{[Trig]} Mute/Unmute selected track(s).
        \item \textbf{[Scale]} Switch Grid X Y tracks.
        \item \textbf{[Trig]} Select track
        \item \textbf{[Trigs] + [Encoder]} Simultaneously modify parameters across selected tracks. 
        \item \textbf{[Trigs] + [Classic/Extended]} Simultaneously reset parameters to last load value across selected tracks.
-       \item \textbf{[Trig]} + \textbf{[Enter/Yes]} Mute selected track(s).
+       \item \textbf{[Trig]} + \textbf{[Enter/Yes]} Mute/Unmute selected track(s).
       \item \textbf{[Trig]} + \textbf{[Exit/No]} Solo selected track(s).
       \item \textbf{[Function]} + \textbf{[Enter/Yes]} Flip active mutes.
-      \item \textbf{[Up/Down/Left/Right]} Preview and edit mute sets.
-      \item \textbf{[Up/Down/Left/Right] + [Enter/Yes]} Load selected mute set.
+      \item \textbf{[Up/Down/Left/Right]} Preview and edit Performance Sets.
+      \item \textbf{[Up/Down/Left/Right]} + \textbf{[Enter/Yes]} Load selected Performance Set.
+      \item \textbf{[Up/Down/Left/Right]} + \textbf{[Mute/BankA]} Disable active device's mutes from selected Performance Set.
+      \item \textbf{[Up/Down/Left/Right]} + \textbf{[Swing/BankB]} Set selected Performance Set to load automatically with PF Slot in Grid Y.
       \item \textbf{<Encoders1-4>} Performance Controllers (A,B,C,D) scene morphs.
+      \item \textbf{<Encoders1-4>} + \textbf{<SHIFT>} Performance Controllers (A,B,C,D) right scene clear.
+      \item \textbf{<Encoders1-4>} + \textbf{<LOAD/YES>} Performance Controllers (A,B,C,D) right scene autofill parameters.   
       \item \textbf{[Up/Down/Left/Right] + [Exit/No] + <Encoders1-4>} Set performance controller lock to mute set.
       \item \textbf{[Function] + <Encoders1-4>} Hard pan performance controller left or right.
       \item \textbf{[Trig]} + \textbf{[Global]} Sequencer mute record for selected tracks.
@@ -107,7 +112,7 @@ Enhanced mode disables editing access to the MD's internal sequencer and enables
       \item \textbf{[Exit/No] + [Down]} Toggle REVERB pages.
        \end{itemize}
 \newpage
-\textbf{Performance Page:}
+\textbf{Performance Page}
 \begin{itemize}
       \item \textbf{[Global]} Open Performance menu.
       \item \textbf{[Global] + [Trig1-4]} Select active controller 1-4.
@@ -125,7 +130,7 @@ Enhanced mode disables editing access to the MD's internal sequencer and enables
      \item \textbf{<Encoder 1>} Set Route output (C/D/E/F).
      \item \textbf{<Encoder 2>} Set quantize amount.
      \end{itemize}
-\textbf{Step Editor:}
+\textbf{Step Editor}
 \begin{itemize}
       \item \textbf{[Record]} enter/exit MCL step editing.
       \item \textbf{[Record] + [Play]} enter realtime record mode (from any page).
@@ -140,7 +145,7 @@ Enhanced mode disables editing access to the MD's internal sequencer and enables
       \item \textbf{[Function] + [Bank C]} edit Mute toggle.
       \item \textbf{[Function] + [Bank D]} edit Slide toggle.
 \end{itemize}
-\textbf{LFO Page:} 
+\textbf{LFO Page} 
 \begin{itemize}
      \item \textbf{[Global]} Switch LFO Type (FREE/TRIG/ONESHOT)
      \item \textbf{[Trigs] }Enter LFO resets (TRIG + ONESHOT only)
@@ -149,7 +154,7 @@ Enhanced mode disables editing access to the MD's internal sequencer and enables
      \item \textbf{<Encoder 1>} LFO shape.
 
      \end{itemize}
-\textbf{Pianoroll Editor:}
+\textbf{Pianoroll Editor}
 \begin{itemize}
      \item \textbf{[Enter/Yes]} Add or remove notes/cc.
      \item \textbf{[Left/Right]} Move cursor along time axis.
@@ -167,7 +172,7 @@ Enhanced mode disables editing access to the MD's internal sequencer and enables
 \item \textbf{[Global] + [Trigs]} Access to EXT track select (1-6) and EXT track mutes (9-14).
 \end{itemize}
 
-\textbf{Chromatic Page:}
+\textbf{Chromatic Page}
       \begin{itemize}
       \item \textbf{[Global] }Toggle shift menu for access to Arpeggiator, Poly tracks etc
       \item \textbf{[Function]} + \textbf{[Clear/Copy/Paste]} Clear/copy/paste track.
@@ -180,7 +185,7 @@ Enhanced mode disables editing access to the MD's internal sequencer and enables
       \item \textbf{<Encoder 4>} Scale type.
       \end{itemize}
 \newpage
-\textbf{Sample Manager Page:} 
+\textbf{Sample Manager Page} 
 \begin{itemize}
 
      \item \textbf{[Up/Down] }Navigate menu
@@ -189,7 +194,7 @@ Enhanced mode disables editing access to the MD's internal sequencer and enables
      \item \textbf{[Global] }File options menu (New directory/rename/delete).
      \end{itemize}
 
-\textbf{WAV Designer:} 
+\textbf{WAV Designer} 
 \begin{itemize}
 
      \item \textbf{[Global] + [Left/Right] }Shift menu select OSC1-3 and Mixer pages.
@@ -206,19 +211,19 @@ Enhanced mode disables editing access to the MD's internal sequencer and enables
          \item \textbf{[Global]} Oscillator mixer page menu for TRANSFER.
      \end{itemize}
      \end{itemize}
-     \textbf{FX Delay Page:} 
+     \textbf{FX Delay Page} 
 \begin{itemize}
 
      \item \textbf{[Left] }Change page.
      \item \textbf{<Encoders 1-4>} FX parameters.
      \end{itemize}
-       \textbf{FX Reverb Page:} 
+       \textbf{FX Reverb Page} 
 \begin{itemize}
 
      \item \textbf{[Down] }Change page.
      \item \textbf{<Encoders 1-4>} FX parameters.
      \end{itemize}
-    \textbf{RAM Machines}:
+    \textbf{RAM Machines}
 \begin{itemize}
 
      \item \textbf{[Enter/Yes]} Initiate recording.

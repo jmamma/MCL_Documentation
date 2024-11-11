@@ -22,7 +22,7 @@ It is possible to simultaneously load a collection of tracks from both Grids X a
 \item Finally release the second grid \textbf{[Trig]} selection to confirm the action. 
 \end{itemize}
 
-\section{Load Track Groups:}
+\section{Load Track Groups}
 When in the Save or Load Page, holding the MD's \textbf{[Enter/Yes]} key opens the Group Select menu, allowing you to load or save all tracks corresponding to a group. An entire row (pattern) including tracks across both Grids X + Y can be loaded or saved this way.\\\\
 \screenshot{group_select_page.png}
 There are five groups:
@@ -37,14 +37,14 @@ From the Group Select Menu each group can be enabled/disabled using the MD's \te
 \\
 Releasing \textbf{[Enter/Yes]} will load tracks corresponding to the active groups.
 
-\section{Playback Queue:}
+\section{Playback Queue}
 Each column of the grid has a dedicated Playback Queue.\\\\Up to 8 slots can be queued in each column.  The slots in the queue form a repeating chain, each slot will be loaded sequentially. When the end of the queue is reached the first slot is loaded again.\\\\Queued slots are drawn with inverse colours on the Grid Page.\\\\The Playback Queue for any column can be activated by setting the load MODE to QUE and then loading a slot in that column.
 
-\section{LOOP \& JUMP:}
+\section{LOOP \& JUMP}
 Each slot contains a LOOP \& JUMP setting which can be adjusted via the Grid page's Slot Menu.\\\\The LOOPS value specifies how many times a track should repeat before it transitions to the slot located at the the bank \& row specified by JUMP.
 \\\\The LOOP \& JUMP settings only applies when a slot is loaded with load MODE set to: Auto (AUT). Auto mode is a useful way to create preset arrangement or songs.
 
-\section{Load MODE setting:}
+\section{Load MODE setting}
 Each column of the grid has a dedicated MODE setting. The MODE setting is applied to the corresponding column on load, and can be set to one of the following values:
 
 \begin{itemize}
@@ -55,10 +55,10 @@ Each column of the grid has a dedicated MODE setting. The MODE setting is applie
 
 As each column has an independent mode setting, it is possible to have some slots loading automatically (AUT) according to their LOOP \& JUMP setting, other slots can be looping in an improvised queue (QUE) the remaining slots could be left static via manual load (MAN).
 \newpage
-\section{Slot Length Override:}
+\section{Slot Length Override}
 When load mode is set to QUE, the LEN parameter allows overriding the loaded slot's length. This can be useful if you have a short track, of say 4 steps, and instead want it to play for 16, looping throughout. Alternatively if you are loading a group of slots, each with different length, it is possible to force them to all play to the same length.
 
-\section{Quantization Rules:}
+\section{Quantization Rules}
 The quantization rules specify the transition interval for the selected slots.\\
 The minimum quantization value is 2 steps. Quantization values can be changed by adjusting the "Q:" parameter, and increase in powers of 2. Holding down the encoder button will step increment the quantization value.
 \begin{itemize}
@@ -69,22 +69,22 @@ The minimum quantization value is 2 steps. Quantization values can be changed by
 \item 32: Toggle cue on next possible 32th step 
 \item 64: Toggle cue on next possible 64th step
 \end{itemize}
-\section{Load Destination:}
+\section{Load Destination}
 \screenshot{load_destination.png}
 In Manual mode, pressing the \textbf{[ Function ]} key from the Load Page will allow you to specify a DESTINATION track for the next load. The offset track is chosen by pressing a \textbf{[ Trig ]} key.
-\section{Track Levels:}
+\section{Track Levels}
 \textit{To provide consistent level mixing across slot loading, the LEV parameter of a loaded track is never transmitted when the sequencer is running.}\\\\This allows the performer to use the LEV parameter to fade the loaded track in and out of the mix. The MD's track's VOL parameter should therefor be used to control the relative track loudness.\\\\
 \textit{Please read the manual section describing the \textbf{Config-->Machinedrum-->Normalize} setting which automatically adjusts a saved track's gain staging for this purpose.}
 
-\chapter{Additional Loading Methods:}
-\section{Loading via [Bank] + [Trig]:}
+\chapter{Additional Loading Methods}
+\section{Loading via [Bank] + [Trig]}
 The Machinedrum's pattern changing functionality has been replicated in MCL. Each row of the Grid can be imagined as a pattern, compromising of slots for each of the MD's 16 tracks, plus Auxiliary slots containing the Master FX settings.
 
 \begin{itemize}
    \item A combination of \textbf{[Bank]} + \textbf{[Trig]} will load the corresponding row of the grid.\\\\ \textit{Slots are loaded from the chosen row, according to the Load Page's Group Selection settings. If the MD groups is active, this mimics the behaviour of pattern loading on the MD.}
    \item A combination of \textbf{[Bank]} + multiple \textbf{[Trig]} will chain multiple rows together.\\\\\textit{This is achieved by automatically setting each column's load MODE setting to QUE and then adding slots to each Playback Queue.}
 \end{itemize}
-\section{Loading via the Grid Slot Menu:}
+\section{Loading via the Grid Slot Menu}
 Slots can be loaded directly from the Grid Page's Slot Menu.
 \begin{itemize}
 \item From the Grid Page, pressing and holding the \textbf{[Exit/No]} button will open the Slot Menu. The MD's \textbf{[Up/Down/Left/Right]} keys can then be used to highlight a selection of slots

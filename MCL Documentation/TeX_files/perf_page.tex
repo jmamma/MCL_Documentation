@@ -1,4 +1,4 @@
-\chapter{Performance Page:}
+\chapter{Performance Page}
 The Performance (Perf) Page features four user programmable Performance Controllers (A,B,C,D) sharing a common pool of eight scenes. Each controller can be assigned two scenes from the shared pool, with each scene comprised of 16 parameter locks.  When rotated, a performance controller will morph between the parameter locks of its two assigned scenes.\\
 
 \textit{Perf controller data, scenes and performance locks can be either stored or recalled by saving or loading to the PF track slot.}
@@ -20,9 +20,10 @@ Performance Controllers A,B,C,D can be controlled externally by mapping them to 
 A parameter "LEARN" feature can be used to automate mapping by setting Source to "--" and Para to "LER".
 \screenshot{perf_page_learn.png}\\
 The \textbf{<Encoder 4>} is the \textbf{Threshold} encoder and can be used to restrict the operating range of the external control to above a specified value.
-
+\newpage
 \section{Scenes}
-The Performance Page features a shared pool of 8 Scenes. Each scene can store 16 parameter locks. A parameter lock can be any MD track parameter and Master FX parameter, or any external MIDI CC. Each scene is mapped to the MD's \textbf{[Trig]} keys 1 through 8.\\
+\subsection{Overview}
+The Performance Page features a shared pool of 8 Scenes. Each scene can store 16 parameter locks. A parameter lock can be any MD track parameter and Master FX parameter, or any external MIDI CC. Each scene is mapped to the MD's \textbf{[Trig]} keys 1 through 8.\\\\
 \subsection{Assigning Scenes}
 Each performance Controller can be assigned two scenes from the pool, one LEFT and one RIGHT. The scenes assignment is shown at the bottom right of the screen.\\\\
 To assign the left most scene, hold \textbf{[Left]} and select a scene from the MD \textbf{[Trig]} keys.\\
@@ -38,6 +39,6 @@ With the scene \textbf{Trig} held down, it is possible to view and edit the acti
 Each scene can be cleared, copied or pasted to another scene by holding the corresponding \textbf{[Trig]}, and pressing the respective key \textbf{[Clear]}, \textbf{[Copy]}, \textbf{[Paste]}.\\\\
 \subsection{Scene Preview}
 To preview a scene, hold the corresponding \textbf{[Trig]} and then press \textbf{[Enter/YES]}.
-\section{Saving or Loading}
+\section{Grid Saving or Loading}
 All four Performance Controllers and the shared pool of eight Scenes can be stored or recalled from the \textbf{PF} slot in column 12 in Grid Y.\\\\
-Additonally, the \textbf{PF} slot also stores the MixerPage's Mute Sets and Performance Controller locks.
+Additionally, the \textbf{PF} slot also stores the MixerPage's four Performance States including track Mute settings and Performance Controller locks.
